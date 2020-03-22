@@ -186,32 +186,36 @@
         $('.left').css('display','block');
     }
     if( type == 1) {
-        $('h3').text('词语辨析测验');
+        $('h3').text('算术计算');
         $('.clickToPractice img').attr('src','../image/type_1/1_.png');
         $('.clickToFormal img').attr('src','../image/type_1/1.png');
     } else if (type == 2) {
-        $('h3').text('视觉追踪测验');
-        $('.clickToPractice img').attr('src','../image/type_1/4_.png');
-        $('.clickToFormal img').attr('src','../image/type_1/4.png');
-    } else if (type == 3) {
-        $('h3').text('视觉短时记忆');
-        $('.clickToPractice img').attr('src','../image/type_1/5_.png');
-        $('.clickToFormal img').attr('src','../image/type_1/5.png');
-    } else if (type == 4) {
-        $('h3').text('图形推理测验');
+        $('h3').text('图形推理');
         $('.clickToPractice img').attr('src','../image/type_1/2_.png');
         $('.clickToFormal img').attr('src','../image/type_1/2.png');
-    } else if (type == 5) {
-        $('h3').text('三维心理旋转');
+    } else if (type == 3) {
+        $('h3').text('自然推理');
         $('.clickToPractice img').attr('src','../image/type_1/3_.png');
         $('.clickToFormal img').attr('src','../image/type_1/3.png');
+    } else if (type == 4) {
+        $('h3').text('语言记忆能力');
+        $('.clickToPractice img').attr('src','../image/type_1/4_.png');
+        $('.clickToFormal img').attr('src','../image/type_1/4.png');
+    } else if (type == 5) {
+        $('h3').text('二维心理旋转');
+        $('.clickToPractice img').attr('src','../image/type_1/5_.png');
+        $('.clickToFormal img').attr('src','../image/type_1/5.png');
+    } else if (type == 6) {
+        $('h3').text('注意力测验');
+        $('.clickToPractice img').attr('src','../image/type_1/6_.png');
+        $('.clickToFormal img').attr('src','../image/type_1/6.png');
     }
     //练习任务跳转
     function goPracticeTask() {
         clickMusic.play();
-        if(type ==1 ) {
+        if(type == 1 ) {
             setTimeout(function(){
-                mui.openWindow({ //词语辨析(练习)
+                mui.openWindow({ //算术计算(练习)
                     url: '../WebContent/experiments/wordassay/index.html?type=1',
                     createNew: true,
                     styles: {
@@ -221,7 +225,7 @@
             }, 500);
         } else if ( type == 2) {
             setTimeout(function(){
-                mui.openWindow({  //视觉追踪(练习)
+                mui.openWindow({  //图形推理(练习)
                     url: '../WebContent/experiments/VisualTracing/index.html?type=1',
                     createNew: true,
                     styles: {
@@ -231,7 +235,7 @@
             }, 500);
         } else if(type == 3 ) {
             setTimeout(function(){
-                mui.openWindow({  //视觉短时记忆(练习)
+                mui.openWindow({  //自然推理(练习)
                     url: '../WebContent/experiments/VWM/index.html?type=1',
                     createNew: true,
                     styles: {
@@ -241,7 +245,7 @@
             }, 500);
         } else if(type == 4 ) {
             setTimeout(function(){
-                mui.openWindow({   //图形推理测验(练习)
+                mui.openWindow({   //语言记忆能力(练习)
                     url: '../WebContent/experiments/Raven10minutes/index.html?type=1',
                     createNew: true,
                     styles: {
@@ -251,7 +255,17 @@
             }, 500);
         } else if(type == 5 ) {
             setTimeout(function(){
-                mui.openWindow({   //三维心理旋转(练习)
+                mui.openWindow({   //二维心理旋转(练习)
+                    url: '../WebContent/experiments/3D/index.html?type=1',
+                    createNew: true,
+                    styles: {
+                        cachemode:"noCache",
+                    }
+                });
+            }, 500);
+        } else if(type == 6 ) {
+            setTimeout(function(){
+                mui.openWindow({   //注意力测验(练习)
                     url: '../WebContent/experiments/3D/index.html?type=1',
                     createNew: true,
                     styles: {
@@ -269,7 +283,7 @@
         if(practice == 'true') {
             if(type == 1) {
                 setTimeout(function(){
-                    mui.openWindow({ //词语辨析(正式)
+                    mui.openWindow({ //算术计算(正式)
                         url: '../WebContent/experiments/wordassay/index.html?type=2',
                         createNew: true,
                         styles: {
@@ -279,7 +293,7 @@
                 }, 500);
             } else if (type == 2) {
                 setTimeout(function(){
-                    mui.openWindow({  //视觉追踪(正式)
+                    mui.openWindow({  //图形推理(正式)
                         url: '../WebContent/experiments/VisualTracing/index.html?type=2',
                         createNew: true,
                         styles: {
@@ -289,7 +303,7 @@
                 }, 500);
             } else if(type == 3 ) {
                 setTimeout(function(){
-                    mui.openWindow({  //视觉短时记忆(正式)
+                    mui.openWindow({  //自然推理(正式)
                         url: '../WebContent/experiments/VWM/index.html?type=2',
                         createNew: true,
                         styles: {
@@ -299,7 +313,7 @@
                 }, 500);
             } else if(type == 4 ) {
                 setTimeout(function(){
-                    mui.openWindow({   //图形推理测验(正式)
+                    mui.openWindow({   //语言记忆能力(正式)
                         url: '../WebContent/experiments/Raven10minutes/index.html?type=2',
                         createNew: true,
                         styles: {
@@ -309,7 +323,17 @@
                 }, 500);
             } else if(type == 5 ) {
                 setTimeout(function(){
-                    mui.openWindow({   //三维心理旋转(正式)
+                    mui.openWindow({   //二维心理旋转(正式)
+                        url: '../WebContent/experiments/3D/index.html?type=2',
+                        createNew: true,
+                        styles: {
+                            cachemode:"noCache",
+                        }
+                    });
+                }, 500);
+            } else if(type == 6 ) {
+                setTimeout(function(){
+                    mui.openWindow({   //注意力测验(正式)
                         url: '../WebContent/experiments/3D/index.html?type=2',
                         createNew: true,
                         styles: {
