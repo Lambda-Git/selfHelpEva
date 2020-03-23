@@ -4,14 +4,14 @@
 <head>
     <title>算术计算（正式，幼儿与小学生）</title>
     <meta http-equiv='content-type' content='text/html;charset=utf-8'/>
-    <link href='../../OPES2/js/jplayer/skin/blue.monday/css/jplayer.blue.monday.min.css' rel='stylesheet'
-          type='text/css'/>
+    <link href='../../OPES2/js/jplayer/skin/blue.monday/css/jplayer.blue.monday.min.css' rel='stylesheet'type='text/css'/>
     <link rel='stylesheet' href='../../OPES2/css/jquery-ui-1.10.4.custom/jquery-ui-1.10.4.custom.min.css'/>
+    <link href="../../../css/mui.min.css" rel="stylesheet"/>
 </head>
 
 <body>
 </body>
-
+<script type='text/javascript' src="../../../js/mui.min.js"></script>
 <script type='text/javascript' src='../../OPES2/js/jquery/jquery-1.8.0.min.js'></script>
 <script type='text/javascript' src='../../OPES2/js/jqueryui/jquery-ui-1.10.4.custom.min.js'></script>
 <script type='text/javascript' src='../../OPES2/js/mousetrap/mousetrap-1.4.6.min.js'></script>
@@ -465,6 +465,20 @@ function reset_all_key()
     };
 
     function post_result() {
+
+        //数据提交成功
+        mui.toast('数据保存成功!2秒后自动跳转到任务列表!',{ duration:'long', type:'div' })
+        setTimeout(function () {
+            mui.openWindow({
+                url: '../../../task_1/task_list.html',
+                createNew: true,
+                styles: {
+                    cachemode:"noCache",
+                }
+            });
+        },2000);
+
+
         //clear up all the timeout IDs for all the data rows
         //NOTE:!!! The start point name sometimes if not OPES_T1 (e.g. if delete the start and then add it)
         //TODO: use OPES_T_START instead. (pre-check if it is defined for old tests). see source code of the web page to check if this OPES_T_START is defined.
