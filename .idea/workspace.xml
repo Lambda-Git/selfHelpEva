@@ -3,15 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3e78b7f3-83d8-4725-857a-5159fdc8ab25" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/experiments/3759/3759.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/experiments/3759/3759.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/experiments/3760/3760.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/experiments/3760/3760.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/experiments/3775/3775.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/experiments/3775/3775.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/experiments/3871/3871.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/experiments/3871/3871.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/experiments/3903/3903.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/experiments/3903/3903.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/experiments/3906/3906.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/experiments/3906/3906.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/experiments/3907/3907.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/experiments/3907/3907.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/experiments/3908/3908.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/experiments/3908/3908.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_1/task_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/task_1/task_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/REMINE" beforeDir="false" afterPath="$PROJECT_DIR$/REMINE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/OPES2/js/upload/swf/js/swfupload/未命名.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,76 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="157" column="75" lean-forward="true" selection-start-line="157" selection-start-column="75" selection-end-line="157" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/experiments/3908/3908.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="1364" column="8" selection-start-line="1364" selection-start-column="8" selection-end-line="1373" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#62#68#0" expanded="true" />
-                <element signature="e#68#74#0" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-                <element signature="e#115#121#0" expanded="true" />
-                <element signature="e#121#127#0" expanded="true" />
-                <element signature="e#64#70#1" expanded="true" />
-                <element signature="e#63#69#1" expanded="true" />
-                <element signature="e#44#50#1" expanded="true" />
-                <element signature="e#48#54#0" expanded="true" />
-                <element signature="e#54#60#0" expanded="true" />
-                <element signature="e#47#53#0" expanded="true" />
-                <element signature="e#53#59#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/experiments/3775/3775.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="468" column="8" lean-forward="true" selection-start-line="468" selection-start-column="8" selection-end-line="478" selection-end-column="16" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#62#68#0" expanded="true" />
-                <element signature="e#68#74#0" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-                <element signature="e#115#121#0" expanded="true" />
-                <element signature="e#121#127#0" expanded="true" />
-                <element signature="e#64#70#1" expanded="true" />
-                <element signature="e#63#69#1" expanded="true" />
-                <element signature="e#44#50#1" expanded="true" />
-                <element signature="e#48#54#0" expanded="true" />
-                <element signature="e#54#60#0" expanded="true" />
-                <element signature="e#47#53#0" expanded="true" />
-                <element signature="e#53#59#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WebContent/experiments/3759/3759.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
-              <caret line="473" column="4" lean-forward="true" selection-start-line="473" selection-start-column="4" selection-end-line="473" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -166,6 +91,11 @@
             <path>
               <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
               <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
+              <item name="mp3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
               <item name="task_1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -177,21 +107,52 @@
               <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
               <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
               <item name="WebContent" type="462c0819:PsiDirectoryNode" />
-              <item name="experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="OPES2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
               <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
               <item name="WebContent" type="462c0819:PsiDirectoryNode" />
-              <item name="experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="3759" type="462c0819:PsiDirectoryNode" />
+              <item name="OPES2" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
               <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
               <item name="WebContent" type="462c0819:PsiDirectoryNode" />
-              <item name="experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="3903" type="462c0819:PsiDirectoryNode" />
+              <item name="OPES2" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="OPES2" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
+              <item name="swf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="OPES2" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
+              <item name="swf" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="OPES2" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
+              <item name="swf" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="swfupload" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -249,7 +210,7 @@
       <workItem from="1584888349761" duration="1755000" />
       <workItem from="1584890283575" duration="1222000" />
       <workItem from="1584924247096" duration="3504000" />
-      <workItem from="1584967936760" duration="2156000" />
+      <workItem from="1584967936760" duration="3129000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1584780092258</created>
@@ -272,17 +233,23 @@
       <option name="project" value="LOCAL" />
       <updated>1584928364349</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="init">
+      <created>1584970200212</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584970200212</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23553000" />
+    <option name="totallyTimeSpent" value="24526000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13423352" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21683876" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -308,10 +275,10 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init" />
     <MESSAGE value="修改 图片 任务名称" />
     <MESSAGE value="8个任务 init" />
-    <option name="LAST_COMMIT_MESSAGE" value="8个任务 init" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/image/type_1/1_.png">
@@ -574,6 +541,9 @@
           <caret line="473" column="4" lean-forward="true" selection-start-line="473" selection-start-column="4" selection-end-line="473" selection-end-column="4" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/OPES2/js/upload/swf/js/swfupload/未命名.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
 </project>
