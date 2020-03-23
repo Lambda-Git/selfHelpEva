@@ -1,0 +1,230 @@
+OPES2 使用文档：
+1. 如何使单选按钮换行？ 方法：添加2个单选按钮组，设置他们的位置，例如第一组A,B,C 第二组D,E,F 最终结果不管选择哪个，都能捕捉到用户结果，因为他们的name相同。
+2. 如何为单选按钮设置图片？方法：添加一个单选按钮，再添加一个图片，设置图片位置到按钮后面即可。
+3. 前置函数，后置函数，如何取得data_row_list  data_column_list? 方法：运行生成后的测验，查看页面源代码，把OPES_T3.params={}的内容(刺激反应集合或列表)拷贝到json viewer http://www.bejson.com/go.html?u=http://www.bejson.com/jsonviewernew/ 里面查看即可。
+		代码例子：
+		//add your code here.....
+		var data_row_list=OPES_T3.params.data_row_list;
+		var current_row=data_row_list[OPES_T3.params.current_row_index];
+		var column_list=current_row.data_column_list;
+		
+		代码例子：精确定位一个图片的位置
+		if(column_list[0].stimulateType='STIMULATE_TYPE_IMAGE')
+		{
+		    column_list[0].src='';
+		    column_list[0].position.at='center center';
+		}
+		
+
+4. 设置鼠标样式的时候，例如第一秒到第三秒 一个样式，第四秒到第五秒一个样式，之间需要一个短时间的间隔设置（通过delay）
+5. jplayer声音播放，如果是IE，不能隐藏控件，否则无法播放声音
+6. 声控开关的例子： 
+http://www.jykc.net/lattice/OPES2/OPES2.html?linecode=140&taskid=4056 
+http://www.dweipsy.com/lattice/experiments/opes2/546/4056/4056.html 
+7. 
+
+
+------------------------------控制整个测验运行数据的例子1：--------------------------------
+//程序-》自定义代码
+//add your code here.....
+//Here you can access all the variables: 
+//e.g. OPES_T2.func_name OPES_T3.params.code ... 
+
+overall_test_time_limit_in_seconds=10;
+start_test_time=getTimestamp();
+//alert(start_test_time);
+
+function check_time()
+{
+   
+var temp_current_time=getTimestamp();
+var elapsed=(temp_current_time-start_test_time)/1000;
+//alert('elapsed '+elapsed+' seconds');
+
+//alert(elapsed+' '+overall_test_time_limit_in_seconds+' '+(elapsed>=overall_test_time_limit_in_seconds));
+if(elapsed>=overall_test_time_limit_in_seconds)
+{
+        //alert(OPES_T3.params.current_row_index+'----'+OPES_T3.params.data_row_list.length);
+	//OPES_T3.params.current_row_index=OPES_T3.params.data_row_list.length-1;
+        post_result();
+}
+
+
+}
+
+setInterval(check_time,2000);
+
+
+------------------------------控制整个测验运行数据的例子2：--------------------------------
+//后置代码
+//add your code here.....
+
+var temp_current_time=getTimestamp();
+var elapsed=(temp_current_time-start_test_time)/1000;
+//alert('elapsed '+elapsed+' seconds');
+
+alert(elapsed+' '+overall_test_time_limit_in_seconds+' '+(elapsed>=overall_test_time_limit_in_seconds));
+if(elapsed>=overall_test_time_limit_in_seconds)
+{
+        //alert(OPES_T3.params.current_row_index+'----'+OPES_T3.params.data_row_list.length);
+	OPES_T3.params.current_row_index=OPES_T3.params.data_row_list.length-1;
+}
+
+
+
+
+
+
+Test method:
+
+0. 定义新的控件的metadata
+1. copy json data to stage.js
+2. 运行这个页面测试所有的控件----template.html
+2. 
+
+因为默认情况下，所有HTML元素的位置都是静态的，可以改变高度和宽度，但无法移动。所以如需对位置进行操作，需要把元素的CSSposition属性设置为relative、fixed或absolute。
+
+jqueryui position 的控件本身必须有高度和宽度！否则定位不起作用！
+jqueryui position会出问题，如果上个刺激没有完全消失！！见data.js line 761 img show position
+
+定位问题解决方法：必须对这个控件加上 $('#'+column_sound_player_id).css({'position':'absolute'});
+
+	$('#'+column_sound_container_id).position({
+		my: column.position.my,
+		at: column.position.at,
+		collision: "none",
+		of: $(document)
+	});
+	$('#'+column_sound_player_id).css({'position':'absolute'});
+	
+	
+
+function _PRE_1428044222477_1428045382671_(proobj)
+{
+	//add your code here.....
+	alert(OPES_T3.params.current_row_index+'----'+OPES_T3.params.data_row_list.length);
+	if(type1_error>=3)
+	{
+	    OPES_T3.params.current_row_index=4;
+	}
+}
+function _POST_1428044378682_1428045323083_(proobj)
+{
+	//add your code here.....
+	//OPES_T3.params.current_row_index=5;
+	//alert(OPES_T3.params.data_row_list.length);
+	//alert(OPES_T3.params.current_row_index);
+	//return;
+	
+	var data_row_list=OPES_T3.params.data_row_list;
+	var current_row=data_row_list[OPES_T3.params.current_row_index];
+	//alert(current_row.userResult+'-------'+current_row.correctResult);
+	//alert(current_row.userResult!=current_row.correctResult);
+	if(current_row.userResult!=current_row.correctResult)
+	{
+	   type1_error++;
+	   alert(type1_error);
+	
+	}
+}
+
+
+-------------------图片点击事件------------------------
+//add your code here.....
+//alert(proobj.id+'_____'+proobj.src);
+//alert(JSON.stringify(__TEMP_GLOBAL_VARIABLE_FOR_IMAGE_ON_CLICK_passobj));
+var passobj=__TEMP_GLOBAL_VARIABLE_FOR_IMAGE_ON_CLICK_passobj;
+
+	var proobj=passobj.proobj;
+	var current_row=passobj.current_row;
+	
+
+//alert($("input:radio[value='A']"));
+//$("input:radio[value='1']").attr('checked','true');
+$("input:radio[value='A']").attr('checked','true');
+
+
+	show_row_feedback(passobj);
+				
+			
+---------------------------声控开关 说明---------------------------------
+1. 第一个刺激，仅需设置一次，时长10ms
+2. 添加其他的刺激，时间99999，用户相应为声控开关，用户一旦相应，就触发反馈，然后转到下一个刺激
+
+
+-----------------------------------跳转到下一个dataset---------------
+if(i1>10)
+{
+  OPES_T3.params.current_row_index=50;
+
+}
+
+
+-------------------赋值例子-----------------------
+//add your code here.....
+
+var data_row_list=OPES_T6.params.data_row_list;
+var current_row=data_row_list[OPES_T6.params.current_row_index];
+
+if (Number(current_row.userResult)==result){
+    previousTrue=1;
+}else{
+    previousTrue=0;
+}
+
+
+trial_number++;
+
+//record result
+if(trial_number==1){
+  radioset_Temp=current_row.userResult;
+  correctanswerset_Temp=result;
+  type4set_Temp=current_row.rowType;
+  stimidset_Temp=trial_number;
+
+current_row.responseEndTime=getTimestamp();
+current_row.responseDuration=current_row.responseEndTime-current_row.responseStartTime;
+		
+
+  timeset_Temp=current_row.responseDuration;
+  memo_Temp=stim;
+  eventOnset_Temp=current_row.eventOnset;
+  firstEventOnset=eventOnset_Temp;
+}else{
+  radioset_Temp=radioset_Temp+';'+current_row.userResult;
+  correctanswerset_Temp=correctanswerset_Temp+';'+result;
+  type4set_Temp=type4set_Temp+';'+current_row.rowType;
+  stimidset_Temp=stimidset_Temp+';'+trial_number;
+
+
+current_row.responseEndTime=getTimestamp();
+current_row.responseDuration=current_row.responseEndTime-current_row.responseStartTime;
+		
+
+
+  timeset_Temp=timeset_Temp+';'+current_row.responseDuration;
+  memo_Temp=memo_Temp+';'+stim;
+
+  eventOnset_Temp=eventOnset_Temp+';'+(current_row.eventOnset-firstEventOnset);
+}
+
+
+alert('stimidset_Temp='+stimidset_Temp+'============timeset_Temp='+timeset_Temp+'===========current_row.responseDuration='+current_row.responseDuration+'====responseStartTime='+current_row.responseStartTime+'============responseEndTime='+current_row.responseEndTime);
+
+if (trial_number>=totalNumber){
+
+  OPES_T6.params.data_row_list[0].userResult=radioset_Temp;
+  OPES_T6.params.data_row_list[0].correctResult=correctanswerset_Temp;
+  OPES_T6.params.data_row_list[0].rowType=type4set_Temp;
+  OPES_T6.params.data_row_list[0].id=stimidset_Temp;
+  OPES_T6.params.data_row_list[0].responseDuration=timeset_Temp;
+  OPES_T6.params.data_row_list[0].comment=memo_Temp;
+
+  OPES_T6.params.data_row_list[0].eventOnset=eventOnset_Temp;
+  post_result();
+
+}else{
+
+    OPES_T6.params.current_row_index=-1;
+}
+

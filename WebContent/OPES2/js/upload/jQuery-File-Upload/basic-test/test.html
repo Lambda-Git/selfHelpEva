@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery File Upload Example</title>
+
+<link rel="stylesheet" href="/size/js/jQuery-File-Upload/bootstrap.min.css" ></link>
+<link rel="stylesheet" href="/size/js/jQuery-File-Upload/jquery.fileupload.css" ></link>
+
+
+</head>
+<body>
+
+
+ 	<span class="btn btn-success fileinput-button">
+        <span>Select Files</span><input id="fileupload" type="file" name="files[]" multiple>
+    </span>
+    
+   
+
+
+<script src="/size/js/jquery-1.8.2.min.js"></script>
+<script src="/size/js/jQuery-File-Upload/jquery.ui.widget.js"></script>
+<script src="/size/js/jQuery-File-Upload/jquery.iframe-transport.js"></script>
+<script src="/size/js/jQuery-File-Upload/jquery.fileupload.js"></script>
+
+<script src="/size/js/json2/json2.js"></script>
+
+<script>
+$(function () {
+    $('#fileupload').fileupload({
+        url:encodeURI('/size/CommonActionProxy?clazz=com.ibm.iis.size.action.proxy.size.FileUploadProxy&service=uploadOneFile&args={resultsID:\'5c37fd42b64ad441a5af2739\'}'),
+    	dataType: 'json',
+        done: function (e, data) {
+        	//alert(JSON.stringify(e));
+        	$('body').append(JSON.stringify(data));
+        }
+        
+    });
+});
+</script>
+</body> 
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN'>
+<html>
+
+<head>
+<title>在线心理实验设计系统</title>
+<meta http-equiv='content-type' content='text/html;charset=utf-8' />
+</head>
+
+<body>
+
+<script type='text/javascript' src='/lattice/OPES2/js/jquery/jquery-1.8.0.min.js'></script>
+<script type='text/javascript' src='/lattice/OPES2/js/jqueryui/jquery-ui-1.10.4.custom.min.js'></script>
+<script type='text/javascript' src='/lattice/OPES2/js/mousetrap/mousetrap-1.4.6.min.js'></script>
+
+
+
+<script type='text/javascript'>
+
+var flowchartWindow_2={};
+flowchartWindow_2.func_name='end_';
+flowchartWindow_2.params={"pagetitle":""};
+flowchartWindow_2.callback=null;
+
+
+var flowchartWindow_3={};
+flowchartWindow_3.func_name='text_';
+flowchartWindow_3.params={"position":"center","text":"TTTTTTTTTT","elapsedtime":"3000","fontcolor":"white","fontsize":"20"};
+flowchartWindow_3.callback=flowchartWindow_2;
+
+
+var flowchartWindow_1={};
+flowchartWindow_1.func_name='start_';
+flowchartWindow_1.params={"mousetype":"none","pagebackground":"black","fontcolor":"white","fontsize":"20","pagetitle":"Title ....."};
+flowchartWindow_1.callback=flowchartWindow_3;
+
+
+
+
+
+
+
+
+
+
+
+
+function exec_func_util(func_name,func_param_name,callback)//string,anytype
+{
+	var temp_func_name=function(data){};
+	try{
+		temp_func_name = eval(func_name);
+		temp_func_name(func_param_name,callback);
+	}catch(e)
+	{
+		alert('func_name='+func_name+'  func_param_name='+func_param_name+'  callback='+callback+' not defined. '+ e);
+	}
+	
+}
+function invoke_callback(callbackargs)
+{
+	
+	//------------callback----------------
+	//alert(callbackargs.func_name+'  '+callbackargs.params);
+	var callback=callbackargs.callback;
+	exec_func_util(callback.func_name,callback.params,callback);
+}
+function bind_key(proobj)
+{
+	Mousetrap.bind('p', function() { show_answer(proobj); });
+	Mousetrap.bind('q', function() { show_answer(proobj); });
+}
+function unbind_key()
+{
+	Mousetrap.unbind('p');
+	Mousetrap.unbind('q');
+}
+function reset_all_key()
+{
+	Mousetrap.reset();
+}
+
+
+
+
+
+
+
+function start_(fundata,callbackargs)
+{
+	$('body').css({'margin':'0px','background-color':'#000','font-size':'80pt','color':'#FFF','cursor':'url(../../images/empty.cur1), auto'});
+	$('body').html('Start.');
+	setTimeout(invoke_callback,2000,callbackargs);
+	
+}
+
+function data_(fundata,callbackargs)
+{
+	var proobj={};
+	proobj.fundata=fundata;
+	proobj.callbackargs=callbackargs;
+	show_question(proobj);
+}
+
+function text_(fundata,callbackargs)
+{
+	$('body').html('');
+	$('body').append('<span id="text_id_'+fundata.id+'"></span>');
+	$('#text_id_'+fundata.id).html(fundata.text);
+	$('#text_id_'+fundata.id).css({'font-size':fundata.fontsize,'color':fundata.fontcolor});
+	$('#text_id_'+fundata.id).position({
+		my: fundata.position.my,
+		at: fundata.position.at,
+		of: $('body')
+	});
+	
+	setTimeout(invoke_callback,2000,callbackargs);
+}
+function end_(fundata,callbackargs)
+{
+	$('body').html('THE END.');
+}
+
+
+
+
+
+
+
+function reset_alldata_status(all_data)//used to mark which serial and which serial_row is processing
+{
+	for(var i=0;i<all_data.length;i++)
+	{
+		var oneserial=all_data[i];
+		oneserial.processing=false;
+		for(var j=0;j<oneserial.datalist.length;j++)
+		{
+			var oneserial_row=oneserial.datalist[j];
+			oneserial_row.processing=false;
+		}
+	}
+}
+function get_to_be_processed_serial(all_data)
+{
+	//alert(all_data.length);
+	for(var i=0;i<all_data.length;i++)
+	{
+		var oneserial=all_data[i];
+		//alert(oneserial.processed);
+		if(typeof oneserial.processed== 'undefined')//has NOT been processed
+		{
+			//alert(oneserial.processed);
+			return oneserial;
+		}
+	}
+	return null;
+}
+function get_been_processing_serial(all_data)
+{
+	for(var i=0;i<all_data.length;i++)
+	{
+		var oneserial=all_data[i];
+		if(oneserial.processing==true)
+		{
+			return oneserial;
+		}
+	}
+	return null;
+}
+function show_question(proobj)
+{
+	var all_data=proobj.fundata.all_data;
+	$('body').html('');
+	bind_key(proobj);
+	reset_alldata_status(all_data);
+	var oneserial=get_to_be_processed_serial(all_data);
+	
+	if(oneserial==null)
+	{
+		//alert('show_question()  all_are_processed');
+		//alert(proobj.callbackargs.func_name+'  '+proobj.callbackargs.params);
+		var callback=proobj.callbackargs.callback;
+		exec_func_util(callback.func_name,callback.params,callback);
+	}else
+	{
+		oneserial.processed=true;//mark this serial has been processed
+		oneserial.processing=true;//mark this serial is processing
+		if(oneserial.onebyone)
+		{
+			alert('TODO 1');
+		}else //show all serial_row at the same time
+		{
+			for(var j=0;j<oneserial.datalist.length;j++)
+			{
+				var oneserial_row=oneserial.datalist[j];
+				$('body').append('<span id="question_id_'+j+'"></span>');
+				$('#question_id_'+j).html(oneserial_row.text);
+				$('#question_id_'+j).css({'font-size':oneserial_row.fontsize,'color':oneserial_row.fontcolor});
+				$('#question_id_'+j).position({
+					my: oneserial_row.position.my,
+					at: oneserial_row.position.at,
+					of: $('body')
+				});
+			}
+		}
+	}
+}
+function show_answer(proobj)
+{
+	var all_data=proobj.fundata.all_data;
+	unbind_key();
+	var oneserial=get_been_processing_serial(all_data);
+	if(oneserial==null)
+	{
+		//Will never go here
+		alert('show_answer()  all_are_processed');
+	}else
+	{
+		oneserial.processing=false;
+		if(oneserial.show_answer)
+		{
+			if(oneserial.hide_question_if_show_answer)
+			{
+				$('body').html('');
+				$('body').append('<span id="answer_id"></span>');
+				$('#answer_id').html(oneserial.answer);
+				$('#answer_id').css({'font-size':oneserial.fontsize,'color':oneserial.fontcolor});
+				$('#answer_id').position({
+					my: oneserial.position.my,
+					at: oneserial.position.at,
+					of: $('body')
+				});
+			}else
+			{
+				alert('TODO2');
+			}
+		}
+		
+		setTimeout(show_question,1000,proobj);
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function () {
+	exec_func_util(flowchartWindow_1.func_name,flowchartWindow_1.params,flowchartWindow_1);
+});
+
+</script>
+</body>
+</html>
+
+
+

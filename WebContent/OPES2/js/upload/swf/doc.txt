@@ -1,0 +1,47 @@
+
+http://demo.swfupload.org/Documentation/#uploadProgress
+
+$(function(){
+
+    $('.swfupload-control').swfupload({
+        // Backend Settings
+        upload_url: "../upload.php",    // Relative to the SWF file (or you can use absolute paths)
+        
+        // File Upload Settings
+        file_size_limit : "102400", // 100MB
+        file_types : "*.*",
+        file_types_description : "All Files",
+        file_upload_limit : "10",
+        file_queue_limit : "0",
+    
+        // Button Settings
+        button_image_url : "../multiinstancedemo/XPButtonUploadText_61x22.png", // Relative to the SWF file
+        button_placeholder_id : "spanButtonPlaceholder",
+        button_width: 61,
+        button_height: 22,
+        
+        // Flash Settings
+        flash_url : "../swfupload/swfupload.swf"
+        
+    });
+    
+    
+    // assign our event handlers
+    $('.swfupload-control')
+        .bind('fileQueued', function(event, file){
+            // start the upload once a file is queued
+            $(this).swfupload('startUpload');
+        })
+        .bind('uploadComplete', function(event, file){
+            alert('Upload completed - '+file.name+'!');
+            // start the upload (if more queued) once an upload is complete
+            $(this).swfupload('startUpload');
+        });
+        
+});
+
+
+
+<div class="swfupload-control">
+    <span id="spanButtonPlaceholder"></span>
+</div>

@@ -1,0 +1,311 @@
+
+
+/** DISABLE TEXT SELECTION (SET ON BODY WHEN DRAGGING IS OCCURRING) **/
+._jsPlumb_drag_select * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.demo {
+  position: relative;
+  width:100%;
+  background-color:white;    
+  height:550px;
+  overflow:auto;  
+  margin-top:0px;
+  margin-bottom:0px;
+  background: url("../../imgs/grid.gif") repeat -7px -7px;
+}
+
+.explanation {
+  position: absolute;
+  text-align: center;
+  background-color: #7AB02C;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  color: white;
+  width: 100%;
+  height: 54px;
+  z-index: 10000;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px gray;
+}
+
+.explanation:hover {
+  height:auto;
+  min-height:54px;
+    max-height:100%;    
+}
+
+.commands {
+  margin-bottom:10px;
+}
+
+.commands:hover {
+  z-index:10000;
+}
+
+/* demo elements */
+
+a, a:visited {
+    text-decoration:none;
+    /*color:#057D9F;        */
+    color:black;
+    border-radius:0.2em;
+    -webkit-transition: color 0.15s ease-in;
+    -moz-transition: color 0.15s ease-in;
+    -o-transition: color 0.15s ease-in;
+    transition: color 0.15s ease-in;
+}
+
+a:hover {
+    color:#7AB02C;
+}
+
+a:active {
+  color:#FF2300;
+}
+
+.menu, #render, #explanation {   
+	background-color:#fff;	    
+}
+
+.menu {    
+  height: 15px;
+	float:right;     
+  padding-top:1em;
+  padding-bottom:0.4em;   
+  background-color: transparent;
+	margin-right:30px;
+  font-size:12px;
+}
+
+
+.menu a {
+  margin-right: 19px;
+}
+
+.otherLibraries {
+    display:inline;
+}
+
+#render a {
+    margin-right:10px;
+}
+
+.selected {
+	color:orange !important;
+}
+
+.window, .label { 
+    
+    text-align:center;
+    z-index:24;
+	cursor:pointer;
+	box-shadow: 2px 2px 19px #aaa;
+   -o-box-shadow: 2px 2px 19px #aaa;
+   -webkit-box-shadow: 2px 2px 19px #aaa;
+   -moz-box-shadow: 2px 2px 19px #aaa;
+    
+}
+path, ._jsPlumb_endpoint { cursor:pointer; }
+
+.cmd { 
+  color:white;
+  margin-right:25px;
+}
+
+.cmd:hover { 
+  color:#FF2300;
+  text-decoration: underline;
+}
+.cmd:active {
+  color:#FF2300;
+}
+
+.label {
+  font-size:13px; 
+  padding:8px;
+  padding:8px;
+}
+
+.component { 
+  border:1px solid #346789; 
+  border-radius:0.5em;        
+  opacity:0.8; 
+  filter:alpha(opacity=80);
+  background-color:white;
+  color:black;
+  padding:0.5em;   
+  font-size:0.8em;
+}
+
+.component:hover {
+    border:1px solid #123456;
+    box-shadow: 2px 2px 19px #444;
+   -o-box-shadow: 2px 2px 19px #444;
+   -webkit-box-shadow: 2px 2px 19px #444;
+   -moz-box-shadow: 2px 2px 19px #fff;
+    opacity:0.9;
+    filter:alpha(opacity=90);
+}
+
+.window {
+    background-color:white;
+    border:1px solid #346789;
+    box-shadow: 2px 2px 19px #e0e0e0;
+    -o-box-shadow: 2px 2px 19px #e0e0e0;
+    -webkit-box-shadow: 2px 2px 19px #e0e0e0;
+    -moz-box-shadow: 2px 2px 19px #e0e0e0;
+    -moz-border-radius:0.5em;
+    border-radius:0.5em;        
+    width:5em; height:5em;        
+    position:absolute;    
+    color:black;
+    padding:0.5em;
+    width:80px; 
+    height:80px;
+    line-height: 80px;     
+    -webkit-transition: -webkit-box-shadow 0.15s ease-in;
+    -moz-transition: -moz-box-shadow 0.15s ease-in;
+    -o-transition: -o-box-shadow 0.15s ease-in;
+    transition: box-shadow 0.15s ease-in;
+}
+
+.window:hover {
+    border:1px solid #123456;
+    box-shadow: 2px 2px 19px #444;
+   -o-box-shadow: 2px 2px 19px #444;
+   -webkit-box-shadow: 2px 2px 19px #444;
+   -moz-box-shadow: 2px 2px 19px #fff;
+    opacity:0.9;
+    filter:alpha(opacity=90);
+}
+
+.window a {
+    font-family:helvetica;
+}
+
+.demo-links, .library-links {
+  position: fixed;
+  right: 0;
+  top: 44px;
+  font-size: 11px;
+  background-color: white;
+  opacity: 0.8;
+  padding-right: 10px;
+  padding-left: 5px;
+  text-transform: uppercase;
+  z-index:100001;
+}
+
+.demo-links div, .library-links a {
+  display:inline;
+  margin-right:7px;
+  margin-left:7px;
+}
+
+.demo-links i, .library-links i {
+  padding:4px;
+}
+
+.library-links {
+    right: 454px;
+    height: 19px;
+    line-height: 19px;
+}
+
+.current-library {
+  color:#7AB02C !important;
+}
+
+/** Z-INDEX **/
+
+._jsPlumb_connector { z-index:18; }
+._jsPlumb_endpoint { z-index:19; }
+._jsPlumb_overlay { z-index:20; }
+
+
+.aLabel {
+  background-color:white; 
+  padding:0.4em; 
+  font:12px sans-serif; 
+  color:#444;
+  z-index:21;
+  border:1px dotted gray;
+  opacity:0.8;
+  filter:alpha(opacity=80);
+  cursor: pointer;
+}
+.aLabel._jsPlumb_hover {
+  background-color:#5C96BC;
+  color:white;  
+  border:1px solid white;
+}
+
+/*----------------------------------------------------------------*/
+.flowchart-demo .window { border:0px solid #346789;
+box-shadow: 2px 2px 19px #aaa;
+   -o-box-shadow: 2px 2px 19px #aaa;
+   -webkit-box-shadow: 2px 2px 19px #aaa;
+   -moz-box-shadow: 2px 2px 19px #aaa;
+-moz-border-radius:0.5em;
+border-radius:0.5em;
+opacity:0.8;
+filter:alpha(opacity=80);
+
+text-align:center;
+z-index:20; position:absolute;
+background-color:#eeeeef;
+color:black;
+font-family:helvetica;padding:0.5em;
+font-size:0.9em;
+
+width:50px;
+height:50px;
+}
+
+.flowchart-demo .window:hover {
+	box-shadow: 2px 2px 19px #444;
+   -o-box-shadow: 2px 2px 19px #444;
+   -webkit-box-shadow: 2px 2px 19px #444;
+   -moz-box-shadow: 2px 2px 19px #444;
+    opacity:0.6;
+	filter:alpha(opacity=60);
+}
+
+.flowchart-demo .active {
+	border:1px dotted green;
+}
+.flowchart-demo .hover {
+	border:1px dotted red;
+}
+
+#flowchartWindow1 { top:34em;left:5em;}
+#flowchartWindow2 { top:7em; left:36em;}
+#flowchartWindow3 { top:27em;left:48em; }
+#flowchartWindow4 { top:23em; left:22em;}
+.flowchart-demo ._jsPlumb_connector { z-index:4; }
+.flowchart-demo ._jsPlumb_endpoint, .endpointTargetLabel, .endpointSourceLabel{ z-index:21;cursor:pointer; }
+
+.flowchart-demo .aLabel {
+ 	background-color:white; 
+	padding:0.4em; 
+	font:12px sans-serif; 
+	color:#444;
+	z-index:21;
+	border:1px dotted gray;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	cursor: pointer;
+}
+.flowchart-demo .aLabel._jsPlumb_hover {
+	background-color:#5C96BC;
+	color:white;	
+	border:1px solid white;
+}
+

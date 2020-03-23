@@ -1,0 +1,81 @@
+
+text
++
+timer
+2  +  3
+
+5  6  7
+input
+button
+
+实验设计框架规范
+一个实验experiment包含一个刺激、多个刺激、一个data控件、多个data控件、或者其它任意控件。
+一个data控件包含一个刺激或者多个刺激
+一个刺激称为一个snapshot， 响应必须针对于一个snapshot。一个snapshot可以有响应response也可以没有响应。响应类型详见其定义规范。
+一个snapshot可以包含多个子刺激窗口blanket，一个blanket只能包含一个子刺激，子刺激类型详见其定义规范。
+
+one snapshot==S+R
+one snapshot==one row
+one blanket==one column
+
+experiment属性：
+1. name 实验名称
+2. URL 实验路径
+3. uid, projectid ...
+
+
+data 控件属性：
+1. randomFlag 定义里面的snapshot是否随机呈现， 0 和 1. 如果定义为随机，在实验设计阶段不随机数据，实验运行阶段随机数据。
+2. exitResult 如果总体结果达到了这个定义的标准，那么退出这个data控件的运行【TODO】
+
+snapshot属性：--row
+1. aliveTime 存活时间: 实验流程会严格按照这个时间执行，时间到了就会转到下一个snapshot，不管用户是否已经响应。
+                       这个时间应该自动计算得出，其里面的所有的columns的delay+alive的最大的一个 
+2. responseFlag 标志是否需要响应， 0 和 1
+3. responseType see below definition
+3. aliveType 存活类型：1 严格按照指定的aliveTime  2 响应和aliveTime 哪个先到先走原则，如果必须要等待用户响应，则可以设置aliveTime为999999999
+4. showTimer 是否显示时间进度条 
+5. [correctResult] 
+6. [userResult] 如果用户在规定时间内没有响应，default is null
+7. [responseStartTime] 如果用户在规定时间内没有响应，default is 0
+8. [responseEndTime] 如果用户在规定时间内没有响应，default is 0
+9. [responseDuration] 如果用户在规定时间内没有响应，default is 0
+
+blanket属性：--column
+1. aliveTime 存活时间，这个时间不能大于其所在的snapshot的aliveTime
+2. delayTime 延迟显示时间，相对于其所在的snapshot的显示时间
+3. stimulateType, see below definition
+4. stimulateProperties....为每种不同的类型定义不同的属性
+
+
+
+
+
+
+//column中的刺激的类型
+var STIMULATE_TYPE_NULL='STIMULATE_TYPE_NULL';//
+var STIMULATE_TYPE_PLAINTEXT='STIMULATE_TYPE_PLAINTEXT';
+var STIMULATE_TYPE_INPUT='STIMULATE_TYPE_INPUT';
+var STIMULATE_TYPE_BUTTON='STIMULATE_TYPE_BUTTON';
+var STIMULATE_TYPE_RICHTEXT='STIMULATE_TYPE_RICHTEXT';
+var STIMULATE_TYPE_IMAGE='STIMULATE_TYPE_IMAGE';
+var STIMULATE_TYPE_SOUND='STIMULATE_TYPE_SOUND';
+var STIMULATE_TYPE_FLASH='STIMULATE_TYPE_FLASH';
+var STIMULATE_TYPE_VIDEO='STIMULATE_TYPE_VIDEO';
+
+
+//customer define the keys, 1-26, single key
+//next button is one blanket, sub snapshot, action is go to next snapshot
+
+
+//row的responseType
+var RESPONSE_TYPE_SINGLEKEY='RESPONSE_TYPE_SINGLEKEY';
+var RESPONSE_TYPE_MULTIPLEKEY='RESPONSE_TYPE_MULTIPLEKEY';
+var RESPONSE_TYPE_SINGLEMOUSECLICK='RESPONSE_TYPE_SINGLEMOUSECLICK';
+var RESPONSE_TYPE_MULTIPLCLICK='RESPONSE_TYPE_MULTIPLMOUSECLICK';
+var RESPONSE_TYPE_RADIOBUTTON='RESPONSE_TYPE_RADIOBUTTON';
+var RESPONSE_TYPE_CHECKBOX='RESPONSE_TYPE_CHECKBOX';
+var RESPONSE_TYPE_INPUT='RESPONSE_TYPE_INPUT';
+var RESPONSE_TYPE_TEXTAREA='RESPONSE_TYPE_TEXTAREA';
+var RESPONSE_TYPE_RICHTEXT='RESPONSE_TYPE_RICHTEXT';
+var RESPONSE_TYPE_SOUND='RESPONSE_TYPE_SOUND';

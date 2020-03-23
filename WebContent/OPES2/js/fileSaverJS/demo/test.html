@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US-x-Hixie">
+<head>
+    <meta charset="utf-8"/>
+    <title>FileSaver.js demo</title>
+    
+     <script type="text/javascript"  src="../Blob.js"></script>
+    <script type="text/javascript"  src="../FileSaver.js"></script>
+    
+</head>
+<body>
+    
+   
+    
+    
+<script>
+
+//IE10+ only
+//var file = new File(['手机号,手机号,手机号\n手机号,手机号,手机号'],  { type: "text/plain;charset=utf-8" });
+//saveAs(file,"手机号1.txt");
+
+//IE10+ only
+//var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
+//saveAs(blob, "hello world1.txt");
+
+//< IE10
+saveTextAs('手机号,手机号,手机号\n手机号,手机号,手机号', "hello world2.txt");
+
+
+
+
+</script>   
+   
+</body>
+</html>

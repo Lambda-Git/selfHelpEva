@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>OPES NextGen Designer</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<style type="text/css"> 
+	body {
+		margin: 0px; background-color: #000000;cursor: url(../../images/empty.cur1), auto;
+		font-size: 80pt; color: #ffffff;
+		}
+ 	
+</style>
+
+</head>
+<body>
+
+<script type="text/javascript" src="../js/jquery/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../js/jqueryui/jquery-ui-1.10.4.custom.min.js"></script>
+<script type="text/javascript" src="../js/mousetrap/mousetrap-1.4.6.min.js"></script>
+<script type="text/javascript" src="../js/json2/json2.js"></script>
+<script type="text/javascript" src="prepare_opes_results.js"></script>
+<SCRIPT src="../../js/Statistics/Statistics.js" type=text/javascript></SCRIPT>
+
+<script type="text/javascript">	
+
+var current_index=0;
+var all_data=[];//first generate all data, with repeated??, each data in it is a serial list.
+for(var i=1;i<=2;i++)
+{
+	var data_serial={};
+	data_serial.id=i;
+	data_serial.show_answer=true;
+	data_serial.show_answer_time=2000;
+	data_serial.hide_question_if_show_answer=true;
+	data_serial.onebyone=false;
+	data_serial.datalist=[];
+	data_serial.answer='answer_'+i;
+	data_serial.datatype='text';
+	data_serial.fontsize=i*10+'px';
+	data_serial.fontcolor='#FFF';
+	data_serial.position={};
+	data_serial.position.my='center center';
+	data_serial.position.at='center center';
+	data_serial.user_answer='';
+	
+	
+	var d={};
+	d.datatype='text';
+	d.fontsize=i*10+'px';
+	d.fontcolor='#FFF';
+	d.position={};
+	d.position.my='left center';
+	d.position.at='left center';
+	d.elapsedtime=2000;
+	d.timeout=0;
+	d.text=i+'+left=26';
+	d.answer=i+'Q';
+	d.weight=5;
+	data_serial.datalist.push(d);
+	
+	var d={};
+	d.datatype='text';
+	d.fontsize=i*10+'px';
+	d.fontcolor='#FFF';
+	d.position={};
+	d.position.my='center center';
+	d.position.at='center center';
+	d.elapsedtime=2000;
+	d.timeout=0;
+	d.text=i+'+center=26';
+	d.answer=i+'Q';
+	d.weight=5;
+	data_serial.datalist.push(d);
+	
+	
+	all_data.push(data_serial);
+}
+
+
+
+function bind_key()
+{
+	Mousetrap.bind('p', function() { show_answer('p'); });
+	Mousetrap.bind('q', function() { show_answer('q'); });
+}
+
+function show_question()
+{
+	if(current_index===all_data.length)
+	{
+		
+	}else
+	{
+		var data=all_data[current_index];
+		
+		$('body').html('');
+		if(data.onebyone)
+		{
+			alert('TODO 1');
+		}else
+		{
+			for(var i=0;i<data.datalist.length;i++)
+			{
+				
+				var tempd=data.datalist[i];
+				$('body').append('<span id="question_id_'+i+'"></span>');
+				$('#question_id_'+i).html(tempd.text);
+				$('#question_id_'+i).css({'font-size':tempd.fontsize,'color':tempd.fontcolor});
+				$('#question_id_'+i).position({
+					  my: tempd.position.my,
+					  at: tempd.position.at,
+					  of: $('body')
+					});
+				//$('#question').center();
+			}
+			
+		}
+		
+		
+	}
+}
+function show_answer(userIputKey)
+{
+	var tempd=all_data[current_index];
+	tempd.user_answer=userIputKey;
+	if(tempd.show_answer)
+	{
+		if(tempd.hide_question_if_show_answer)
+		{
+			$('body').html('');
+			$('body').append('<span id="answer_id"></span>');
+			$('#answer_id').html(tempd.answer);
+			$('#answer_id').css({'font-size':tempd.fontsize,'color':tempd.fontcolor});
+			$('#answer_id').position({
+				  my: tempd.position.my,
+				  at: tempd.position.at,
+				  of: $('body')
+				});
+		}else
+		{
+			alert('TODO2');
+		}
+	}
+	
+	
+	current_index++;
+	
+	if(current_index===all_data.length)
+	{
+		setTimeout("post_result()",1000);
+	}else
+	{
+		setTimeout("show_question()",1000);
+	}
+	
+}
+
+function start_test()
+{
+	show_question();
+}
+
+$(document).ready(function () {
+
+	bind_key();
+	start_test();
+	
+});
+
+
+
+function getTimestamp()
+{
+	var now = new Date();
+	return now.getTime(); // in ms
+}
+</script>
+</body>
+</html>
