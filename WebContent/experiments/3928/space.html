@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>二维心理旋转</title>
+    <link rel="icon" type="image/GIF" href="res/favicon.ico"/>
+    <meta name="viewport" content="initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="yes"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <style>
+        body, canvas, div {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+    </style>
+</head>
+
+<body style="padding:0; margin: 0; background: #000;">
+<script src="jquery-2.1.4.js"></script>
+<script src="zhu.js"></script>
+<script src="res/loading.js"></script>
+<canvas id="gameCanvas" width="480" height="720"></canvas>
+<script>
+
+    // var taskid=<%=taskid%>;
+    // var projectid=<%=projectid%>;
+    // var uid=<%=uid%>;
+    // var codematerial=<%=codematerial%>;
+    // var sumitcoids=<%=sumitcoids%>;
+    // var lan='<%=lan%>';
+    // var targetpagename='<%=targetpagename%>';
+
+
+    (function () {
+        var nav = window.navigator;
+        var ua = nav.userAgent.toLowerCase();
+        var uaResult = /android (\d+(?:\.\d+)+)/i.exec(ua) || /android (\d+(?:\.\d+)+)/i.exec(nav.platform);
+        if (uaResult) {
+            var osVersion = parseInt(uaResult[1]) || 0;
+            var browserCheck = ua.match(/(qzone|micromessenger|qqbrowser)/i);
+            if (browserCheck) {
+                var gameCanvas = document.getElementById("gameCanvas");
+                var ctx = gameCanvas.getContext('2d');
+                ctx.fillStyle = '#000000';
+                ctx.fillRect(0, 0, 1, 1);
+            }
+        }
+    })();
+
+    //调用函数
+    //-----【全局变量声明】
+    var all_time = 60, delay = 4000, q_now = 0, num1, num2, score = 0, wrong_num = 0;
+    var setTimeout_id1;
+    all_time_go();
+
+    function all_time_go() {
+        if (all_time == 0) {
+            $("#remain_time").html(all_time);
+            alert("时间到！");
+            jump_end();
+            return
+        } else {
+            //alert("value:"+all_time);
+            $("#remain_time").html(all_time);
+
+            all_time--;
+
+
+            var height_tmp = parseInt(all_time / 60 * 280);
+
+            height_tmp = height_tmp + 'px';
+
+            $("#timebar").css("height", height_tmp);
+
+            setTimeout_id1 = setTimeout(function () {
+                all_time_go()
+            }, 1000)
+            //alert("test");
+            //all_time_go();
+        }
+    }
+
+
+</script>
+<script src="../../js/CCBoot.js"></script>
+<script src="main.js"></script>
+<script src="../../js/jquery-1.8.2.min.js"></script>
+<SCRIPT src="../../js/Statistics/Statistics.js" type=text/javascript></SCRIPT>
+<script src="../../js/oneui/opes_post_result_util.js"></script>
+
+<div style="position: absolute;top:20px;left:10px;padding:10px;font-size:14px;color:red">时间:<span
+        id="remain_time">60</span></div>
+<div style="position: absolute;top:140px;left:15px;padding:10px;height:300px;font-size:12px;width:28px;background: #eee">
+    剩余时间
+    <div id="timebar" style="height:280px;width:28px;background:green"></div>
+</div>
+<div class="container" style="position: relative;">
+    <div class="row" style="top:0%; "></div>
+    <div class="row" style="top:10%;"></div>
+    <div class="row" style="top:20%;"></div>
+    <div class="row" style="top:30%;"></div>
+    <div class="row" style="top:40%;"></div>
+    <div class="row" style="top:50%;"></div>
+    <div class="row" style="top:60%;"></div>
+    <div class="row" style="top:70%;"></div>
+    <div class="row" style="top:80%;"></div>
+    <div class="row" style="top:90%;"></div>
+    <div class="row" style="top:100%;"></div>
+
+</div>
+
+
+</body>
+</html>
