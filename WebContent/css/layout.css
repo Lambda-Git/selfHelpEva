@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+
+.illation_result_button {
+    font-size: 23px;
+    /*background-image: url(../images/an.jpg);*/
+    border: 1px #77AFD9 solid;
+    width: 90px;
+    height: 33px;
+    /*clip: rect()*/
+}
+
+
+body {
+    margin: 0 auto;
+    color: #000000;
+    font-family: simsun;
+    font-size: 15px;
+    font-size-adjust: none;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 100%;
+
+}
+
+.layout_outer_div {
+
+    border-top: 1px solid #AFAFAF;
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+
+
+    margin: 0 auto;
+    padding: 0 0 5px;
+    width: 1000px;
+    height: 100%;
+    align: left;
+
+}
+
+.layout_for_inner_table {
+    position: relative;
+    float: left;
+    height: 500px;
+}

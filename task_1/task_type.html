@@ -186,37 +186,33 @@
         $('.left').css('display','block');
     }
     if( type == 1) {
-        $('h3').text('算术计算');
+        $('h3').text('图形推理');
         $('.clickToPractice img').attr('src','../image/type_1/1_.png');
         $('.clickToFormal img').attr('src','../image/type_1/1.png');
     } else if (type == 2) {
-        $('h3').text('图形推理');
+        $('h3').text('二维心理旋转');
         $('.clickToPractice img').attr('src','../image/type_1/2_.png');
         $('.clickToFormal img').attr('src','../image/type_1/2.png');
     } else if (type == 3) {
-        $('h3').text('自然推理');
+        $('h3').text('注意力测验');
         $('.clickToPractice img').attr('src','../image/type_1/3_.png');
         $('.clickToFormal img').attr('src','../image/type_1/3.png');
     } else if (type == 4) {
-        $('h3').text('语言记忆能力');
+        $('h3').text('空间N-back测验');
         $('.clickToPractice img').attr('src','../image/type_1/4_.png');
         $('.clickToFormal img').attr('src','../image/type_1/4.png');
     } else if (type == 5) {
-        $('h3').text('二维心理旋转');
+        $('h3').text('图形匹配');
         $('.clickToPractice img').attr('src','../image/type_1/5_.png');
         $('.clickToFormal img').attr('src','../image/type_1/5.png');
-    } else if (type == 6) {
-        $('h3').text('注意力测验');
-        $('.clickToPractice img').attr('src','../image/type_1/6_.png');
-        $('.clickToFormal img').attr('src','../image/type_1/6.png');
     }
     //练习任务跳转
     function goPracticeTask() {
         clickMusic.play();
         if(type == 1 ) {
             setTimeout(function(){
-                mui.openWindow({ //算术计算(练习)
-                    url: '../WebContent/experiments/3908/3908.html?type=1',
+                mui.openWindow({ //图形推理(练习)
+                    url: '../WebContent/experiments/3906/3906.html?type=1',
                     createNew: true,
                     styles: {
                         cachemode:"noCache",
@@ -225,8 +221,8 @@
             }, 500);
         } else if ( type == 2) {
             setTimeout(function(){
-                mui.openWindow({  //图形推理(练习)
-                    url: '../WebContent/experiments/3906/3906.html?type=1',
+                mui.openWindow({  //二维心理旋转(练习)
+                    url: '../WebContent/experiments/3928/3928.html?type=1',
                     createNew: true,
                     styles: {
                         cachemode:"noCache",
@@ -235,8 +231,8 @@
             }, 500);
         } else if(type == 3 ) {
             setTimeout(function(){
-                mui.openWindow({  //自然推理(练习)
-                    url: '../WebContent/experiments/3907/3907.html?type=1',
+                mui.openWindow({  //注意力测验(练习)
+                    url: '../WebContent/experiments/3911/3911.html?type=1',
                     createNew: true,
                     styles: {
                         cachemode:"noCache",
@@ -245,8 +241,8 @@
             }, 500);
         } else if(type == 4 ) {
             setTimeout(function(){
-                mui.openWindow({   //语言记忆能力(练习)
-                    url: '../WebContent/experiments/3903/3903.html?type=1',
+                mui.openWindow({   //空间N-back测验(练习)
+                    url: '../WebContent/experiments/2908/2908.html?type=1',
                     createNew: true,
                     styles: {
                         cachemode:"noCache",
@@ -255,18 +251,8 @@
             }, 500);
         } else if(type == 5 ) {
             setTimeout(function(){
-                mui.openWindow({   //二维心理旋转(练习)
-                    url: '../WebContent/experiments/3928/3928.html?type=1',
-                    createNew: true,
-                    styles: {
-                        cachemode:"noCache",
-                    }
-                });
-            }, 500);
-        } else if(type == 6 ) {
-            setTimeout(function(){
-                mui.openWindow({   //注意力测验(练习)
-                    url: '../WebContent/experiments/3911/3911.html?type=1',
+                mui.openWindow({   //图形匹配(练习)
+                    url: '../WebContent/experiments/3540/3540.html?type=1',
                     createNew: true,
                     styles: {
                         cachemode:"noCache",
@@ -283,8 +269,8 @@
         if(practice == 'true') {
             if(type == 1) {
                 setTimeout(function(){
-                    mui.openWindow({ //算术计算(正式)
-                        url: '../WebContent/experiments/3775/3775.html?type=2',
+                    mui.openWindow({ //图形推理(正式)
+                        url: '../WebContent/experiments/3760/3760.html?type=2',
                         createNew: true,
                         styles: {
                             cachemode:"noCache",
@@ -293,8 +279,8 @@
                 }, 500);
             } else if (type == 2) {
                 setTimeout(function(){
-                    mui.openWindow({  //图形推理(正式)
-                        url: '../WebContent/experiments/3760/3760.html?type=2',
+                    mui.openWindow({  //二维心理旋转(正式)
+                        url: '../WebContent/experiments/3600/3600.html?type=2',
                         createNew: true,
                         styles: {
                             cachemode:"noCache",
@@ -303,8 +289,8 @@
                 }, 500);
             } else if(type == 3 ) {
                 setTimeout(function(){
-                    mui.openWindow({  //自然推理(正式)
-                        url: '../WebContent/experiments/3871/3871.html?type=2',
+                    mui.openWindow({  //注意力测验(正式)
+                        url: '../WebContent/experiments/3782/3782.html?type=2',
                         createNew: true,
                         styles: {
                             cachemode:"noCache",
@@ -313,8 +299,8 @@
                 }, 500);
             } else if(type == 4 ) {
                 setTimeout(function(){
-                    mui.openWindow({   //语言记忆能力(正式)
-                        url: '../WebContent/experiments/3759/3759.html?type=2',
+                    mui.openWindow({   //空间N-back测验(正式)
+                        url: '../WebContent/experiments/2909/2909.html?type=2',
                         createNew: true,
                         styles: {
                             cachemode:"noCache",
@@ -323,18 +309,8 @@
                 }, 500);
             } else if(type == 5 ) {
                 setTimeout(function(){
-                    mui.openWindow({   //二维心理旋转(正式)
-                        url: '../WebContent/experiments/3600/3600.html?type=2',
-                        createNew: true,
-                        styles: {
-                            cachemode:"noCache",
-                        }
-                    });
-                }, 500);
-            } else if(type == 6 ) {
-                setTimeout(function(){
-                    mui.openWindow({   //注意力测验(正式)
-                        url: '../WebContent/experiments/3782/3782.html?type=2',
+                    mui.openWindow({   //图形匹配(正式)
+                        url: '../WebContent/experiments/7054/7054.html?type=2',
                         createNew: true,
                         styles: {
                             cachemode:"noCache",

@@ -62,27 +62,23 @@
             <div class="mui-row slide-box">
                 <div class="slide-item formal practice">
                     <img class="animated bounceInLeft" src="../image/type_1/1.png" onclick="goTask(1)" />
-                    <p>算术计算</p>
+                    <p>图形推理</p>
                 </div>
                 <div class="slide-item formal">
                     <img class="animated bounceInLeft" src="../image/type_1/2.png" onclick="goTask(2)" />
-                    <p>图形推理</p>
+                    <p>二维心理旋转</p>
                 </div>
                 <div class="slide-item formal practice">
                     <img class="animated bounceInLeft" src="../image/type_1/3.png" onclick="goTask(3)" />
-                    <p>自然推理</p>
+                    <p>注意力测验</p>
                 </div>
                 <div class="slide-item formal">
                     <img class="animated bounceInLeft" src="../image/type_1/4.png" onclick="goTask(4)" />
-                    <p>语言记忆能力</p>
+                    <p>空间N-back测验</p>
                 </div>
                 <div class="slide-item formal practice">
                     <img class="animated bounceInLeft" src="../image/type_1/5.png" onclick="goTask(5)" />
-                    <p>二维心理旋转</p>
-                </div>
-                <div class="slide-item formal">
-                    <img class="animated bounceInLeft" src="../image/type_1/6.png" onclick="goTask(6)" />
-                    <p>注意力测验</p>
+                    <p>图形匹配</p>
                 </div>
             </div>
 		</div>
@@ -98,7 +94,7 @@
         clickMusic.play();
         if(go === 1) {
             setTimeout(function(){
-                mui.openWindow({ //算术计算
+                mui.openWindow({ //图形推理
                     url: 'task_testNotes.html?type=1',
                     createNew: true,
                     styles: {
@@ -108,7 +104,7 @@
             }, 500);
         }else if (go === 2) {
             setTimeout(function(){
-                mui.openWindow({  //图形推理
+                mui.openWindow({  //二维心理旋转
                     url: 'task_testNotes.html?type=2',
                     createNew: true,
                     styles: {
@@ -118,7 +114,7 @@
             }, 500);
         }else if(go === 3 ) {
             setTimeout(function(){
-                mui.openWindow({  //自然推理
+                mui.openWindow({  //注意力测验
                     url: 'task_testNotes.html?type=3',
                     createNew: true,
                     styles: {
@@ -129,7 +125,7 @@
         }
         else if(go === 4 ) {
             setTimeout(function(){
-                mui.openWindow({   //语言记忆能力
+                mui.openWindow({   //空间N-back测验
                     url: 'task_testNotes.html?type=4',
                     createNew: true,
                     styles: {
@@ -139,17 +135,7 @@
             }, 500);
         } else if(go === 5 ) {
             setTimeout(function(){
-                mui.openWindow({   //二维心理旋转
-                    url: 'task_testNotes.html?type=5',
-                    createNew: true,
-                    styles: {
-                        cachemode:"noCache",
-                    }
-                });
-            }, 500);
-        }  else if(go === 6 ) {
-            setTimeout(function(){
-                mui.openWindow({   //注意力测验
+                mui.openWindow({   //图形匹配
                     url: 'task_testNotes.html?type=5',
                     createNew: true,
                     styles: {
