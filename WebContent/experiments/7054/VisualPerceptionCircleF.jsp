@@ -832,6 +832,7 @@ function draw_dot()
 	jg_doc.paint();
 }
 
+
 function ari_obj(item1_array,item2_array,item3_array,item4_array,target_array,correct_result_array)
 {
 	if(item1_array.length!=item2_array.length)
