@@ -1,8 +1,9 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-    <title>图形推理（练习）</title>
+    <title>图形推理（正式）</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
     <link rel="stylesheet" href="../../css/layout.css" type="text/css"/>
     <link rel="stylesheet" href="../../css/main.css" type="text/css"/>
     <link href="../../../css/mui.min.css" rel="stylesheet"/>
@@ -18,8 +19,6 @@
     <script src="../../../js/mui.min.js"></script>
     <script src="../../../js/common.js"></script>
     <script src="../../../js/jquery.min.js"></script>
-
-
     <style type="text/css">
         body {
             margin: 0px;
@@ -67,6 +66,7 @@
             margin: 0 auto;
             background-color: #000000;
             clear: both;
+            align: center;
             height: 30%;
             width: 60%;
             position: absolute;
@@ -82,6 +82,7 @@
         .stroopnum_relax_tips_div {
             background-color: #000000;
             clear: both;
+            align: center;
             height: 100px;
             width: 40%;
             position: absolute;
@@ -136,6 +137,7 @@
 									<br/>Uploading
 								</span>
                     </td>
+
                     <td align=center height=50px>
 								<span id="item1_span" class="asmdresult"> 
 								<img name="item1_image" id="item1_image" src="../../images/black_toosmall.jpg"/>
@@ -219,7 +221,6 @@
     </div>
 </div>
 
-
 </body>
 <script type="text/javascript">
 
@@ -244,12 +245,12 @@
     var simple_3 = new Array("78", "94", "22", "49", "29", "37", "87", "61", "24", "32", "40", "108", "80", "15", "99", "66", "59", "70", "44", "107", "67", "27", "42", "95", "35", "24", "85", "64", "19", "4", "118", "89", "69", "97", "16", "23", "116", "2", "11", "2", "21", "102", "46", "10", "26", "111", "7", "54", "28", "112", "53", "98", "71", "82", "113", "100", "57", "93", "103", "77", "30", "38", "110", "45", "62", "13", "109", "34", "39", "8", "14", "85", "36", "5", "116", "96", "17", "84", "93", "12", "92", "72", "79", "31", "18", "119", "106", "117", "76", "43", "50", "3", "20", "83", "48", "88", "1", "74", "101", "55", "33", "115", "91", "63", "51", "41", "62", "6", "25", "68", "81", "75", "52", "65", "60", "90", "120", "104", "86", "47");
     var simple_result = new Array("q", "q", "p", "p", "p", "q", "p", "q", "q", "p", "p", "q", "p", "p", "p", "q", "p", "p", "q", "q", "q", "p", "q", "p", "p", "q", "p", "p", "p", "q", "p", "q", "q", "q", "p", "p", "q", "q", "p", "q", "p", "q", "q", "q", "p", "q", "q", "p", "p", "p", "q", "p", "q", "p", "q", "q", "p", "q", "p", "p", "p", "q", "p", "q", "q", "p", "p", "p", "q", "p", "p", "q", "p", "p", "q", "p", "p", "q", "p", "p", "q", "p", "q", "p", "q", "q", "p", "q", "q", "p", "p", "q", "q", "p", "q", "q", "p", "p", "q", "q", "p", "q", "q", "q", "p", "q", "p", "q", "q", "p", "q", "p", "q", "p", "q", "q", "p", "p", "q", "q");
 
-
-    var simple_target = new Array("58", "13", "29", "69", "57", "99", "55", "51");
-    var simple_1 = new Array("88", "11", "24", "65", "79", "99", "44", "15");
-    var simple_2 = new Array("29", "13", "26", "61", "67", "45", "55", "49");
-    var simple_3 = new Array("18", "16", "29", "37", "97", "36", "66", "37");
-    var simple_result = new Array("p", "q", "q", "p", "p", "q", "q", "p");
+    //测试接口提交
+    // var simple_target=new Array("58","13");
+    // var simple_1=new Array("88","11");
+    // var simple_2=new Array("29","13");
+    // var simple_3=new Array("18","16");
+    // var simple_result=new Array("p","q");
 
 
     //Simple：
@@ -293,7 +294,7 @@
     var update_interval = midle_relax_interval / bar_length;//
     var current_index = 0;
     var current_start_time = getTimestamp();
-    var ristrict_time = 1000 * 60 * 3;
+    var ristrict_time = 1000 * 60 * 10;
     //var relax_point=new Array("40","80");
 
     var relax_point = new Array("400", "800");
@@ -345,12 +346,15 @@
         //stroopnum_tips.style.display="block";
         //dotcomparison_tips.style.display="block";
         //stroopnum_tips.innerHTML="<br/><br/>正在装入程序("+ progress + "%)"+"，稍等... ";
+
         //document.getElementById("loading").innerHTML = "<img  src='../../images/ajax-loader(2).gif'/><br/><br/>正在装入程序("+ progress + "%)"+"，稍等... ";
         document.getElementById("loading").innerHTML = "<br/><br/>程序加载中(" + progress + "%)";
+
     }
 
     /* 按任意键继续 */
     function any_key_start() {
+
         document.getElementById("myCanvas").style.display = "none";
         var stroopnum_tips = document.getElementById("stroopnum_tip");
         stroopnum_tips.style.display = "block";
@@ -590,7 +594,6 @@
 
 
         var temp_save_to_local_checkbox = document.getElementById("save_to_local_checkbox").value;
-        //alert(temp_save_to_local_checkbox);
         if (temp_save_to_local_checkbox == '1') {
 
             var original_local_saved_disk = '<%=request.getParameter("original_local_saved_disk")%>';
@@ -642,7 +645,7 @@
     }
 
 
-    //张静远：将key_down函数拆成了key_down和key_input函数
+    //将key_down函数拆成了key_down和key_input函数
     function key_down(e) {
         //console.log("key_down");
         //console.log(e);
@@ -721,19 +724,19 @@
 
         //document.getElementById("item4_span").style.display = "none";
         document.getElementById("target_span").style.display = "none";
-
-        document.getElementById("feed_back_div").style.display = "block";
-        if (all_a[index].user_result[current_index - 1] == all_a[index].correct_result_array[current_index - 1]) {
-            /*答对*/
-            document.getElementById("message").innerHTML = "选择正确！能否再快一些!";
-            document.getElementById('messageimageObj').src = pleased_image;
-        } else {
-            /*答错*/
-            document.getElementById("message").innerHTML = "选择错误!";
-            document.getElementById('messageimageObj').src = depressed_image;
+        /*
+        document.getElementById("feed_back_div").style.display="block";
+        if(all_a[index].user_result[current_index-1]==all_a[index].correct_result_array[current_index-1])
+        {
+            document.getElementById("message").innerHTML = "<fmt:message key="jsp.eachtest.correctresponse"/>";
+            document.getElementById('messageimageObj').src =pleased_image;
+        }else
+        {
+            document.getElementById("message").innerHTML = "<fmt:message key="jsp.eachtest.wrongresponse"/>";
+            document.getElementById('messageimageObj').src =depressed_image;
         }
-
-        setTimeout("show_fixation()", feedback_interval + 1000);
+        */
+        setTimeout("show_fixation()", feedback_interval);
 
     }
 
@@ -837,6 +840,3 @@
 </script>
 
 </html>
-
-
-
