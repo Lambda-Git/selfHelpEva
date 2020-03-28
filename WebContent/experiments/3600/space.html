@@ -22,19 +22,19 @@
 </head>
 
 <body style="padding:0; margin: 0; background: #000;">
-<script src="jquery-2.1.4.js"></script>
-<script src="zhu.js"></script>
-<script src="res/loading.js"></script>
+	<script src="../../js/jquery.3.4.1.js"></script>
+	<script src="zhu.js"></script>
+    <script src="res/loading.js"></script>
 <canvas id="gameCanvas" width="480" height="720"></canvas>
 <script>
 
-    // var taskid=<%=taskid%>;
-    // var projectid=<%=projectid%>;
-    // var uid=<%=uid%>;
-    // var codematerial=<%=codematerial%>;
-    // var sumitcoids=<%=sumitcoids%>;
-    // var lan='<%=lan%>';
-    // var targetpagename='<%=targetpagename%>';
+	// var taskid=<%=taskid%>;
+	// var projectid=<%=projectid%>;
+	// var uid=<%=uid%>;
+	// var codematerial=<%=codematerial%>;
+	// var sumitcoids=<%=sumitcoids%>;
+	// var lan='<%=lan%>';
+	// var targetpagename='<%=targetpagename%>';
 
 
     (function () {
@@ -53,65 +53,54 @@
         }
     })();
 
-    //调用函数
-    //-----【全局变量声明】
-    var all_time = 240, delay = 4000, q_now = 0, num1, num2, score = 0, wrong_num = 0;
-    var setTimeout_id1;
-    all_time_go();
-
-    function all_time_go() {
-        if (all_time == 0) {
-            $("#remain_time").html(all_time);
-            alert("时间到！");
-            jump_end();
-            return
-        } else {
-            //alert("value:"+all_time);
-            $("#remain_time").html(all_time);
-
-            all_time--;
-
-
-            var height_tmp = parseInt(all_time / 240 * 280);
-
-            height_tmp = height_tmp + 'px';
-
-            $("#timebar").css("height", height_tmp);
-
-            setTimeout_id1 = setTimeout(function () {
-                all_time_go()
-            }, 1000)
-        }
-    }
+	//调用函数
+	//-----【全局变量声明】
+	var all_time=240,delay=4000,q_now=0,num1,num2,score=0,wrong_num=0;
+	var setTimeout_id1;
+	all_time_go();
+	function all_time_go(){
+		if (all_time == 0) {
+			$("#remain_time").html(all_time);
+			alert("时间到！");
+			jump_end();
+			return
+		}else{
+			//alert("value:"+all_time);
+			$("#remain_time").html(all_time);
+			all_time--;
+			var height_tmp=parseInt(all_time/240*280);
+			height_tmp=height_tmp+'px';
+			$("#timebar").css("height",height_tmp);
+			setTimeout_id1=setTimeout(function() {
+				all_time_go()
+			}, 1000)
+		}
+	}
 
 
 </script>
-<script src="../../../Training/frog/frameworks/cocos2d-html5/CCBoot.js"></script>
-<script cocos src="main.js"></script>
-<script src="../../js/jquery-1.8.2.min.js"></script>
-<SCRIPT src="../../js/Statistics/Statistics.js" type=text/javascript></SCRIPT>
-<script src="../../js/oneui/opes_post_result_util.js"></script>
+    <script src="../../../Training/frog/frameworks/cocos2d-html5/CCBoot.js"></script>
+    <script cocos src="main.js"></script>
+    <script src="../../js/jquery-1.8.2.min.js"></script>
+    <SCRIPT src="../../js/Statistics/Statistics.js" type=text/javascript></SCRIPT>
+    <script src="../../js/oneui/opes_post_result_util.js"></script>
 
-<div style="position: absolute;top:20px;left:10px;padding:10px;font-size:14px;color:red">时间:<span
-        id="remain_time">240</span></div>
-<div style="position: absolute;top:140px;left:15px;padding:10px;height:300px;font-size:12px;width:28px;background: #eee">
-    剩余时间
-    <div id="timebar" style="height:280px;width:28px;background:green"></div>
-</div>
-<div class="container" style="position: relative;">
-    <div class="row" style="top:0%; "></div>
-    <div class="row" style="top:10%;"></div>
-    <div class="row" style="top:20%;"></div>
-    <div class="row" style="top:30%;"></div>
-    <div class="row" style="top:40%;"></div>
-    <div class="row" style="top:50%;"></div>
-    <div class="row" style="top:60%;"></div>
-    <div class="row" style="top:70%;"></div>
-    <div class="row" style="top:80%;"></div>
-    <div class="row" style="top:90%;"></div>
-    <div class="row" style="top:100%;"></div>
+    <div style="position: absolute;top:0px;left:10px;padding:10px;font-size:14px;color:red">时间:<span  id="remain_time">240</span></div>
+    <div style="position: absolute;top:30px;left:15px;padding:10px;height:300px;font-size:12px;width:28px;background: #eee">剩余时间<div id="timebar" style="height:280px;width:28px;background:green"></div></div>
+	<div class="container" style="position: relative;">
+		<div class="row" style="top:0%; "> </div>
+		<div class="row" style="top:10%;"> </div>
+		<div class="row" style="top:20%;"> </div>
+		<div class="row" style="top:30%;"> </div>
+		<div class="row" style="top:40%;"> </div>
+		<div class="row" style="top:50%;"> </div>
+		<div class="row" style="top:60%;"> </div>
+		<div class="row" style="top:70%;"> </div>
+		<div class="row" style="top:80%;"> </div>
+		<div class="row" style="top:90%;"> </div>
+		<div class="row" style="top:100%;"> </div>
 
-</div>
+	</div>
 
 
 </body>

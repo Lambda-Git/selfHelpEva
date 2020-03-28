@@ -1,323 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e78b7f3-83d8-4725-857a-5159fdc8ab25" name="Default Changelist" comment="删除多余的">
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/.cocos-project.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/DownSprite.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/GameObj.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/GameScene.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/Space.ccs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/Space.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/Space.udf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/font-size.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/instruction_img.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/jquery-2.1.4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/manifest.webapp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/project.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/Default/ImageFile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/MainScene.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/backup/fail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/backup/success.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/fail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type1_down0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type1_down1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type1_top0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type1_top1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type2_down0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type2_down1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type2_top0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type2_top1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type3_down0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type3_down1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type3_top0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type3_top1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type4_down0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type4_down1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type4_top0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type4_top1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type5_down0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type5_down1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type5_top0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/shapes/type5_top1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/images/success.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/res/loading.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/resource.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/space.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/sysVar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/test.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/test1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/test2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3600/zhu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/font-size.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_x14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_x15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_x16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_x24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_x25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_x26.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_x34.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_x35.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_x36.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_x44.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_x45.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_x46.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_x54.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_x55.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_x56.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_x64.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_x65.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d11_x66.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_x14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_x15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_x16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_x24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_x25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_x26.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_x34.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_x35.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_x36.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_x44.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_x45.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_x46.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_x54.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_x55.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_x56.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_x64.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_x65.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d21_x66.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_x14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_x15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_x16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_x24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_x25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_x26.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_x34.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_x35.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_x36.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_x44.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_x45.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_x46.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_x54.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_x55.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_x56.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_x64.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_x65.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d31_x66.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_x14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_x15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_x16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_x24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_x25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_x26.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_x34.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_x35.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_x36.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_x44.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_x45.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_x46.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_x54.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_x55.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_x56.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_x64.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_x65.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d41_x66.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_x14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_x15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_x16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_x24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_x25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_x26.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_x34.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_x35.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_x36.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_x44.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_x45.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_x46.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_x54.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_x55.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_x56.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_x64.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_x65.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d51_x66.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_x14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_x15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_x16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_x24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_x25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_x26.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_x34.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_x35.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_x36.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_x44.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_x45.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_x46.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_x54.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_x55.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_x56.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_x64.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_x65.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/d61_x66.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/gou.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x11_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x11_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x11_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x11_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x11_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x11_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x12_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x12_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x12_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x12_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x12_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x12_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x13_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x13_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x13_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x13_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x13_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x13_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x21_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x21_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x21_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x21_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x21_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x21_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x22_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x22_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x22_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x22_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x22_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x22_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x23_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x23_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x23_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x23_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x23_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x23_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x31_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x31_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x31_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x31_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x31_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x31_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x32_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x32_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x32_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x32_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x32_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x32_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x33_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x33_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x33_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x33_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x33_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x33_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x41_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x41_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x41_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x41_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x41_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x41_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x42_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x42_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x42_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x42_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x42_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x42_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x43_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x43_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x43_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x43_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x43_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x43_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x51_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x51_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x51_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x51_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x51_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x51_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x52_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x52_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x52_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x52_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x52_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x52_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x53_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x53_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x53_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x53_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x53_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x53_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x61_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x61_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x61_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x61_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x61_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x61_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x62_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x62_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x62_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x62_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x62_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x62_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x63_d12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x63_d22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x63_d32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x63_d42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x63_d52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/img/x63_d62.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/instruction_img.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/jquery-2.1.4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/new 1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/test.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/test.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/3782/zhu.js" afterDir="false" />
+    <list default="true" id="3e78b7f3-83d8-4725-857a-5159fdc8ab25" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/experiments/3911/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/experiments/3911/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/experiments/3600/instruction_img.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/experiments/3600/instruction_img.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/experiments/3600/jquery-2.1.4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/experiments/3600/jquery-3.2.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/experiments/3600/space.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/experiments/3600/space.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/experiments/3928/instruction_img.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/experiments/3928/instruction_img.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/experiments/3928/jquery-2.1.4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/experiments/3928/jquery-3.2.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/experiments/3928/space.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/experiments/3928/space.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_1/task_type.html" beforeDir="false" afterPath="$PROJECT_DIR$/task_1/task_type.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -329,18 +23,33 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/instruction_img.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+              <folding>
+                <element signature="n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cocos2d</find>
-      <find>opes_result_data</find>
-      <find>Training/frog/frameworks</find>
-      <find>feed_back_div</find>
-      <find>messageimageObj</find>
-      <find>oncontextmenu</find>
-      <find>black</find>
-      <find>depressed</find>
       <find>exp_anniu</find>
       <find>an.jpg</find>
       <find>tdborder</find>
@@ -358,11 +67,19 @@
       <find>zhu</find>
       <find>test.mp3</find>
       <find>new_fileA</find>
-      <find>jquery-2.1.4</find>
       <find>show_face</find>
       <find>BNU2017419</find>
       <find>new</find>
       <find>font-size.js</find>
+      <find>remain_time</find>
+      <find>499px</find>
+      <find>GameObj</find>
+      <find>sumitcoids</find>
+      <find>3928</find>
+      <find>3600</find>
+      <find>contentText</find>
+      <find>jquery-2.1.4</find>
+      <find>jquery-3.2.1.min</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -371,9 +88,10 @@
       <dir>D:\project\app\selfHelpEva</dir>
       <dir>D:\project\app\selfHelpEva\WebContent</dir>
       <dir>D:\project\app\selfHelpEva\WebContent\experiments</dir>
-      <dir>D:\project\app\selfHelpEva\WebContent\experiments\3928</dir>
       <dir>D:\project\app\selfHelpEva\WebContent\experiments\3911</dir>
       <dir>D:\project\app\selfHelpEva\WebContent\experiments\3782</dir>
+      <dir>D:\project\app\selfHelpEva\WebContent\experiments\3600</dir>
+      <dir>D:\project\app\selfHelpEva\WebContent\experiments\3928</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -401,13 +119,10 @@
         <option value="$PROJECT_DIR$/WebContent/css/login.css" />
         <option value="$PROJECT_DIR$/WebContent/css/layout.css" />
         <option value="$PROJECT_DIR$/WebContent/css/main.css" />
-        <option value="$PROJECT_DIR$/task_1/task_type.html" />
         <option value="$PROJECT_DIR$/WebContent/experiments/3540/VisualPerceptionCircleTest.html" />
         <option value="$PROJECT_DIR$/WebContent/experiments/7054/VisualPerceptionCircleF.html" />
         <option value="$PROJECT_DIR$/WebContent/experiments/3928/index.html" />
         <option value="$PROJECT_DIR$/WebContent/experiments/3928/test.html" />
-        <option value="$PROJECT_DIR$/WebContent/experiments/3928/instruction_img.html" />
-        <option value="$PROJECT_DIR$/WebContent/experiments/3928/space.html" />
         <option value="$PROJECT_DIR$/WebContent/experiments/3911/instruction_img.html" />
         <option value="$PROJECT_DIR$/WebContent/experiments/3911/test.html" />
         <option value="$PROJECT_DIR$/WebContent/experiments/3911/index.html" />
@@ -415,8 +130,11 @@
         <option value="$PROJECT_DIR$/WebContent/experiments/3782/index.html" />
         <option value="$PROJECT_DIR$/WebContent/experiments/3782/instruction_img.html" />
         <option value="$PROJECT_DIR$/WebContent/experiments/3782/test.html" />
+        <option value="$PROJECT_DIR$/task_1/task_type.html" />
         <option value="$PROJECT_DIR$/WebContent/experiments/3600/instruction_img.html" />
         <option value="$PROJECT_DIR$/WebContent/experiments/3600/space.html" />
+        <option value="$PROJECT_DIR$/WebContent/experiments/3928/space.html" />
+        <option value="$PROJECT_DIR$/WebContent/experiments/3928/instruction_img.html" />
       </list>
     </option>
   </component>
@@ -440,6 +158,11 @@
             <path>
               <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
               <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
+              <item name="task_1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
               <item name="WebContent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -447,6 +170,19 @@
               <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
               <item name="WebContent" type="462c0819:PsiDirectoryNode" />
               <item name="experiments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="3928" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -514,7 +250,7 @@
       <workItem from="1585041276747" duration="163000" />
       <workItem from="1585228449302" duration="5015000" />
       <workItem from="1585267950844" duration="7178000" />
-      <workItem from="1585321187125" duration="8060000" />
+      <workItem from="1585321187125" duration="14438000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1584780092258</created>
@@ -621,16 +357,24 @@
       <option name="project" value="LOCAL" />
       <updated>1585364928543</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="3600 add">
+      <created>1585366081434</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1585366081434</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49600000" />
+    <option name="totallyTimeSpent" value="55978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19698173" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25814137" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -664,59 +408,10 @@
     <MESSAGE value="删除多余的" />
     <MESSAGE value="3911  注意力测验" />
     <MESSAGE value="3911 修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="3911 修改" />
+    <MESSAGE value="3600 add" />
+    <option name="LAST_COMMIT_MESSAGE" value="3600 add" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/test.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/test.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/style.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1820">
-          <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/.cocos-project.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/BNU2017419.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="54" column="38" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/zhu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/resource.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/project.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/res/images/shapes/type1_down0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/res/images/shapes/type1_top0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/res/loading.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -747,53 +442,11 @@
     <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/res/images/score.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/instruction_img.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/jquery-2.1.4.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/space.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#8;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#9;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#10;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -979,25 +632,160 @@
     <entry file="file://$PROJECT_DIR$/WebContent/experiments/3600/test.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="18229" column="17" selection-start-line="18229" selection-start-column="17" selection-end-line="18229" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3600/res/loading.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3600/GameObj.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-990" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3600/zhu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3906/3906.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="60" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_1/task_testNotes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="77" column="36" lean-forward="true" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="72" column="42" lean-forward="true" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_1/task_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="105" column="34" lean-forward="true" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_1/task_type.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="286" column="25" lean-forward="true" selection-start-line="286" selection-start-column="25" selection-end-line="286" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3600/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1063" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/experiments/3600/space.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-858">
-          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        <state relative-caret-position="311">
+          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#OPES_Task#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#OPES_Task#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#9;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#10;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/experiments/3600/instruction_img.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="78" column="9" lean-forward="true" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
+        <state relative-caret-position="176">
+          <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#OPES_Task#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#body#0;n#OPES_Task#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#body#0;n#OPES_Task#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3600/font-size.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/space.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#9;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#10;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/instruction_img.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding>
+            <element signature="n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
