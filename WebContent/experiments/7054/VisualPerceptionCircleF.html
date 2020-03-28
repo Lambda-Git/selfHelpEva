@@ -66,7 +66,6 @@
             margin: 0 auto;
             background-color: #000000;
             clear: both;
-            align: center;
             height: 30%;
             width: 60%;
             position: absolute;
@@ -82,7 +81,6 @@
         .stroopnum_relax_tips_div {
             background-color: #000000;
             clear: both;
-            align: center;
             height: 100px;
             width: 40%;
             position: absolute;
@@ -97,7 +95,6 @@
 
         span#item1_span {
             position: relative;
-            bottom: -120px;
         }
 
         span#item4_span {
@@ -131,43 +128,42 @@
             <table cellspacing="0" border=0px cellpadding="0" width="30%" align="center" style="border:0px solid red;">
 
                 <tr style="border:0px solid red;">
-                    <td align=center height=100px colspan=2>
+                    <td align=center colspan=2>
 								<span id="loading" class="loading">
 									<img name="imageObj" id="imageObj" src="../../images/black_toosmall.jpg"/>
 									<br/>Uploading
 								</span>
                     </td>
-
-                    <td align=center height=50px>
-								<span id="item1_span" class="asmdresult"> 
+                    <td align=center>
+								<span id="item1_span" class="asmdresult">
 								<img name="item1_image" id="item1_image" src="../../images/black_toosmall.jpg"/>
 								</span>
                     </td>
                 </tr>
                 <tr style="border:0px solid red;">
                     <td style="border:0px solid red;" align=center height=50px width=50px>
-								<span id="item2_span" class="asmdresult"> 
+								<span id="item2_span" class="asmdresult">
 								<img name="item2_image" id="item2_image" src="../../images/black_toosmall.jpg"/>
 								</span>
                     </td>
 
 
-                    <td style="border:0px solid red;" align=center height=50px>
-								<span id="target_span" class="addsubmildiv">
+                    <td style="border:0px solid red;position: relative" align=center height=50px>
+								<span style="position: absolute;top: -25px" id="target_span" class="addsubmildiv">
 									<img name="target_image" id="target_image" src="../../images/black_toosmall.jpg"/>
 								</span>
                     </td>
 
 
                     <td style="border:0px solid red;" align=center height=50px>
-								<span id="item3_span" class="asmdresult"> 
-								
-								<img style='margin-top:200px;' name="item3_image" id="item3_image"
+								<span id="item3_span" class="asmdresult">
+
+								<img style='margin-top:50px;' name="item3_image" id="item3_image"
                                      src="../../images/black_toosmall.jpg"/>
 								</span>
                     </td>
-                    <td style="border:0px solid red;" align=center height=50px>
-								<span id="item4_span" class="asmdresult"> 
+                    <td style="border:0px solid red;position: relative" align=center height=50px>
+								<span  style="position: absolute;top: -25px" id="item4_span" class="asmdresult">
 								<img name="item4_image" id="item4_image" src="../../images/black_toosmall.jpg"/>
 								</span>
                     </td>
@@ -364,7 +360,7 @@
         document.onkeydown = ignor_key_press;
         //是ipad的情况下，显示图片，并且添加鼠标响应事件
         if (is_iPad()) {
-            document.getElementById("button_pq").style.display = "block";
+            // document.getElementById("button_pq").style.display = "block";
             document.getElementById("button_pq").addEventListener("mousedown", ignor_key_press, true);
         }
     }
@@ -436,6 +432,7 @@
     function change_view() {
         var stroop = all_a[index];
         document.getElementById("item1_span").style.display = "block";
+        document.getElementById("button_pq").style.display = "block";
         document.getElementById("item1_image").src = all_a[index].target_array[current_index].src;
         document.getElementById("item2_span").style.display = "block";
         document.getElementById("item2_image").src = blank.src;
@@ -446,7 +443,7 @@
         document.getElementById("item4_span").style.display = "block";
         document.getElementById("item4_image").src = all_a[index].item3_array[current_index].src;
         if (is_iPad()) {
-            document.getElementById("button_pq").style.display = "block";//是ipad，显示图片
+            // document.getElementById("button_pq").style.display = "block";//是ipad，显示图片
         }
 
         all_a[index].user_result[current_index] = undef_key;
@@ -457,7 +454,7 @@
 
         current_index++;
         document.onkeydown = key_down;
-        document.getElementById("cueing").innerHTML = "√&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;×";
+        // document.getElementById("cueing").innerHTML = "√&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;×";
         //setTimeout("Disappear()",4000);
     }
 
@@ -467,6 +464,7 @@
         document.getElementById("item3_span").style.display = "none";
         document.getElementById("item4_span").style.display = "none";
         document.getElementById("target_span").style.display = "none";
+        document.getElementById("button_pq").style.display = "none";
     }
 
     //check if a value in a array
@@ -716,12 +714,12 @@
     }
 
     function show_user_result() {
-        document.getElementById("cueing").innerHTML = "";
+        // document.getElementById("cueing").innerHTML = "";
         document.getElementById("item1_span").style.display = "none";
         document.getElementById("item2_span").style.display = "none";
         document.getElementById("item3_span").style.display = "none";
         document.getElementById("item4_span").style.display = "none";
-
+        document.getElementById("button_pq").style.display = "none";
         //document.getElementById("item4_span").style.display = "none";
         document.getElementById("target_span").style.display = "none";
         /*
