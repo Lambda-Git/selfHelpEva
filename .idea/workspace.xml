@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e78b7f3-83d8-4725-857a-5159fdc8ab25" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3e78b7f3-83d8-4725-857a-5159fdc8ab25" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -18,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/space.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+            <state relative-caret-position="-352">
+              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -149,6 +147,30 @@
               <item name="Training" type="462c0819:PsiDirectoryNode" />
               <item name="frog" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
+              <item name="Training" type="462c0819:PsiDirectoryNode" />
+              <item name="frog" type="462c0819:PsiDirectoryNode" />
+              <item name="frameworks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
+              <item name="Training" type="462c0819:PsiDirectoryNode" />
+              <item name="frog" type="462c0819:PsiDirectoryNode" />
+              <item name="frameworks" type="462c0819:PsiDirectoryNode" />
+              <item name="cocos2d-html5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
+              <item name="Training" type="462c0819:PsiDirectoryNode" />
+              <item name="frog" type="462c0819:PsiDirectoryNode" />
+              <item name="frameworks" type="462c0819:PsiDirectoryNode" />
+              <item name="cocos2d-html5" type="462c0819:PsiDirectoryNode" />
+              <item name="cocos2d" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -159,7 +181,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Training/frog/frameworks/cocos2d-html5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Training/frog/frameworks" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -171,14 +193,14 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\project\app\selfHelpEva\WebContent\js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\app\selfHelpEva\Training\frog\frameworks" />
+      <recent name="D:\project\app\selfHelpEva\Training\frog\frameworks\cocos2d-html5" />
       <recent name="D:\project\app\selfHelpEva\WebContent\experiments\3928" />
       <recent name="D:\project\app\selfHelpEva\WebContent\images" />
       <recent name="D:\project\app\selfHelpEva\WebContent\css" />
-      <recent name="D:\project\app\selfHelpEva\WebContent\testpics" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\project\app\selfHelpEva\WebContent\js" />
     </key>
   </component>
@@ -215,7 +237,7 @@
       <workItem from="1585041276747" duration="163000" />
       <workItem from="1585228449302" duration="5015000" />
       <workItem from="1585267950844" duration="7178000" />
-      <workItem from="1585321187125" duration="3438000" />
+      <workItem from="1585321187125" duration="4008000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1584780092258</created>
@@ -287,14 +309,22 @@
       <option name="project" value="LOCAL" />
       <updated>1585360892685</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="图形匹配">
+      <created>1585361562067</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1585361562067</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44978000" />
+    <option name="totallyTimeSpent" value="45548000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19698173" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -330,31 +360,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="图形匹配" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/.cocos-project.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/manifest.webapp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3871/3871.html" />
-    <entry file="file://$PROJECT_DIR$/WebContent/js/CCBoot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2662">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/project.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/res/Default/ImageFile.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -626,10 +631,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Training/frog/frameworks/cocos2d-html5/moduleConfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-389">
+          <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Training/frog/frameworks/cocos2d-html5/cocos2d/core/CCActionManager.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Training/frog/frameworks/cocos2d-html5/cocos2d/core/cocoa/CCGeometry.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Training/frog/frameworks/cocos2d-html5/cocos2d/core/utils/BinaryLoader.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Training/frog/frameworks/cocos2d-html5/cocos2d/core/utils/CCProfiler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/experiments/3928/space.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        <state relative-caret-position="-352">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
