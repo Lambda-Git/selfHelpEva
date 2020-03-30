@@ -123,7 +123,7 @@
     <input type=hidden value="" name="projectid" id="projectid"/>
 </form>
 
-<table height="40%" border=0px width="100%" border="0" align="center">
+<table height="40%" border=0px width="90%" border="0" align="center">
     <tr>
         <td align="center" valign="middle">
             <table cellspacing="0" border=0px cellpadding="0" width="30%" align="center" style="border:0px solid red;">
@@ -132,7 +132,6 @@
                     <td align=center colspan=2>
 								<span id="loading" class="loading">
 									<img name="imageObj" id="imageObj" src="../../images/black_toosmall.jpg"/>
-									<br/>Uploading
 								</span>
                     </td>
                     <td align=center>
@@ -179,19 +178,6 @@
     </tr>
 
 </table>
-
-
-<!--  
-<div class="left_test_tips_div" style="height=35px;bottom:0px;font-size: 20px;">
-<br/>
-左边包含结果，就用左手食指按Q/q键
-</div>
-
-<div class="right_test_tips_div" style="height=35px;bottom:0px;font-size: 20px;">
-<br/>
-右边包含结果，就用右手食指按P/p键
-</div>
- -->
 
 
 <div id="stroopnum_tip" style="display:none;" class="stroopnum_tip_div">
@@ -638,8 +624,17 @@
             save_to_local(jsonData, local_saved_disk); //36
         }
 
-
-        document.getElementById("result").submit();
+        // document.getElementById("result").submit();
+        mui.toast('练习结束!2秒后自动跳转正式任务页面!', {duration: 'long', type: 'div'})
+        setTimeout(function () {
+            mui.openWindow({
+                url: '../../../task_1/task_type.html?type=5&practice=true',
+                createNew: true,
+                styles: {
+                    cachemode: "noCache",
+                }
+            });
+        }, 2000);
     }
 
 

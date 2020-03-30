@@ -241,13 +241,14 @@
             }, 500);
         } else if(type == 4 ) {
             setTimeout(function(){
-                mui.openWindow({   //空间N-back测验(练习)
-                    url: '../WebContent/experiments/2908/2908.html?type=1',
-                    createNew: true,
-                    styles: {
-                        cachemode:"noCache",
-                    }
-                });
+                mui.toast('任务重写等待中!',{ duration:'long', type:'div' })
+                // mui.openWindow({   //空间N-back测验(练习)
+                //     url: '../WebContent/experiments/2908/2908.html?type=1',
+                //     createNew: true,
+                //     styles: {
+                //         cachemode:"noCache",
+                //     }
+                // });
             }, 500);
         } else if(type == 5 ) {
             setTimeout(function(){
@@ -310,7 +311,7 @@
             } else if(type == 5 ) {
                 setTimeout(function(){
                     mui.openWindow({   //图形匹配(正式)
-                        url: '../WebContent/experiments/7054/7054.html?type=2',
+                        url: '../WebContent/experiments/7054/VisualPerceptionCircleF.html?type=2',
                         createNew: true,
                         styles: {
                             cachemode:"noCache",
