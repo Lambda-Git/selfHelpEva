@@ -28,8 +28,16 @@ function jump_end(){
 
 
 	alert("测验结束！您的得分为:"+score+"分，感谢您的参与！");
-	console.log(data);
-	post_result();
+	setTimeout(function () {
+		mui.openWindow({
+			url: '../../../task_1/task_type.html?type=2&practice=true',
+			createNew: true,
+			styles: {
+				cachemode: "noCache",
+			}
+		});
+	}, 2000);
+	// post_result();
 	return;
 
 

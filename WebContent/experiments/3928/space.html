@@ -10,6 +10,7 @@
     <meta name="screen-orientation" content="portrait"/>
     <meta name="x5-fullscreen" content="true"/>
     <meta name="360-fullscreen" content="true"/>
+<!--    <link href="../../../css/mui.min.css" rel="stylesheet"/>-->
     <style>
         body, canvas, div {
             -moz-user-select: none;
@@ -23,6 +24,7 @@
 
 <body style="padding:0; margin: 0; background: #000;">
 <script src="../../js/jquery.3.4.1.js"></script>
+<script type='text/javascript' src="../../../js/mui.min.js"></script>
 <script src="zhu.js"></script>
 <script src="res/loading.js"></script>
 <canvas id="gameCanvas" width="480" height="720"></canvas>
@@ -55,8 +57,9 @@
 
     //调用函数
     //-----【全局变量声明】
-    var all_time = 60, delay = 4000, q_now = 0, num1, num2, score = 0, wrong_num = 0;
+    var all_time = 10, delay = 4000, q_now = 0, num1, num2, score = 0, wrong_num = 0;
     var setTimeout_id1;
+    var setTimeout_id2;
     all_time_go();
 
     function all_time_go() {
@@ -66,12 +69,8 @@
             jump_end();
             return
         } else {
-            //alert("value:"+all_time);
             $("#remain_time").html(all_time);
-
             all_time--;
-
-
             var height_tmp = parseInt(all_time / 60 * 280);
 
             height_tmp = height_tmp + 'px';
