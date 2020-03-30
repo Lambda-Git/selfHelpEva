@@ -21,6 +21,7 @@
 <script type='text/javascript' src='../../OPES2/js/soundRecordSwitch/swfobject.js'></script>
 <script type='text/javascript' src='../../OPES2/js/fileSaverJS/Blob.js'></script>
 <script type='text/javascript' src='../../OPES2/js/fileSaverJS/FileSaver.js'></script>
+<script type='text/javascript' src='../../../js/common.js'></script>
 
 
 <script type='text/javascript'>
@@ -375,7 +376,7 @@ function reset_all_key()
             async: true,
             cache: false,
             dataType: "json",//which is expected from the sever
-            url: "/lattice/CommonActionProxy",
+            url: "http://www.dweipsy.com/lattice/CommonActionProxy",
             data: data,
             beforeSend: function (XMLHttpRequestObject) {
             },
@@ -383,6 +384,7 @@ function reset_all_key()
                 //alert($.isEmptyObject(rdata));
                 //if 200 ok, Even if the server do not return json object (e.g. return nothing), it will go into this success function.
                 success_callback(rdata);
+
             },
             error: function (jqXHR, textStatus, errorThrown) {
             },
@@ -464,31 +466,21 @@ function reset_all_key()
 
 
     var opes_result_data = {
-        taskid: -1,
-        projectid: -1,
-        coid: 0,
+        taskid: 3760,
+        projectid: 1539,
+        coid: 1111,
         redirectURLAfterPostResult: ''
     };
 
 
     function post_result() {
 
-        //数据提交成功
-        mui.toast('数据保存成功!2秒后自动跳转到任务列表!',{ duration:'long', type:'div' })
-        setTimeout(function () {
-            mui.openWindow({
-                url: '../../../task_1/task_list.html',
-                createNew: true,
-                styles: {
-                    cachemode:"noCache",
-                }
-            });
-        },2000);
-
         //clear up all the timeout IDs for all the data rows
         //NOTE:!!! The start point name sometimes if not OPES_T1 (e.g. if delete the start and then add it)
         //TODO: use OPES_T_START instead. (pre-check if it is defined for old tests). see source code of the web page to check if this OPES_T_START is defined.
         prepare_opes_result_js_clearAllTimeOutIDs(OPES_T1);
+
+        parepare_and_post();
 
         //$('body').html(JSON.stringify(OPES_T1));
         //	return;
@@ -496,30 +488,30 @@ function reset_all_key()
         //先暂时屏蔽
         //prepare_opes_results_js_saveFileToLocal();
 
-        var argsdata = {};
-        var data = {
-            clazz: 'com.lattice.action.proxy.opes.page.redirect.PageRedirectProxy',
-            service: 'getRedirectURL',
-            args: JSON.stringify(argsdata)
-        };
+        // var argsdata = {};
+        // var data = {
+        //     clazz: 'com.lattice.action.proxy.opes.page.redirect.PageRedirectProxy',
+        //     service: 'getRedirectURL',
+        //     args: JSON.stringify(argsdata)
+        // };
 
         //$('body').html('正在提交数据，第一阶段（获取返回的URL）请稍等...');
         //$('body').html(JSON.stringify(OPES_T1));
         //return;
 
-        var success = function (rdata) {
-            opes_result_data.coid = rdata.coid;
-            opes_result_data.taskid = rdata.taskid;
-            opes_result_data.projectid = rdata.projectid;
-            if (GetRequest().targetpagename != null) {
-                opes_result_data.redirectURLAfterPostResult = "http://www.dweipsy.com/lattice/" + GetRequest().targetpagename;
-            } else {
-                opes_result_data.redirectURLAfterPostResult = rdata.url;
-            }
-
-            parepare_and_post();
-        };
-        invoke_proxy(data, success);
+        // var success = function (rdata) {
+        //     opes_result_data.coid = 1111;
+        //     opes_result_data.taskid = 3760;
+        //     opes_result_data.projectid = 1539;
+        //     if (GetRequest().targetpagename != null) {
+        //         opes_result_data.redirectURLAfterPostResult = "http://www.dweipsy.com/lattice/" + GetRequest().targetpagename;
+        //     } else {
+        //         opes_result_data.redirectURLAfterPostResult = rdata.url;
+        //     }
+        //
+        //     parepare_and_post();
+        // };
+        // invoke_proxy(data, success);
     }
 
     function parepare_and_post() {
@@ -536,23 +528,25 @@ function reset_all_key()
         //$('body').html(JSON.stringify({OPES_T1:OPES_T1,all_data:all_data,opes_result_data:opes_result_data}));
         //return;
 
-        $.ajax({
-            type: "POST",
-            async: true,
-            cache: false,
-            //dataType:"json",//which is expected from the sever
-            url: "/lattice/OPESHandler?type=formal",
-            data: opes_result_data,
-            beforeSend: function (XMLHttpRequestObject) {
-                $('body').html('正在提交数据，第二阶段（提交结果数据）请稍等...');
-            },
-            success: function (rdata, textStatus, XMLHttpRequest) {
-            },
-            complete: function (jqXHR, textStatus) {
-                //as this is ajax call, so the OPESHandler redirect will not use.
-                window.location.href = opes_result_data.redirectURLAfterPostResult;
-            }
-        });
+
+        // $.ajax({
+        //     type: "POST",
+        //     async: true,
+        //     cache: false,
+        //     //dataType:"json",//which is expected from the sever
+        //     url: "http://www.dweipsy.com//lattice/OPESHandler?type=formal",
+        //     data: opes_result_data,
+        //     // beforeSend: function (XMLHttpRequestObject) {
+        //     //     $('body').html('正在提交数据，第二阶段（提交结果数据）请稍等...');
+        //     // },
+        //     success: function (rdata, textStatus, XMLHttpRequest) {
+        //
+        //     },
+        //     complete: function (jqXHR, textStatus) {
+        //         //as this is ajax call, so the OPESHandler redirect will not use.
+        //         // window.location.href = opes_result_data.redirectURLAfterPostResult;
+        //     }
+        // });
     }
 
     /*
@@ -1027,7 +1021,8 @@ function reset_all_key()
         add_result("type4_Unique", type4_Unique);
 
         //document.getElementById("result").submit();
-
+        //调用公共方法
+        postWebMathData();
     }
 
     function prepare_opes_results_js_saveFileToLocal() {

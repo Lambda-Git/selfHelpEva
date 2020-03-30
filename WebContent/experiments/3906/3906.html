@@ -6,7 +6,7 @@
     <meta http-equiv='content-type' content='text/html;charset=utf-8'/>
     <link href='../../OPES2/js/jplayer/skin/blue.monday/css/jplayer.blue.monday.min.css' rel='stylesheet'type='text/css'/>
     <link rel='stylesheet' href='../../OPES2/css/jquery-ui-1.10.4.custom/jquery-ui-1.10.4.custom.min.css'/>
-    <link href="../../../css/mui.min.css" rel="stylesheet"/>
+<!--    <link href="../../../css/mui.min.css" rel="stylesheet"/>-->
 </head>
 
 <body>
@@ -470,43 +470,18 @@ function reset_all_key()
         redirectURLAfterPostResult: ''
     };
 
-
+    //练习数据不用提交
     function post_result() {
-        //clear up all the timeout IDs for all the data rows
-        //NOTE:!!! The start point name sometimes if not OPES_T1 (e.g. if delete the start and then add it)
-        //TODO: use OPES_T_START instead. (pre-check if it is defined for old tests). see source code of the web page to check if this OPES_T_START is defined.
-        prepare_opes_result_js_clearAllTimeOutIDs(OPES_T1);
-
-        //$('body').html(JSON.stringify(OPES_T1));
-        //	return;
-
-        //先暂时屏蔽
-        //prepare_opes_results_js_saveFileToLocal();
-
-        var argsdata = {};
-        var data = {
-            clazz: 'com.lattice.action.proxy.opes.page.redirect.PageRedirectProxy',
-            service: 'getRedirectURL',
-            args: JSON.stringify(argsdata)
-        };
-
-        //$('body').html('正在提交数据，第一阶段（获取返回的URL）请稍等...');
-        //$('body').html(JSON.stringify(OPES_T1));
-        //return;
-
-        var success = function (rdata) {
-            opes_result_data.coid = rdata.coid;
-            opes_result_data.taskid = rdata.taskid;
-            opes_result_data.projectid = rdata.projectid;
-            if (GetRequest().targetpagename != null) {
-                opes_result_data.redirectURLAfterPostResult = "http://www.dweipsy.com/lattice/" + GetRequest().targetpagename;
-            } else {
-                opes_result_data.redirectURLAfterPostResult = rdata.url;
-            }
-
-            parepare_and_post();
-        };
-        invoke_proxy(data, success);
+        // mui.toast('练习结束!2秒后自动跳转正式任务页面!', {duration: 'long', type: 'div'})
+        setTimeout(function () {
+            mui.openWindow({
+                url: '../../../task_1/task_type.html?type=1&practice=true',
+                createNew: true,
+                styles: {
+                    cachemode: "noCache",
+                }
+            });
+        }, 0);
     }
 
     function parepare_and_post() {
@@ -1375,17 +1350,7 @@ function reset_all_key()
     }
 
     function end_(fundata, callbackargs) {
-        mui.toast('练习结束!2秒后自动跳转正式任务页面!', {duration: 'long', type: 'div'})
-        setTimeout(function () {
-            mui.openWindow({
-                url: '../../../task_1/task_type.html?type=1&practice=true',
-                createNew: true,
-                styles: {
-                    cachemode: "noCache",
-                }
-            });
-        }, 2000);
-        // post_result();
+         post_result();
     }
 
 

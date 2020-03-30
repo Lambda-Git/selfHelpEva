@@ -74,15 +74,13 @@ function getFormData(eId) {
 //ajax -- post  认知能力测评(当前状态) 统一接口--数据提交*************
 function postFormInputData() {
     //展示正式任务结束页面
-    $('.formalResult').removeClass('active'); //隐藏 打印结果form表单
-    document.getElementById("button_pq").style.display = "none"; //隐藏 左右button
     var formData = getFormData('result');
     //本地测试账号-对应孙老师
    /* formData.userName = '18210119894001';
     formData.password = 'password';*/
     //正式环境
-    formData.userName = '105988';
-    formData.password = '123456';
+    formData.userName = userInfo.userName;
+    formData.password = userInfo.password;
     formData.type = 'formal';
     $.ajax({
         type: 'POST',
@@ -97,15 +95,15 @@ function postFormInputData() {
         success: function (data) {
         //数据提交成功
         mui.toast('数据保存成功!3秒后自动跳转到任务列表!',{ duration:'long', type:'div' })
-         setTimeout(function () {
-             mui.openWindow({
-                 url: '../../../task_1/task_list.html',
-                 createNew: true,
-                 styles: {
-                     cachemode:"noCache",
-                 }
-             });
-         },3000);
+         // setTimeout(function () {
+         //     mui.openWindow({
+         //         url: '../../../task_1/task_list.html',
+         //         createNew: true,
+         //         styles: {
+         //             cachemode:"noCache",
+         //         }
+         //     });
+         // },3000);
         }
     });
 }
@@ -116,8 +114,9 @@ function postWebMathData(opes_result_data) {
     /* formData.userName = '18210119894001';
      formData.password = 'password';*/
     //正式环境
-    opes_result_data.userName = userInfo.userName;
-    opes_result_data.password =  userInfo.password;
+    opes_result_data.userName = localStorage.getItem(userInfo.userName);
+    opes_result_data.password =  localStorage.getItem(userInfo.password);
+    opes_result_data.access_token =  localStorage.getItem();userInfo.password;
     opes_result_data.access_token =  localStorage.getItem('access_token');
     opes_result_data.type = 'formal';
     $.ajax({

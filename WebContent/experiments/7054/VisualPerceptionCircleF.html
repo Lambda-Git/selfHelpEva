@@ -110,9 +110,9 @@
 </head>
 <body oncontextmenu="return false;">
 <form id="result" name="result" method="post" action="">
-    <input type=hidden value="74" name="taskid" id="taskid"/>
-    <input type=hidden value="" name="sumitcoids" id="sumitcoids"/>
-    <input type=hidden value="" name="targetpagename" id="targetpagename"/>
+    <input type=hidden value="7054" name="taskid" id="taskid"/>
+    <input type=hidden value="0" name="sumitcoids" id="sumitcoids"/>
+    <input type=hidden value="0" name="targetpagename" id="targetpagename"/>
     <input type=hidden value="VisualPerceptionCircle" name="taskIdentifier" id="taskIdentifier"/>
     <input type=hidden value="" name="save_to_local_checkbox" id="save_to_local_checkbox"/>
     <input type=hidden value="" name="save_to_server_checkbox" id="save_to_server_checkbox"/>
@@ -122,7 +122,7 @@
     <input type=hidden value="" name="projectid" id="projectid"/>
 </form>
 
-<table height="40%" border=0px width="100%" border="0" align="center">
+<table height="40%" border=0px width="90%" border="0" align="center">
     <tr>
         <td align="center" valign="middle">
             <table cellspacing="0" border=0px cellpadding="0" width="30%" align="center" style="border:0px solid red;">
@@ -130,8 +130,7 @@
                 <tr style="border:0px solid red;">
                     <td align=center colspan=2>
 								<span id="loading" class="loading">
-									<img name="imageObj" id="imageObj" src="../../images/black_toosmall.jpg"/>
-									<br/>Uploading
+									<img name="imageObj" id="imageObj" src="../../images/black_toosmall.jpg"/>Uploading
 								</span>
                     </td>
                     <td align=center>
@@ -242,11 +241,11 @@
     var simple_result = new Array("q", "q", "p", "p", "p", "q", "p", "q", "q", "p", "p", "q", "p", "p", "p", "q", "p", "p", "q", "q", "q", "p", "q", "p", "p", "q", "p", "p", "p", "q", "p", "q", "q", "q", "p", "p", "q", "q", "p", "q", "p", "q", "q", "q", "p", "q", "q", "p", "p", "p", "q", "p", "q", "p", "q", "q", "p", "q", "p", "p", "p", "q", "p", "q", "q", "p", "p", "p", "q", "p", "p", "q", "p", "p", "q", "p", "p", "q", "p", "p", "q", "p", "q", "p", "q", "q", "p", "q", "q", "p", "p", "q", "q", "p", "q", "q", "p", "p", "q", "q", "p", "q", "q", "q", "p", "q", "p", "q", "q", "p", "q", "p", "q", "p", "q", "q", "p", "p", "q", "q");
 
     //测试接口提交
-    // var simple_target=new Array("58","13");
-    // var simple_1=new Array("88","11");
-    // var simple_2=new Array("29","13");
-    // var simple_3=new Array("18","16");
-    // var simple_result=new Array("p","q");
+    var simple_target=new Array("58","13");
+    var simple_1=new Array("88","11");
+    var simple_2=new Array("29","13");
+    var simple_3=new Array("18","16");
+    var simple_result=new Array("p","q");
 
 
     //Simple：
@@ -344,7 +343,7 @@
         //stroopnum_tips.innerHTML="<br/><br/>正在装入程序("+ progress + "%)"+"，稍等... ";
 
         //document.getElementById("loading").innerHTML = "<img  src='../../images/ajax-loader(2).gif'/><br/><br/>正在装入程序("+ progress + "%)"+"，稍等... ";
-        document.getElementById("loading").innerHTML = "<br/><br/>程序加载中(" + progress + "%)";
+        document.getElementById("loading").innerHTML = "程序加载中(" + progress + "%)";
 
     }
 
@@ -599,8 +598,8 @@
             local_saved_disk = local_saved_disk.replace(new RegExp('_', "gm"), '/');
 
             var jsonData = {};
-            jsonData.userid = document.getElementById('userid').value;
-            jsonData.username = document.getElementById('username').value;
+            jsonData.userid = localStorage.getItem(userid);
+            jsonData.username = localStorage.getItem(userInfo.userName);
             jsonData.taskid = document.getElementById('taskid').value;
             jsonData.radioset = radioset;
             jsonData.buttonset = buttonset;
@@ -639,7 +638,8 @@
         }
 
 
-        document.getElementById("result").submit();
+        // document.getElementById("result").submit();
+        postFormInputData();
     }
 
 

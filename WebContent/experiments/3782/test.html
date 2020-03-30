@@ -37,7 +37,7 @@
 
 </div>
 
-<form class="form-horizontal" role="form" id="result" name="result" method="post" action="">
+<form class="form-horizontal" role="form" id="result" name="result" method="post" action="" style="display: none">
     <input type=hidden value="" name="taskid" id="taskid"/>
     <input type=hidden value="" name="sumitcoids" id="sumitcoids"/>
     <input type=hidden value="" name="targetpagename" id="targetpagename"/>
@@ -50,11 +50,14 @@
 
 <script src="../../js/jquery.3.4.1.js"></script>
 <script src="./zhu.js"></script>
+<script type='text/javascript' src='../../../js/common.js'></script>
+<script type='text/javascript' src="../../../js/mui.min.js"></script>
 </html>
 <script type="text/javascript">
 
 
     //-----【全局变量声明】
+    // var all_time = 10, delay = 4000, q_now = 0, num1, num2, score = 0, wrong_num = 0;
     var all_time = 240, delay = 4000, q_now = 0, num1, num2, score = 0, wrong_num = 0;
     var q_lib = [], q_answer = [];
     var data = {};
@@ -282,41 +285,28 @@
     }
 
     function post_result() {
-
-    //     var opes_result_data = {};
-    //
-    //     opes_result_data.taskid =
-    // <
-    //     %= taskid % >;
-    //     opes_result_data.sumitcoids =
-    // <
-    //     %= sumitcoids % >;
-    //     opes_result_data.targetpagename = "<%=targetpagename%>";
-    //     opes_result_data.codematerial =
-    // <
-    //     %= codematerial % >;
-    //     opes_result_data.uid =
-    // <
-    //     %= uid % >;
-    //     opes_result_data.lan = "<%=lan%>";
-    //     opes_result_data.projectid =
-    // <
-    //     %= projectid % >;
-    //
-    //     opes_result_data.type4set = data.typeset.substring(0, data.typeset.length - 1);
-    //     opes_result_data.stimidset = data.stimset.substring(0, data.stimset.length - 1);
-    //     opes_result_data.correctanswerset = data.correctanswerset.substring(0, data.correctanswerset.length - 1);
-    //     opes_result_data.numset = data.numset.substring(0, data.numset.length - 1);
-    //     opes_result_data.timeset = '';
-    //     opes_result_data.radioset = "";
-    //     opes_result_data.buttonset = "";
-    //     opes_result_data.commentset = data.commentset.substring(0, data.commentset.length - 1);
-    //     opes_result_data.timeaverage = 0;
-    //     opes_result_data.duration = 0;
-    //     console.log(opes_result_data);
-    //     opes_post_result_util_js_opes_post_result(opes_result_data);
+        var opes_result_data = {};
+        opes_result_data.taskid = 3782
+        opes_result_data.sumitcoids = 0
+        opes_result_data.targetpagename = "<%=targetpagename%>";
+        opes_result_data.codematerial = 0;
+        opes_result_data.uid = localStorage.getItem('uid');
+        opes_result_data.lan = "<%=lan%>";
+        opes_result_data.projectid = localStorage.getItem('projectid');
+        opes_result_data.type4set = data.typeset.substring(0, data.typeset.length - 1);
+        opes_result_data.stimidset = data.stimset.substring(0, data.stimset.length - 1);
+        opes_result_data.correctanswerset = data.correctanswerset.substring(0, data.correctanswerset.length - 1);
+        opes_result_data.numset = data.numset.substring(0, data.numset.length - 1);
+        opes_result_data.timeset = '';
+        opes_result_data.radioset = "";
+        opes_result_data.buttonset = "";
+        opes_result_data.commentset = data.commentset.substring(0, data.commentset.length - 1);
+        opes_result_data.timeaverage = 0;
+        opes_result_data.duration = 0;
+        opes_post_result_util_js_opes_post_result(opes_result_data);
         return;
     }
+
 
 
 </script>

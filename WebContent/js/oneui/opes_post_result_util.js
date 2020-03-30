@@ -1,6 +1,6 @@
 /*
  * This util depends on JQuery.js and Statistics.js
- * 
+ *
  * How to use this util: See example in page: temp_3463_mentalhealth_example_delete_it_later.jsp
  * 1. for thirdpard jsp pages, create one json object: var opes_result_data={};
  * 2. prepare the properties for this object opes_result_data
@@ -126,6 +126,7 @@ function opes_post_result_util_js_create_result_form() {
         var result_form = '<form id="opes_post_result_util_js_result_form" name="opes_post_result_util_js_result_form" method="post" action="">';
         result_form += '</form>';
         $(document.body).append(result_form);
+        $('#opes_post_result_util_js_result_form').css('display','none')
     }
 
 }
@@ -187,6 +188,7 @@ function opes_post_result_util_js_add_all_results_to_form(opes_result_data) {
 }
 
 function opes_post_result_util_js_submit_result(opes_result_data) {
+    //ccommon.js  公共保存方法
     postWebMathData(opes_result_data);
     // document.getElementById("opes_post_result_util_js_result_form").submit();  //废用的表单提交
 }

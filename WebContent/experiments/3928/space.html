@@ -23,6 +23,7 @@
 </head>
 
 <body style="padding:0; margin: 0; background: #000;">
+<script type='text/javascript' src="../../../js/mui.min.js"></script>
 <script src="../../js/jquery.3.4.1.js"></script>
 <script type='text/javascript' src="../../../js/mui.min.js"></script>
 <script src="zhu.js"></script>
@@ -30,13 +31,13 @@
 <canvas id="gameCanvas" width="480" height="720"></canvas>
 <script>
 
-    // var taskid=<%=taskid%>;
-    // var projectid=<%=projectid%>;
-    // var uid=<%=uid%>;
-    // var codematerial=<%=codematerial%>;
-    // var sumitcoids=<%=sumitcoids%>;
-    // var lan='<%=lan%>';
-    // var targetpagename='<%=targetpagename%>';
+    var taskid= 3928;
+    var projectid= localStorage.getItem('projectid');
+    var uid= localStorage.getItem('uid');
+    var codematerial= '0';
+    var sumitcoids= '0';
+    var lan= '0';
+    var targetpagename= '0';
 
 
     (function () {
@@ -83,6 +84,18 @@
         }
     }
 
+    function post_result() {
+        // mui.toast('练习结束!2秒后自动跳转正式任务页面!', {duration: 'long', type: 'div'})
+        setTimeout(function () {
+            mui.openWindow({
+                url: '../../../task_1/task_type.html?type=2&practice=true',
+                createNew: true,
+                styles: {
+                    cachemode: "noCache",
+                }
+            });
+        }, 0);
+    }
 
 </script>
 <script src="../../../Training/frog/frameworks/cocos2d-html5/CCBoot.js"></script>

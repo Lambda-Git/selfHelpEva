@@ -22,19 +22,21 @@
 </head>
 
 <body style="padding:0; margin: 0; background: #000;">
-	<script src="../../js/jquery.3.4.1.js"></script>
-	<script src="zhu.js"></script>
-    <script src="res/loading.js"></script>
+<script src="../../js/jquery.3.4.1.js"></script>
+<script src="zhu.js"></script>
+<script src="res/loading.js"></script>
+<script type='text/javascript' src='../../../js/common.js'></script>
+<script type='text/javascript' src="../../../js/mui.min.js"></script>
 <canvas id="gameCanvas" width="480" height="720"></canvas>
 <script>
 
-	var taskid= 3600;
-	var projectid= localStorage.getItem('projectid');
-	var uid= localStorage.getItem('uid');
-	var codematerial= '0';
-	var sumitcoids= '0';
-	var lan= '0';
-	var targetpagename= '0';
+    var taskid = 3600;
+    var projectid = localStorage.getItem('projectid');
+    var uid = localStorage.getItem('uid');
+    var codematerial = '0';
+    var sumitcoids = '0';
+    var lan = '0';
+    var targetpagename = '0';
 
 
     (function () {
@@ -53,55 +55,83 @@
         }
     })();
 
-	//调用函数
-	//-----【全局变量声明】
-	var all_time=10,delay=4000,q_now=0,num1,num2,score=0,wrong_num=0;
-	// var all_time=240,delay=4000,q_now=0,num1,num2,score=0,wrong_num=0;
-	var setTimeout_id1;
-	var setTimeout_id2;
-	all_time_go();
-	function all_time_go(){
-		if (all_time == 0) {
-			$("#remain_time").html(all_time);
-			alert("时间到！");
-			jump_end();
-			return
-		}else{
-			$("#remain_time").html(all_time);
-			all_time--;
-			var height_tmp=parseInt(all_time/240*280);
-			height_tmp=height_tmp+'px';
-			$("#timebar").css("height",height_tmp);
-			setTimeout_id1=setTimeout(function() {
-				all_time_go()
-			}, 1000)
-		}
-	}
+    //调用函数
+    //-----【全局变量声明】
+    var all_time = 10, delay = 4000, q_now = 0, num1, num2, score = 0, wrong_num = 0;
+    // var all_time=240,delay=4000,q_now=0,num1,num2,score=0,wrong_num=0;
+    var setTimeout_id1;
+    var setTimeout_id2;
+    all_time_go();
+
+    function all_time_go() {
+        if (all_time == 0) {
+            $("#remain_time").html(all_time);
+            alert("时间到！");
+            jump_end();
+            return
+        } else {
+            $("#remain_time").html(all_time);
+            all_time--;
+            var height_tmp = parseInt(all_time / 240 * 280);
+            height_tmp = height_tmp + 'px';
+            $("#timebar").css("height", height_tmp);
+            setTimeout_id1 = setTimeout(function () {
+                all_time_go()
+            }, 1000)
+        }
+    }
+
+    function post_result() {
+        var opes_result_data = {};
+        opes_result_data.taskid = 3600
+        opes_result_data.sumitcoids = 0
+        opes_result_data.targetpagename = "<%=targetpagename%>";
+        opes_result_data.codematerial = 0;
+        opes_result_data.uid = localStorage.getItem('uid');
+        opes_result_data.lan = "<%=lan%>";
+        opes_result_data.projectid = localStorage.getItem('projectid');
+        opes_result_data.type4set = data.typeset.substring(0, data.typeset.length - 1);
+        opes_result_data.stimidset = data.stimset.substring(0, data.stimset.length - 1);
+        opes_result_data.correctanswerset = data.correctanswerset.substring(0, data.correctanswerset.length - 1);
+        opes_result_data.numset = data.numset.substring(0, data.numset.length - 1);
+        opes_result_data.timeset = '';
+        opes_result_data.radioset = "";
+        opes_result_data.buttonset = "";
+        opes_result_data.commentset = data.commentset.substring(0, data.commentset.length - 1);
+        opes_result_data.timeaverage = 0;
+        opes_result_data.duration = 0;
+        opes_post_result_util_js_opes_post_result(opes_result_data);
+        return;
+    }
 
 
 </script>
-    <script src="../../../Training/frog/frameworks/cocos2d-html5/CCBoot.js"></script>
-    <script cocos src="main.js"></script>
-    <script src="../../js/jquery-1.8.2.min.js"></script>
-    <SCRIPT src="../../js/Statistics/Statistics.js" type=text/javascript></SCRIPT>
-    <script src="../../js/oneui/opes_post_result_util.js"></script>
+<script src="../../../Training/frog/frameworks/cocos2d-html5/CCBoot.js"></script>
+<script cocos src="main.js"></script>
+<script src="../../js/jquery-1.8.2.min.js"></script>
+<SCRIPT src="../../js/Statistics/Statistics.js" type=text/javascript></SCRIPT>
+<script src="../../js/oneui/opes_post_result_util.js"></script>
 
-    <div style="position: absolute;top:0px;left:10px;padding:10px;font-size:14px;color:red">时间:<span  id="remain_time">240</span></div>
-    <div style="position: absolute;top:30px;left:15px;padding:10px;height:300px;font-size:12px;width:28px;background: #eee">剩余时间<div id="timebar" style="height:280px;width:28px;background:green"></div></div>
-	<div class="container" style="position: relative;">
-		<div class="row" style="top:0%; "> </div>
-		<div class="row" style="top:10%;"> </div>
-		<div class="row" style="top:20%;"> </div>
-		<div class="row" style="top:30%;"> </div>
-		<div class="row" style="top:40%;"> </div>
-		<div class="row" style="top:50%;"> </div>
-		<div class="row" style="top:60%;"> </div>
-		<div class="row" style="top:70%;"> </div>
-		<div class="row" style="top:80%;"> </div>
-		<div class="row" style="top:90%;"> </div>
-		<div class="row" style="top:100%;"> </div>
+<div style="position: absolute;top:0px;left:10px;padding:10px;font-size:14px;color:red">时间:<span
+        id="remain_time">240</span></div>
+<div style="position: absolute;top:30px;left:15px;padding:10px;height:300px;font-size:12px;width:28px;background: #eee">
+    剩余时间
+    <div id="timebar" style="height:280px;width:28px;background:green"></div>
+</div>
+<div class="container" style="position: relative;">
+    <div class="row" style="top:0%; "></div>
+    <div class="row" style="top:10%;"></div>
+    <div class="row" style="top:20%;"></div>
+    <div class="row" style="top:30%;"></div>
+    <div class="row" style="top:40%;"></div>
+    <div class="row" style="top:50%;"></div>
+    <div class="row" style="top:60%;"></div>
+    <div class="row" style="top:70%;"></div>
+    <div class="row" style="top:80%;"></div>
+    <div class="row" style="top:90%;"></div>
+    <div class="row" style="top:100%;"></div>
 
-	</div>
+</div>
 
 
 </body>
