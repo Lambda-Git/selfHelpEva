@@ -28,13 +28,13 @@
 <canvas id="gameCanvas" width="480" height="720"></canvas>
 <script>
 
-	// var taskid=<%=taskid%>;
-	// var projectid=<%=projectid%>;
-	// var uid=<%=uid%>;
-	// var codematerial=<%=codematerial%>;
-	// var sumitcoids=<%=sumitcoids%>;
-	// var lan='<%=lan%>';
-	// var targetpagename='<%=targetpagename%>';
+	var taskid= 3600;
+	var projectid= localStorage.getItem('projectid');
+	var uid= localStorage.getItem('uid');
+	var codematerial= '0';
+	var sumitcoids= '0';
+	var lan= '0';
+	var targetpagename= '0';
 
 
     (function () {
@@ -55,8 +55,10 @@
 
 	//调用函数
 	//-----【全局变量声明】
-	var all_time=240,delay=4000,q_now=0,num1,num2,score=0,wrong_num=0;
+	var all_time=10,delay=4000,q_now=0,num1,num2,score=0,wrong_num=0;
+	// var all_time=240,delay=4000,q_now=0,num1,num2,score=0,wrong_num=0;
 	var setTimeout_id1;
+	var setTimeout_id2;
 	all_time_go();
 	function all_time_go(){
 		if (all_time == 0) {
@@ -65,7 +67,6 @@
 			jump_end();
 			return
 		}else{
-			//alert("value:"+all_time);
 			$("#remain_time").html(all_time);
 			all_time--;
 			var height_tmp=parseInt(all_time/240*280);
