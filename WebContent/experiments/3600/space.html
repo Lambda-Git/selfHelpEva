@@ -57,8 +57,22 @@
 
     //调用函数
     //-----【全局变量声明】
-    var all_time = 10, delay = 4000, q_now = 0, num1, num2, score = 0, wrong_num = 0;
-    // var all_time=240,delay=4000,q_now=0,num1,num2,score=0,wrong_num=0;
+    // var all_time = 10, delay = 4000, q_now = 0, num1, num2, score = 0, wrong_num = 0;
+    var all_time=240,delay=4000,q_now=0,num1,num2,score=0,wrong_num=0;
+    var data = {};
+    data.stimset = '';
+    data.correctanswerset = '';
+    data.numset = '';
+    data.typeset = '';
+    data.commentset = '';
+    data.add = function (sti, cor, num, com) {
+        this.stimset += sti + ';';
+        this.correctanswerset += cor + ';';
+        this.numset += num + ';';
+        this.typeset += '1' + ';';
+        this.commentset += com + ';';
+
+    }
     var setTimeout_id1;
     var setTimeout_id2;
     all_time_go();
@@ -79,29 +93,6 @@
                 all_time_go()
             }, 1000)
         }
-    }
-
-    function post_result() {
-        var opes_result_data = {};
-        opes_result_data.taskid = 3600
-        opes_result_data.sumitcoids = 0
-        opes_result_data.targetpagename = "<%=targetpagename%>";
-        opes_result_data.codematerial = 0;
-        opes_result_data.uid = localStorage.getItem('uid');
-        opes_result_data.lan = "<%=lan%>";
-        opes_result_data.projectid = localStorage.getItem('projectid');
-        opes_result_data.type4set = data.typeset.substring(0, data.typeset.length - 1);
-        opes_result_data.stimidset = data.stimset.substring(0, data.stimset.length - 1);
-        opes_result_data.correctanswerset = data.correctanswerset.substring(0, data.correctanswerset.length - 1);
-        opes_result_data.numset = data.numset.substring(0, data.numset.length - 1);
-        opes_result_data.timeset = '';
-        opes_result_data.radioset = "";
-        opes_result_data.buttonset = "";
-        opes_result_data.commentset = data.commentset.substring(0, data.commentset.length - 1);
-        opes_result_data.timeaverage = 0;
-        opes_result_data.duration = 0;
-        opes_post_result_util_js_opes_post_result(opes_result_data);
-        return;
     }
 
 

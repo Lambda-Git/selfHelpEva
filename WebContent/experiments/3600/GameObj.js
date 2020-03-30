@@ -89,7 +89,6 @@ GameObj = function(gameScene){
         this.sendMsg();
     };
     this.sendMsg = function(){
-		
 
 		//add by Zhou Xinlin 
 		if (type4setArray.length>buttonsetArray.length){
