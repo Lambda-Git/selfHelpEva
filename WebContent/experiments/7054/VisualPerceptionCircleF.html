@@ -106,10 +106,14 @@
             position: relative;
             right: -10px;
         }
+
+        #button_pq {
+            margin-top: -60px;
+        }
     </style>
 </head>
 <body oncontextmenu="return false;">
-<form id="result" name="result" method="post" action="">
+<form id="result" name="result" method="post" action="" style="display:none;">
     <input type=hidden value="7054" name="taskid" id="taskid"/>
     <input type=hidden value="0" name="sumitcoids" id="sumitcoids"/>
     <input type=hidden value="0" name="targetpagename" id="targetpagename"/>
@@ -177,19 +181,6 @@
     </tr>
 
 </table>
-
-
-<!--  
-<div class="left_test_tips_div" style="height=35px;bottom:0px;font-size: 20px;">
-<br/>
-左边包含结果，就用左手食指按Q/q键
-</div>
-
-<div class="right_test_tips_div" style="height=35px;bottom:0px;font-size: 20px;">
-<br/>
-右边包含结果，就用右手食指按P/p键
-</div>
- -->
 
 
 <div id="stroopnum_tip" style="display:none;" class="stroopnum_tip_div">
@@ -354,7 +345,7 @@
         var stroopnum_tips = document.getElementById("stroopnum_tip");
         stroopnum_tips.style.display = "block";
         stroopnum_tips.innerHTML = "<div class='mui-row' style='text-align: center'>" +
-            "<button type='button' class='mui-btn mui-btn-primary startBtn' onclick='ignor_key_press()'>开始练习</button>" +
+            "<button type='button' class='mui-btn mui-btn-primary startBtn' onclick='ignor_key_press()'>开始正式测验</button>" +
             "</div>";
         document.onkeydown = ignor_key_press;
         //是ipad的情况下，显示图片，并且添加鼠标响应事件
