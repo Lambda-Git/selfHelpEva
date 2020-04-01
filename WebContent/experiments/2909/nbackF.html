@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>空间n-back</title>
+    <link href="../../../css/mui.min.css" rel="stylesheet"/>
     <style>
         *{
             margin: 0px;
@@ -109,6 +110,8 @@
         }
 
     </style>
+    <script src="../../js/Statistics/Statistics.js" type=text/javascript></script>
+    <script src="../../js/oneui/opes_post_result_util.js"></script>
 </head>
 <body>
 <div id="box" class="box">
@@ -161,6 +164,9 @@
 </div>
 </body>
 <script src="../../js/jquery.3.4.1.js"></script>
+<script type="text/javascript" src="../../js/oneui/common_utils.js"></script>
+<script src="../../../js/mui.min.js"></script>
+<script src="../../../js/common.js"></script>
 <script>
     $(function () {
         var N2_1=["4.png","5.png"];
@@ -243,7 +249,7 @@
                     clearInterval(timer3);
                     timer3=null;
                     if(result){
-                        alert("结束");
+                        post_result();
                         console.log(data)
                         return;
                     }else {
@@ -288,6 +294,32 @@
             NTwoIndex++;
             stimid++;
             timer3Fun();
+        }
+
+        function post_result() {
+            // sumscore,meanscore,meanart;
+            var opes_result_data = {};
+            opes_result_data.taskid = 2909;
+            opes_result_data.sumitcoids = 0;
+            opes_result_data.targetpagename = "<%=targetpagename%>";
+            opes_result_data.codematerial = 0;
+            opes_result_data.uid = localStorage.getItem('uid');
+            opes_result_data.lan = "<%=lan%>";
+            opes_result_data.projectid = localStorage.getItem('projectid');
+            opes_result_data.duration = 0;
+            opes_result_data.timeaverage = Math.round(0);
+            opes_result_data.type4set = (data.type4set).join(";");
+            opes_result_data.stimidset = (data.stimidset).join(";");
+            opes_result_data.correctanswerset = (data.correctanswerset).join(";");
+            opes_result_data.time = "0";
+            opes_result_data.level = "0";
+            opes_result_data.timeset = (data.timeset).join(";");
+            opes_result_data.radioset = "";
+            opes_result_data.buttonset = (data.buttonset).join(";");
+            opes_result_data.commentset = (data.commentset).join(";");
+            opes_result_data.numset = "";
+            opes_post_result_util_js_opes_post_result(opes_result_data);
+            return;
         }
 
     })

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>空间n-back</title>
+    <link href="../../../css/mui.min.css" rel="stylesheet"/>
     <style>
         *{
             margin: 0px;
@@ -161,6 +162,8 @@
 </div>
 </body>
 <script src="../../js/jquery.3.4.1.js"></script>
+<script src="../../../js/mui.min.js"></script>
+<script src="../../../js/common.js"></script>
 <script>
     $(function () {
         var N2_1=["9.png","4.png"];
@@ -231,7 +234,7 @@
                     clearInterval(timer3);
                     timer3=null;
                     if(result){
-                        alert("结束")
+                        post_result();
                     }else {
                         init();
                         hideFun("item4")
@@ -279,8 +282,19 @@
             }
             NTwoIndex++;
             timer3Fun();
-
-
+        }
+        
+        function post_result() {
+            mui.toast('练习结束!1秒后自动跳转正式任务页面!', {duration: 'long', type: 'div'})
+            setTimeout(function () {
+                mui.openWindow({
+                    url: '../../../task_1/task_type.html?type=4&practice=true',
+                    createNew: true,
+                    styles: {
+                        cachemode: "noCache",
+                    }
+                });
+            }, 1000);
         }
 
     })
