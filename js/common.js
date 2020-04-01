@@ -75,12 +75,6 @@ function getFormData(eId) {
 function postFormInputData() {
     //展示正式任务结束页面
     var formData = getFormData('result');
-    //本地测试账号-对应孙老师
-   /* formData.userName = '18210119894001';
-    formData.password = 'password';*/
-    //正式环境
-    formData.userName = userInfo.userName;
-    formData.password = userInfo.password;
     formData.type = 'formal';
     $.ajax({
         type: 'POST',
@@ -94,7 +88,7 @@ function postFormInputData() {
         dataType: 'json',
         success: function (data) {
         //数据提交成功
-        mui.toast('数据保存成功!3秒后自动跳转到任务列表!',{ duration:'long', type:'div' })
+        mui.toast('数据保存成功!2秒后自动跳转到任务列表!',{ duration:'long', type:'div' })
          setTimeout(function () {
              mui.openWindow({
                  url: '../../../task_1/task_list.html',
@@ -103,7 +97,7 @@ function postFormInputData() {
                      cachemode:"noCache",
                  }
              });
-         },3000);
+         },2000);
         }
     });
 }
