@@ -95,15 +95,15 @@ function postFormInputData() {
         success: function (data) {
         //数据提交成功
         mui.toast('数据保存成功!3秒后自动跳转到任务列表!',{ duration:'long', type:'div' })
-         // setTimeout(function () {
-         //     mui.openWindow({
-         //         url: '../../../task_1/task_list.html',
-         //         createNew: true,
-         //         styles: {
-         //             cachemode:"noCache",
-         //         }
-         //     });
-         // },3000);
+         setTimeout(function () {
+             mui.openWindow({
+                 url: '../../../task_1/task_list.html',
+                 createNew: true,
+                 styles: {
+                     cachemode:"noCache",
+                 }
+             });
+         },3000);
         }
     });
 }

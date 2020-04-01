@@ -2,35 +2,16 @@
 <html>
 
 <head>
-    <title>图形推理（正式，幼儿与小学生）</title>
+    <title>OPES在线心理实验设计系统</title>
     <meta http-equiv='content-type' content='text/html;charset=utf-8'/>
     <link href='../../OPES2/js/jplayer/skin/blue.monday/css/jplayer.blue.monday.min.css' rel='stylesheet'type='text/css'/>
     <link rel='stylesheet' href='../../OPES2/css/jquery-ui-1.10.4.custom/jquery-ui-1.10.4.custom.min.css'/>
     <link href="../../../css/mui.min.css" rel="stylesheet"/>
-
-    <style type="text/css">
-        img#column_id_1 {
-            max-width: 500px;
-            max-height: 400px;
-            top: 25px!important;
-        }
-        img#column_id_2 {
-            max-width: 500px;
-            max-height: 400px;
-            top: 25px!important;
-        }
-        input#column_id_2{
-            top: 365px!important;
-        }
-        input#column_id_3{
-            top: 365px!important;
-        }
-    </style>
-
 </head>
 
 <body>
 </body>
+
 <script type='text/javascript' src="../../../js/mui.min.js"></script>
 <script type='text/javascript' src='../../OPES2/js/jquery/jquery-1.8.0.min.js'></script>
 <script type='text/javascript' src='../../OPES2/js/jqueryui/jquery-ui-1.10.4.custom.min.js'></script>
@@ -41,7 +22,7 @@
 <script type='text/javascript' src='../../OPES2/js/soundRecordSwitch/swfobject.js'></script>
 <script type='text/javascript' src='../../OPES2/js/fileSaverJS/Blob.js'></script>
 <script type='text/javascript' src='../../OPES2/js/fileSaverJS/FileSaver.js'></script>
-<script type='text/javascript' src='../../../js/common.js'></script>
+
 
 
 <script type='text/javascript'>
@@ -404,7 +385,6 @@ function reset_all_key()
                 //alert($.isEmptyObject(rdata));
                 //if 200 ok, Even if the server do not return json object (e.g. return nothing), it will go into this success function.
                 success_callback(rdata);
-
             },
             error: function (jqXHR, textStatus, errorThrown) {
             },
@@ -486,21 +466,18 @@ function reset_all_key()
 
 
     var opes_result_data = {
-        taskid: 3760,
-        projectid: 1539,
-        coid: 1111,
+        taskid: -1,
+        projectid: -1,
+        coid: 0,
         redirectURLAfterPostResult: ''
     };
 
 
     function post_result() {
-
         //clear up all the timeout IDs for all the data rows
         //NOTE:!!! The start point name sometimes if not OPES_T1 (e.g. if delete the start and then add it)
         //TODO: use OPES_T_START instead. (pre-check if it is defined for old tests). see source code of the web page to check if this OPES_T_START is defined.
         prepare_opes_result_js_clearAllTimeOutIDs(OPES_T1);
-
-        parepare_and_post();
 
         //$('body').html(JSON.stringify(OPES_T1));
         //	return;
@@ -508,30 +485,30 @@ function reset_all_key()
         //先暂时屏蔽
         //prepare_opes_results_js_saveFileToLocal();
 
-        // var argsdata = {};
-        // var data = {
-        //     clazz: 'com.lattice.action.proxy.opes.page.redirect.PageRedirectProxy',
-        //     service: 'getRedirectURL',
-        //     args: JSON.stringify(argsdata)
-        // };
+        var argsdata = {};
+        var data = {
+            clazz: 'com.lattice.action.proxy.opes.page.redirect.PageRedirectProxy',
+            service: 'getRedirectURL',
+            args: JSON.stringify(argsdata)
+        };
 
         //$('body').html('正在提交数据，第一阶段（获取返回的URL）请稍等...');
         //$('body').html(JSON.stringify(OPES_T1));
         //return;
 
-        // var success = function (rdata) {
-        //     opes_result_data.coid = 1111;
-        //     opes_result_data.taskid = 3760;
-        //     opes_result_data.projectid = 1539;
-        //     if (GetRequest().targetpagename != null) {
-        //         opes_result_data.redirectURLAfterPostResult = "http://www.dweipsy.com/lattice/" + GetRequest().targetpagename;
-        //     } else {
-        //         opes_result_data.redirectURLAfterPostResult = rdata.url;
-        //     }
-        //
-        //     parepare_and_post();
-        // };
-        // invoke_proxy(data, success);
+        var success = function (rdata) {
+            opes_result_data.coid = 1111;
+            opes_result_data.taskid = 3760;
+            opes_result_data.projectid = 1539;
+            if (GetRequest().targetpagename != null) {
+                opes_result_data.redirectURLAfterPostResult = "http://www.dweipsy.com/lattice/" + GetRequest().targetpagename;
+            } else {
+                opes_result_data.redirectURLAfterPostResult = rdata.url;
+            }
+
+            parepare_and_post();
+        };
+        invoke_proxy(data, success);
     }
 
     function parepare_and_post() {
@@ -548,25 +525,34 @@ function reset_all_key()
         //$('body').html(JSON.stringify({OPES_T1:OPES_T1,all_data:all_data,opes_result_data:opes_result_data}));
         //return;
 
-
-        // $.ajax({
-        //     type: "POST",
-        //     async: true,
-        //     cache: false,
-        //     //dataType:"json",//which is expected from the sever
-        //     url: "http://www.dweipsy.com//lattice/OPESHandler?type=formal",
-        //     data: opes_result_data,
-        //     // beforeSend: function (XMLHttpRequestObject) {
-        //     //     $('body').html('正在提交数据，第二阶段（提交结果数据）请稍等...');
-        //     // },
-        //     success: function (rdata, textStatus, XMLHttpRequest) {
-        //
-        //     },
-        //     complete: function (jqXHR, textStatus) {
-        //         //as this is ajax call, so the OPESHandler redirect will not use.
-        //         // window.location.href = opes_result_data.redirectURLAfterPostResult;
-        //     }
-        // });
+        $.ajax({
+            type: "POST",
+            async: true,
+            cache: false,
+            //dataType:"json",//which is expected from the sever
+            url: "http://www.dweipsy.com/lattice/OPESHandler?type=formal",
+            data: opes_result_data,
+            beforeSend: function (XMLHttpRequestObject) {
+                // $('body').html('正在提交数据，第二阶段（提交结果数据）请稍等...');
+            },
+            success: function (rdata, textStatus, XMLHttpRequest) {
+                mui.toast('数据保存成功!3秒后自动跳转到任务列表!', {duration: 'long', type: 'div'})
+                setTimeout(function () {
+                    mui.openWindow({
+                        url: '../../../task_1/task_list.html',
+                        createNew: true,
+                        styles: {
+                            cachemode: "noCache",
+                        }
+                    });
+                }, 3000);
+            },
+            complete: function (jqXHR, textStatus) {
+                //as this is ajax call, so the OPESHandler redirect will not use.
+                // window.location.href=opes_result_data.redirectURLAfterPostResult;
+                mui.toast('后端服务异常,请联系后台管理员!', {duration: 'long', type: 'div'})
+            }
+        });
     }
 
     /*
@@ -1041,8 +1027,7 @@ function reset_all_key()
         add_result("type4_Unique", type4_Unique);
 
         //document.getElementById("result").submit();
-        //调用公共方法
-        postFormInputData();
+
     }
 
     function prepare_opes_results_js_saveFileToLocal() {
@@ -1731,7 +1716,7 @@ cancel keyboard event conditions:
                 if (current_row.userResult == current_row.correctResult) {
                     $('#feedback_msg_span_id').html(current_row.feedback.msgImage.msgForCorrectResult);
                     if (current_row.feedback.showImage) {
-                        var img = '<img id="feedback_img_id" src="../../../image/logoicon.png" />';
+                        var img = '<img id="feedback_img_id" src="' + current_row.feedback.msgImage.imgForCorrectResultSrc + '" />';
                         $('#feedback_img_span_id').html(img);
                         $('#feedback_img_id').css({
                             'width': current_row.feedback.msgImage.width,
@@ -1741,7 +1726,7 @@ cancel keyboard event conditions:
                 } else {
                     $('#feedback_msg_span_id').html(current_row.feedback.msgImage.msgForWrongResult);
                     if (current_row.feedback.showImage) {
-                        var img = '<img id="feedback_img_id" src="../../../image/logoicon.png" />';
+                        var img = '<img id="feedback_img_id" src="' + current_row.feedback.msgImage.imgForWrongResultSrc + '" />';
                         $('#feedback_img_span_id').html(img);
                         $('#feedback_img_id').css({
                             'width': current_row.feedback.msgImage.width,
