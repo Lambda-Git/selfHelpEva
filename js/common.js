@@ -110,7 +110,7 @@ function postWebMathData(opes_result_data) {
     //正式环境
     opes_result_data.userName = localStorage.getItem(userInfo.userName);
     opes_result_data.password =  localStorage.getItem(userInfo.password);
-    opes_result_data.access_token =  localStorage.getItem();userInfo.password;
+    opes_result_data.access_token =  localStorage.getItem(userInfo.password);
     opes_result_data.access_token =  localStorage.getItem('access_token');
     opes_result_data.type = 'formal';
     $.ajax({
