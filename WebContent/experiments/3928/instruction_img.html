@@ -12,16 +12,16 @@
 <body style="width:100%;height:100%;overflow:hidden; margin:0; padding:0;">
 	<div id='top' style="background-color:floralwhite;height:5%;width:100%"></div>
 	<div id="left" style="float:left;background-color:floralwhite;height:95%;width:10%"></div>
-	<div id="mid" style="float:left;color:#0000FF;background-color:floralwhite;height:95%;width:80%;text-align: center;">
-		<div id="textArea" style="font-size:30px; float:left; height:75%;width:100%;background-color: floralwhite;">
-		    <p id="contentText" style="color:black;line-height: 35px;margin-top:10px;height: auto;text-align:center;"></p>
-		    <img id="targetpic" hidden="true"  src="test.png" style=" align: center;" />
-		    <img id="targetpic1" hidden="true"  src="test1.png" style=" align: center;" />
-		    <img id="targetpic2" hidden="true"  src="test2.png" style=" align: center;" />
+	<div id="mid" style="float:left;color:#0000FF;background-color:floralwhite;height:95%;width:80%;font-size: 12px;position: relative">
+		<div id="textArea" style="font-size:3em; float:left; height:60%;width:100%;background-color: floralwhite;">
+		    <p id="contentText" style="color:black;line-height: 35px;margin-top:10px;height: auto;text-indent: 2em;padding-top: 40px;"></p>
+		    <img id="targetpic" hidden="true"  src="test.png" style=" align: center;max-height:180px;" />
+		    <img id="targetpic1" hidden="true"  src="test1.png" style=" align: center;max-height:180px;" />
+		    <img id="targetpic2" hidden="true"  src="test2.png" style=" align: center;max-height:180px;" />
 		</div>
-		<div id="clickArea" style="float:left;margin-top:10px;height:60%;width:100%;text-align:center;">
+		<div id="clickArea" style="font-size: 12px;float:left;margin-top:10px;height:30%;width:100%;text-align:center;position: absolute;bottom: 10px;">
 			<div class="mui-row">
-				<div class="mui-col-sm-6 " >
+				<div class="mui-col-sm-6 ">
 					<input type="radio" id="ansA" value="" onclick="userClick(1)"/>
 					<label id='radioA' for="ansA"></label>
 				</div>
