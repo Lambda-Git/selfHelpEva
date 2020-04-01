@@ -27,11 +27,23 @@ function jump_end(){
 	});
 
 
-	alert("测验结束！您的得分为:"+score+"分，感谢您的参与！");
-	console.log(data);
+	// alert("测验结束！您的得分为:"+score+"分，感谢您的参与！");
+	// console.log(data);
 	post_result();
 	return;
 
 
 }
 
+function post_result () {
+	//代码缺失 临时给个返回
+	setTimeout(function () {
+		mui.openWindow({
+			url: '../../../task_1/task_list.html',
+			createNew: true,
+			styles: {
+				cachemode:"noCache",
+			}
+		});
+	},10);
+}

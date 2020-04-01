@@ -289,19 +289,6 @@
 
     }
 
-    function post_result() {
-        // mui.toast('练习结束!2秒后自动跳转正式任务页面!', {duration: 'long', type: 'div'})
-        setTimeout(function () {
-            mui.openWindow({
-                url: '../../../task_1/task_type.html?type=3&practice=true',
-                createNew: true,
-                styles: {
-                    cachemode: "noCache",
-                }
-            });
-        }, 0);
-    }
-
     function show_face(x) {
         if (x == 1) {
             $("#face").attr("src", './img/correct.png')

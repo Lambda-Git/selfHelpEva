@@ -75,6 +75,8 @@ function getFormData(eId) {
 function postFormInputData() {
     //展示正式任务结束页面
     var formData = getFormData('result');
+    formData.userName = localStorage.getItem(userInfo.userName);
+    formData.password = localStorage.getItem(userInfo.password);
     formData.type = 'formal';
     $.ajax({
         type: 'POST',
@@ -126,16 +128,25 @@ function postWebMathData(opes_result_data) {
         success: function (data) {
             if (data.flag === 'success') {
                 //数据提交成功
-                mui.toast('数据保存成功!3秒后自动跳转到任务列表!',{ duration:'long', type:'div' })
                 setTimeout(function () {
                     mui.openWindow({
-                        url: '../../../task_2/appointTask/index_list.html?pid='+opes_result_data.projectid,
+                        url: '../../../task_1/task_list.html',
                         createNew: true,
                         styles: {
                             cachemode:"noCache",
                         }
                     });
-                },3000);
+                },10);
+            } else {
+                setTimeout(function () {
+                    mui.openWindow({
+                        url: '../../../task_1/task_list.html',
+                        createNew: true,
+                        styles: {
+                            cachemode:"noCache",
+                        }
+                    });
+                },10);
             }
         }
     });

@@ -23,7 +23,6 @@
 </head>
 
 <body style="padding:0; margin: 0; background: #000;">
-<script type='text/javascript' src="../../../js/mui.min.js"></script>
 <script src="../../js/jquery.3.4.1.js"></script>
 <script type='text/javascript' src="../../../js/mui.min.js"></script>
 <script src="zhu.js"></script>
@@ -66,7 +65,7 @@
     function all_time_go() {
         if (all_time == 0) {
             $("#remain_time").html(all_time);
-            alert("时间到！");
+            // alert("时间到！");
             jump_end();
             return
         } else {
@@ -85,7 +84,6 @@
     }
 
     function post_result() {
-        // mui.toast('练习结束!2秒后自动跳转正式任务页面!', {duration: 'long', type: 'div'})
         setTimeout(function () {
             mui.openWindow({
                 url: '../../../task_1/task_type.html?type=2&practice=true',
@@ -94,7 +92,7 @@
                     cachemode: "noCache",
                 }
             });
-        }, 0);
+        }, 10);
     }
 
 </script>
