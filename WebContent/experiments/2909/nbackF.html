@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>空间n-back</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        html,body,.box,.item{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .btnBox{
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            height: 30%;
+        }
+        .btn{
+            color: #fff;
+            background-color:#2d8cf0;
+            position: absolute;
+            bottom: 30%;
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: 400;
+            text-align: center;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            height: 60px;
+            padding: 0 50px;
+            font-size: 24px;
+            border-radius: 4px;
+        }
+        .btn:before{
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            bottom: -1px;
+            right: -1px;
+            background: #fff;
+            opacity: .35;
+            content: "";
+            border-radius: inherit;
+            z-index: 1;
+            transition: opacity .2s;
+            pointer-events: none;
+            display: none;
+        }
+
+        .leftBtn{
+            left: 10%;
+        }
+        .rightBtn{
+            right: 10%;
+        }
+        .div_flex{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .stast{
+            height: 40%;
+            width: 100%;
+        }
+        .stast span{
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            background: #2d8cf0;
+            color: #fff;
+            font-size: 28px;
+            line-height: 100px;
+            text-align: center;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+        #box .hide{
+            display: none;
+        }
+        .titleBox{
+            min-height: 60%;
+        }
+        .title{
+            width: 70%;
+            height: auto;
+            text-indent: 2em;
+            font-size: 24px;
+            color: #000;
+        }
+        .itemImg{
+            height: 60%;
+        }
+        .itemImg img{
+            max-height: 90%;
+            max-width: 80%;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box" class="box">
+
+    <div id="item1" class="item">
+        <div class="titleBox div_flex">
+            <div class="title">判断当前出现的位置与先于当前位置2个出现的位置是否相同，如果相同，请点击“相同”按钮，如果不同，请点击“不同”按钮。</div>
+        </div>
+        <div class="stast div_flex">
+            <span class="st1">开始</span>
+        </div>
+    </div>
+
+    <div id="item2" class="item hide">
+        <div class="itemImg div_flex">
+            <img class="img" id="img1" src="" alt="">
+        </div>
+    </div>
+
+    <div id="item3" class="item hide">
+        <div class="itemImg div_flex">
+            <img class="img" id="img2" src="" alt="">
+        </div>
+        <div class="btnBox">
+            <button data-data="Q" class="btn leftBtn">相同</button>
+            <button data-data="P" class="btn rightBtn">不同</button>
+        </div>
+    </div>
+
+    <div id="item4" class="item hide">
+        <div class="titleBox div_flex">
+            <div class="title">判断当前出现的位置与先于当前位置3个出现的位置是否相同，如果相同，请点击“相同”按钮，如果不同，请点击“不同”按钮。</div>
+        </div>
+        <div class="stast div_flex">
+            <span class="st1">开始</span>
+        </div>
+    </div>
+
+    <div id="item5" class="item hide">
+
+    </div>
+
+    <div id="item6" class="item div_flex hide">
+        <span id="falck" style="font-size: 38px;"></span>
+    </div>
+
+
+
+
+</div>
+</body>
+<script src="../../js/jquery.3.4.1.js"></script>
+<script>
+    $(function () {
+        var N2_1=["4.png","5.png"];
+        var N2_2=["1.png","5.png","3.png","9.png","3.png","9.png","7.png","7.png","7.png","7.png","8.png","7.png","8.png","2.png","8.png","2.png","8.png","1.png","3.png","1.png"];
+        var N2_ans=["P","Q","P","P","Q","Q","P","P","Q","Q","P","Q","Q","P","Q","Q","Q","P","P","Q"];
+        var N3_1=["6.png","1.png","8.png"];
+        var N3_2=["6.png","1.png","9.png","1.png","1.png","9.png","4.png","7.png","2.png","4.png","2.png","6.png","4.png","2.png","6.png","3.png","8.png","6.png","3.png","5.png"];
+        var N3_ans=["Q","Q","P","P","Q","Q","P","P","P","Q","P","P","Q","Q","Q","P","P","Q","Q","P"];
+        var NOne=N2_1,NTwo=N2_2,NAns=N2_ans;
+        var NOneIndex=0,NTwoIndex=0;
+        var NOneIndexLength=2,NTwoIndexLength=20;
+        var time1=1000,time2=500,time3=500;
+        var timer1=null,timer2=null,timer3=null;
+        var time,beginTime,endTime;
+        var QPKey=false;
+        var result=false;
+        var type="1",stimid=1;
+        var data={
+            type4set:[],
+            stimidset:[],
+            correctanswerset:[],
+            buttonset:[],
+            timeset:[],
+            commentset:[]
+        }
+        // var type4set=[],stimidset=[],correctanswerset=[],buttonset=[],timeset=[],commentset=[];
+
+        function init(){
+            NOne=N3_1,NTwo=N3_2,NAns=N3_ans,NOneIndex=0,NTwoIndex=0;
+            NOneIndexLength=3,NTwoIndexLength=20;
+            time3=500;
+            type="2";
+            $("#falck").text(" ");
+            result=true;
+        }
+        $(".st1").on("click",function () {
+            timer1Fun();
+        });
+
+        function hideFun(ID) {
+            $(".item").addClass("hide");
+            $("#"+ID).removeClass("hide");
+        }
+
+        function tipocFun(ID,arr,index) {
+            $("#"+ID).attr("src","../../testpics/nBank/"+arr[index]);
+        }
+
+        function timer1Fun() {
+            hideFun("item2");
+            tipocFun("img1",NOne,NOneIndex);
+            timer1=setInterval(function () {
+                NOneIndex++;
+                if(NOneIndex>=NOneIndexLength){
+                    timer3Fun();
+                    clearInterval(timer1);
+                    timer1=null;
+                }else {
+                    timer2Fun();
+                }
+
+                clearInterval(timer1);
+                timer1=null;
+            }, time1);
+        }
+        function timer2Fun() {
+            $(".img").attr("src","");
+            hideFun("item5");
+            timer2=setInterval(function () {
+                timer1Fun();
+                clearInterval(timer2);
+                timer2=null;
+            }, time2);
+        }
+        function timer3Fun() {
+            $(".img").attr("src","");
+            hideFun("item6");
+            timer3=setInterval(function () {
+                if(NTwoIndex>=NTwoIndexLength){
+                    clearInterval(timer3);
+                    timer3=null;
+                    if(result){
+                        alert("结束");
+                        console.log(data)
+                        return;
+                    }else {
+                        init();
+                        hideFun("item4")
+                    }
+                }else {
+                    hideFun("item3");
+                    tipocFun("img2",NTwo,NTwoIndex);
+                    QPKey=true;
+                    beginTime=new Date().getTime();
+                }
+
+                clearInterval(timer3);
+                timer3=null;
+            }, time3);
+        }
+
+        $(".btn").on("click",function () {
+            var key=$(this).attr("data-data");
+            QPKeyFun(key);
+        });
+
+        function QPKeyFun(key) {
+            if(QPKey){
+                endTime=new Date().getTime();
+                time=(endTime-beginTime).toFixed(0);
+                data.type4set.push(type);
+                data.stimidset.push(stimid);
+                data.timeset.push(time);
+                data.correctanswerset.push(NAns[NTwoIndex]);
+                data.buttonset.push(key);
+                data.commentset.push(NTwo[NTwoIndex]);
+                QPKey=false;
+                tishi();
+            }
+        }
+
+
+        function tishi() {
+            time3=300;
+            NTwoIndex++;
+            stimid++;
+            timer3Fun();
+        }
+
+    })
+</script>
+</html>
