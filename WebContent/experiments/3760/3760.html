@@ -536,7 +536,7 @@ function reset_all_key()
                 // $('body').html('正在提交数据，第二阶段（提交结果数据）请稍等...');
             },
             success: function (rdata, textStatus, XMLHttpRequest) {
-                mui.toast('数据保存成功!3秒后自动跳转到任务列表!', {duration: 'long', type: 'div'})
+                mui.toast('数据保存成功!1秒后自动跳转到任务列表!', {duration: 'long', type: 'div'})
                 setTimeout(function () {
                     mui.openWindow({
                         url: '../../../task_1/task_list.html',
@@ -545,12 +545,21 @@ function reset_all_key()
                             cachemode: "noCache",
                         }
                     });
-                }, 3000);
+                }, 1000);
             },
             complete: function (jqXHR, textStatus) {
                 //as this is ajax call, so the OPESHandler redirect will not use.
                 // window.location.href=opes_result_data.redirectURLAfterPostResult;
                 mui.toast('后端服务异常,请联系后台管理员!', {duration: 'long', type: 'div'})
+                setTimeout(function () {
+                    mui.openWindow({
+                        url: '../../../task_1/task_list.html',
+                        createNew: true,
+                        styles: {
+                            cachemode: "noCache",
+                        }
+                    });
+                }, 1000);
             }
         });
     }

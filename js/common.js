@@ -90,7 +90,7 @@ function postFormInputData() {
         dataType: 'json',
         success: function (data) {
         //数据提交成功
-        mui.toast('数据保存成功!2秒后自动跳转到任务列表!',{ duration:'long', type:'div' })
+        mui.toast('数据保存成功!1秒后自动跳转到任务列表!',{ duration:'long', type:'div' })
          setTimeout(function () {
              mui.openWindow({
                  url: '../../../task_1/task_list.html',
@@ -99,7 +99,7 @@ function postFormInputData() {
                      cachemode:"noCache",
                  }
              });
-         },2000);
+         },1000);
         }
     });
 }

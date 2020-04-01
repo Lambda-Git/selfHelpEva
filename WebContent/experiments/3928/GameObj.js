@@ -124,6 +124,16 @@ GameObj = function(gameScene){
         opes_result_data.radioset="";
         opes_result_data.buttonset = x.buttonset;
         opes_result_data.commentset="";
-        opes_post_result_util_js_opes_post_result(opes_result_data);
+        //练习不用提交数据
+        // opes_post_result_util_js_opes_post_result(opes_result_data);
+        setTimeout(function () {
+            mui.openWindow({
+                url: '../../../task_1/task_type.html?type=2&practice=true',
+                createNew: true,
+                styles: {
+                    cachemode: "noCache",
+                }
+            });
+        }, 10);
     };
 }
