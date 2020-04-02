@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<!doctype html>
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -7,7 +7,16 @@
     <script src="../../js/jquery.3.4.1.js"></script>
     <script src="../../js/font-size.js"></script>
     <script src="../../../js/mui.js"></script>
-    <style>
+    <style type="text/css">
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+        }
         #textArea img {
             width: 400px;
         }
@@ -43,58 +52,58 @@
     </div>
 </div>
 </body>
-</html>
-<script>
+<script type="text/javascript">
     var index = 0;
-    var words = new Array ("您是否已经完成了练习？只有完成了练习，才能参加正式测验。","您所在的环境是否是安静的？需要在安静的环境中完成测验。","您是否一个人或者只有一位监护人陪同您进行测验？","您是否可以做到一个人独立完成测验？需要独立完成,保证数据真实性。","监护人要做到不干扰不提示不暗示测试者答题,只能在答题前讲解指导语。","这是一个限时6分钟的测验，分2部分。要求既快速又准确！","第一部分：判断当前出现的位置与先于当前位置2个出现的位置是否相同，如果相同，请点击“相同”按钮，如果不同，请点击“不同”按钮。","第二部分：判断当前出现的位置与先于当前位置3个出现的位置是否相同，如果相同，请点击“相同”按钮，如果不同，请点击“不同”按钮。");
-    var answerA = new Array(" 完成了！","环境是安静的。","我独自一人或者我只有一位监护人陪同我。","我能一个人独立完成测验（监护人可以在答题前讲解指导语）","监护人可以做到不干扰不提示不暗示,只是在答题前讲解指导语！","我知道要求既快速又准确。","我理解了指导语,开始答题。","进入测试");
-    var answerB = new Array("没有完成，退出。","环境是嘈杂的,退出。","有很多人,退出。","不能独立完成,退出。","不能做到,退出。","不明白,退出。","不理解,退出。","退出");
-    window.onload=function(){
+    var words = new Array("您是否已经完成了练习？只有完成了练习，才能参加正式测验。", "您所在的环境是否是安静的？需要在安静的环境中完成测验。", "您是否一个人或者只有一位监护人陪同您进行测验？", "您是否可以做到一个人独立完成测验？需要独立完成,保证数据真实性。", "监护人要做到不干扰不提示不暗示测试者答题,只能在答题前讲解指导语。", "这是一个限时6分钟的测验，分2部分。要求既快速又准确！", "第一部分：判断当前出现的位置与先于当前位置2个出现的位置是否相同，如果相同，请点击“相同”按钮，如果不同，请点击“不同”按钮。", "第二部分：判断当前出现的位置与先于当前位置3个出现的位置是否相同，如果相同，请点击“相同”按钮，如果不同，请点击“不同”按钮。");
+    var answerA = new Array(" 完成了！", "环境是安静的。", "我独自一人或者我只有一位监护人陪同我。", "我能一个人独立完成测验（监护人可以在答题前讲解指导语）", "监护人可以做到不干扰不提示不暗示,只是在答题前讲解指导语！", "我知道要求既快速又准确。", "我理解了指导语,开始答题。", "进入测试");
+    var answerB = new Array("没有完成，退出。", "环境是嘈杂的,退出。", "有很多人,退出。", "不能独立完成,退出。", "不能做到,退出。", "不明白,退出。", "不理解,退出。", "退出");
+    window.onload = function () {
         $("#contentText").text(words[index]);
         $("#radioA").text(answerA[index]);
         $("#radioB").text(answerB[index]);
 
 
     };
-    function userClick(para){
+
+    function userClick(para) {
         index++;
-        if(para == 2){
+        if (para == 2) {
             mui.openWindow({
                 url: '../../../task_1/task_list.html',
                 createNew: true,
                 styles: {
-                    cachemode:"noCache",
+                    cachemode: "noCache",
                 }
             });
-        }else if (index >= 8){
+        } else if (index >= 8) {
             mui.openWindow({
                 url: 'nbackF.html',
                 createNew: true,
                 styles: {
-                    cachemode:"noCache",
+                    cachemode: "noCache",
                 }
             });
-            if(para == 2){
+            if (para == 2) {
                 mui.openWindow({
                     url: '../../../task_1/task_list.html',
                     createNew: true,
                     styles: {
-                        cachemode:"noCache",
+                        cachemode: "noCache",
                     }
                 });
             }
         }
 
-        if(index == 5){
+        if (index == 5) {
             $("#targetpic").show();
         }
 
-        if(index == 6){
+        if (index == 6) {
             $("#targetpic").hide();
             $("#targetpic1").show();
         }
 
-        if(index == 7){
+        if (index == 7) {
             $("#targetpic").hide();
             $("#targetpic1").hide();
             $("#targetpic2").show();
@@ -102,21 +111,11 @@
         $("#contentText").text(words[index]);
         $("#radioA").text(answerA[index]);
         $("#radioB").text(answerB[index]);
-        $("#ansA").prop("checked",false);
-        $("#ansB").prop("checked",false);
+        $("#ansA").prop("checked", false);
+        $("#ansB").prop("checked", false);
 
     }
 </script>
+</html>
 
-<style type="text/css">
-    html
-    {
-        height:100%;
-        margin:0;
-    }
-    body
-    {
-        height:100%;
-        margin:0;
-    }
-</style>
+

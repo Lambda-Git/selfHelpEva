@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<!doctype html>
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -7,7 +7,15 @@
     <script src="../../js/jquery.3.4.1.js"></script>
     <script src="../../js/font-size.js"></script>
     <script src="../../../js/mui.js"></script>
-    <style>
+    <style type="text/css">
+        html {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            height: 100%;
+            margin: 0;
+        }
         #textArea img {
             width: 400px;
         }
@@ -36,8 +44,7 @@
 </div>
 <div id="right" style="float:right;background-color:floralwhite;height:95%;width:10%"></div>
 </body>
-</html>
-<script>
+<script type="text/javascript">
     var index = 0;
     var words = new Array ("您是否已经完成了练习？只有完成了练习，才能参加正式测验。","您所在的环境是否是安静的？需要在安静的环境中完成测验。","您是否一个人或者只有一位监护人陪同您进行测验？","您是否可以做到一个人独立完成测验？需要独立完成，保证数据真实性。","监护人要做到不干扰不提示不暗示测试者答题，只能在答题前讲解指导语。","这是一个限时10分钟的测验；要求既快速又准确！","屏幕上将呈现一组不规则图形，如果有2个相同的图形，请用左手食指按一下“Q”键；如果没有相同图形，请用右手食指按一下“P”键。");
     var answerA = new Array("完成了！","环境是安静的。","我独自一人或者我只有一位监护人陪同我。","我能一个人独立完成测验（监护人可以在答题前讲解指导语）","监护人可以做到不干扰不提示不暗示，只是在答题前讲解指导语！","我知道要求既快速又准确。","我理解了指导语，开始答题。");
@@ -91,15 +98,6 @@
 
     }
 </script>
+</html>
 
-<style type="text/css">
-    html {
-        height: 100%;
-        margin: 0;
-    }
 
-    body {
-        height: 100%;
-        margin: 0;
-    }
-</style>

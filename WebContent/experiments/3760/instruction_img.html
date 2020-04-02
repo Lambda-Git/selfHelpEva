@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<!doctype html>
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -7,7 +7,16 @@
     <script src="../../js/jquery.3.4.1.js"></script>
     <script src="../../js/font-size.js"></script>
     <script src="../../../js/mui.js"></script>
-    <style>
+    <style type="text/css">
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+        }
         #textArea img {
             width: 400px;
         }
@@ -36,13 +45,12 @@
 </div>
 <div id="right" style="float:right;background-color:floralwhite;height:95%;width:10%"></div>
 </body>
-</html>
-<script>
+<script type="text/javascript">
     var index = 0;
-    var words = new Array ("您是否已经完成了练习？只有完成了练习，才能参加正式测验。","您所在的环境是否是安静的？需要在安静的环境中完成测验。","您是否一个人或者只有一位监护人陪同您进行测验？","您是否可以做到一个人独立完成测验？需要独立完成，保证数据真实性。","监护人要做到不干扰不提示不暗示测试者答题，只能在答题前讲解指导语。","这是一个限时4分钟的测验；错误5题后测验也结束。要求既快速又准确！","下列每个题目都有一个主题，每张主题图中都缺少一个部分，在主题图下有8张小图片，请选择合适的图片，可以使整个图片完整的表达一个主题。");
-    var answerA = new Array("完成了！","环境是安静的。","我独自一人或者我只有一位监护人陪同我。","我能一个人独立完成测验（监护人可以在答题前讲解指导语）","监护人可以做到不干扰不提示不暗示，只是在答题前讲解指导语！","我知道要求既快速又准确。","我理解了指导语，开始答题。");
-    var answerB = new Array("没有完成，退出。","环境是嘈杂的，退出。","有很多人，退出。","不能独立完成，退出。","不能做到，退出。","不明白，退出。","不理解，退出。");
-    window.onload=function(){
+    var words = new Array("您是否已经完成了练习？只有完成了练习，才能参加正式测验。", "您所在的环境是否是安静的？需要在安静的环境中完成测验。", "您是否一个人或者只有一位监护人陪同您进行测验？", "您是否可以做到一个人独立完成测验？需要独立完成，保证数据真实性。", "监护人要做到不干扰不提示不暗示测试者答题，只能在答题前讲解指导语。", "这是一个限时4分钟的测验；错误5题后测验也结束。要求既快速又准确！", "下列每个题目都有一个主题，每张主题图中都缺少一个部分，在主题图下有8张小图片，请选择合适的图片，可以使整个图片完整的表达一个主题。");
+    var answerA = new Array("完成了！", "环境是安静的。", "我独自一人或者我只有一位监护人陪同我。", "我能一个人独立完成测验（监护人可以在答题前讲解指导语）", "监护人可以做到不干扰不提示不暗示，只是在答题前讲解指导语！", "我知道要求既快速又准确。", "我理解了指导语，开始答题。");
+    var answerB = new Array("没有完成，退出。", "环境是嘈杂的，退出。", "有很多人，退出。", "不能独立完成，退出。", "不能做到，退出。", "不明白，退出。", "不理解，退出。");
+    window.onload = function () {
         fontsetting();
         $("#contentText").text(words[index]);
         $("#radioA").text(answerA[index]);
@@ -56,7 +64,7 @@
                 url: '../../../task_1/task_list.html',
                 createNew: true,
                 styles: {
-                    cachemode:"noCache",
+                    cachemode: "noCache",
                 }
             });
         } else if (index >= 6) {
@@ -65,7 +73,7 @@
                     url: '3760.html',
                     createNew: true,
                     styles: {
-                        cachemode:"noCache",
+                        cachemode: "noCache",
                     }
                 });
             }
@@ -74,32 +82,23 @@
                     url: '../../../task_1/task_list.html',
                     createNew: true,
                     styles: {
-                        cachemode:"noCache",
+                        cachemode: "noCache",
                     }
                 });
             }
         }
 
-        if(index == 6){
+        if (index == 6) {
             $("#targetpic").hide();
         }
         $("#contentText").text(words[index]);
         $("#radioA").text(answerA[index]);
         $("#radioB").text(answerB[index]);
-        $("#ansA").prop("checked",false);
-        $("#ansB").prop("checked",false);
+        $("#ansA").prop("checked", false);
+        $("#ansB").prop("checked", false);
 
     }
 </script>
+</html>
 
-<style type="text/css">
-    html {
-        height: 100%;
-        margin: 0;
-    }
 
-    body {
-        height: 100%;
-        margin: 0;
-    }
-</style>
