@@ -125,28 +125,28 @@ function postWebMathData(opes_result_data) {
         },
         dataType: 'json',
         success: function (data) {
-            // if (data.flag === 'success') {
-            //     //数据提交成功
-            //     setTimeout(function () {
-            //         mui.openWindow({
-            //             url: '../../../task_1/task_list.html',
-            //             createNew: true,
-            //             styles: {
-            //                 cachemode:"noCache",
-            //             }
-            //         });
-            //     },10);
-            // } else {
-            //     setTimeout(function () {
-            //         mui.openWindow({
-            //             url: '../../../task_1/task_list.html',
-            //             createNew: true,
-            //             styles: {
-            //                 cachemode:"noCache",
-            //             }
-            //         });
-            //     },10);
-            // }
+            if (data.flag === 'success') {
+                //数据提交成功
+                setTimeout(function () {
+                    mui.openWindow({
+                        url: '../../../task_1/task_list.html',
+                        createNew: true,
+                        styles: {
+                            cachemode:"noCache",
+                        }
+                    });
+                },10);
+            } else {
+                setTimeout(function () {
+                    mui.openWindow({
+                        url: '../../../task_1/task_list.html',
+                        createNew: true,
+                        styles: {
+                            cachemode:"noCache",
+                        }
+                    });
+                },10);
+            }
         }
     });
 }
