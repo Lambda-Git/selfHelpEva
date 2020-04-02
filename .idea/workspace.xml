@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e78b7f3-83d8-4725-857a-5159fdc8ab25" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/2908/nbackTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/experiments/2909/nbackF.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/testpics/nBank/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/testpics/nBank/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/testpics/nBank/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/testpics/nBank/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/testpics/nBank/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/testpics/nBank/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/testpics/nBank/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/testpics/nBank/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/testpics/nBank/9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,74 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="150" column="45" lean-forward="true" selection-start-line="150" selection-start-column="45" selection-end-line="150" selection-end-column="45" />
-              <folding>
-                <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task_1/task_testNotes.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/experiments/2908/nbackTest.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="194" lean-forward="true" selection-start-line="194" selection-end-line="194" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WebContent/experiments/2909/nbackF.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="208" column="24" selection-start-line="208" selection-start-column="24" selection-end-line="208" selection-end-column="24" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/REMINE">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/experiments/3760/3760.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23606">
-              <caret line="1073" column="32" selection-start-line="1073" selection-start-column="26" selection-end-line="1073" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-93">
-              <caret line="79" column="29" lean-forward="true" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
+            <state relative-caret-position="293">
+              <caret line="129" column="24" lean-forward="true" selection-start-line="129" selection-start-column="24" selection-end-line="129" selection-end-column="24" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -105,7 +32,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>opes_post_result_util_js_result_form</find>
       <find>opes_post_result_util_js_submit_result</find>
       <find>common</find>
       <find>ajax</find>
@@ -135,6 +61,7 @@
       <find>img</find>
       <find>结束</find>
       <find>tipocFun</find>
+      <find>post_result</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -185,7 +112,6 @@
         <option value="$PROJECT_DIR$/WebContent/experiments/3928/space.html" />
         <option value="$PROJECT_DIR$/WebContent/experiments/3782/zhu.js" />
         <option value="$PROJECT_DIR$/WebContent/experiments/3782/test.html" />
-        <option value="$PROJECT_DIR$/js/common.js" />
         <option value="$PROJECT_DIR$/WebContent/experiments/7054/VisualPerceptionCircleF.html" />
         <option value="$PROJECT_DIR$/WebContent/experiments/3540/VisualPerceptionCircleTest.html" />
         <option value="$PROJECT_DIR$/task_1/task_type.html" />
@@ -196,8 +122,9 @@
         <option value="$PROJECT_DIR$/WebContent/experiments/3906/3906.html" />
         <option value="$PROJECT_DIR$/WebContent/experiments/3760/3760.html" />
         <option value="$PROJECT_DIR$/task_1/task_testNotes.html" />
-        <option value="$PROJECT_DIR$/WebContent/experiments/2909/nbackF.html" />
         <option value="$PROJECT_DIR$/WebContent/experiments/2908/nbackTest.html" />
+        <option value="$PROJECT_DIR$/WebContent/experiments/2909/nbackF.html" />
+        <option value="$PROJECT_DIR$/js/common.js" />
       </list>
     </option>
   </component>
@@ -218,43 +145,6 @@
               <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
               <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
-              <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
-              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
-              <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
-              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
-              <item name="experiments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
-              <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
-              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
-              <item name="experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="2908" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
-              <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
-              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
-              <item name="experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="2909" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
-              <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
-              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="selfHelpEva" type="b2602c69:ProjectViewProjectNode" />
-              <item name="selfHelpEva" type="462c0819:PsiDirectoryNode" />
-              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
-              <item name="testpics" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -265,7 +155,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/WebContent/testpics/nBank" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -278,8 +168,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\project\app\selfHelpEva\WebContent\testpics\nBank" />
       <recent name="D:\project\app\selfHelpEva\WebContent\experiments\2909" />
+      <recent name="D:\project\app\selfHelpEva\WebContent\testpics\nBank" />
       <recent name="D:\project\app\selfHelpEva\WebContent\experiments\2908" />
       <recent name="D:\project\app\selfHelpEva\image" />
       <recent name="D:\project\app\selfHelpEva\image\icon" />
@@ -325,7 +215,8 @@
       <workItem from="1585321187125" duration="16038000" />
       <workItem from="1585387561149" duration="2812000" />
       <workItem from="1585529843156" duration="28638000" />
-      <workItem from="1585733224640" duration="1837000" />
+      <workItem from="1585733224640" duration="2744000" />
+      <workItem from="1585792131636" duration="2006000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1584780092258</created>
@@ -502,11 +393,25 @@
       <option name="project" value="LOCAL" />
       <updated>1585733461856</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="n-bank">
+      <created>1585735062717</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1585735062717</updated>
+    </task>
+    <task id="LOCAL-00027" summary="n-bank">
+      <created>1585735960931</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1585735960931</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90865000" />
+    <option name="totallyTimeSpent" value="93778000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -567,9 +472,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="n-bank" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WebContent/OPES2/css/colorpicker/images/map-pointer.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/OPES2/css/colorpicker/images/preview-opacity.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -799,16 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/js/oneui/opes_post_result_util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/experiments/3600/GameObj.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1760">
@@ -827,16 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-154">
           <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3540/VisualPerceptionCircleTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="620" column="41" lean-forward="true" selection-start-line="620" selection-start-column="41" selection-end-line="620" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -930,26 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-93">
-          <caret line="79" column="29" lean-forward="true" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="150" column="45" lean-forward="true" selection-start-line="150" selection-start-column="45" selection-end-line="150" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task_1/task_testNotes.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -957,22 +819,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/js/oneui/opes_post_result_util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/experiments/2909/nback.jsp" />
+    <entry file="file://$PROJECT_DIR$/WebContent/experiments/3540/VisualPerceptionCircleTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="60" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="60" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/experiments/2908/nbackTest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="194" lean-forward="true" selection-start-line="194" selection-end-line="194" />
+        <state relative-caret-position="330">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="140" column="25" lean-forward="true" selection-start-line="140" selection-start-column="25" selection-end-line="140" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/experiments/2909/nbackF.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="208" column="24" selection-start-line="208" selection-start-column="24" selection-end-line="208" selection-end-column="24" />
+        <state relative-caret-position="88">
+          <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="129" column="24" lean-forward="true" selection-start-line="129" selection-start-column="24" selection-end-line="129" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>

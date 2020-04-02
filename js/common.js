@@ -112,7 +112,6 @@ function postWebMathData(opes_result_data) {
     //正式环境
     opes_result_data.userName = localStorage.getItem(userInfo.userName);
     opes_result_data.password =  localStorage.getItem(userInfo.password);
-    opes_result_data.access_token =  localStorage.getItem(userInfo.password);
     opes_result_data.access_token =  localStorage.getItem('access_token');
     opes_result_data.type = 'formal';
     $.ajax({
@@ -126,28 +125,28 @@ function postWebMathData(opes_result_data) {
         },
         dataType: 'json',
         success: function (data) {
-            if (data.flag === 'success') {
-                //数据提交成功
-                setTimeout(function () {
-                    mui.openWindow({
-                        url: '../../../task_1/task_list.html',
-                        createNew: true,
-                        styles: {
-                            cachemode:"noCache",
-                        }
-                    });
-                },10);
-            } else {
-                setTimeout(function () {
-                    mui.openWindow({
-                        url: '../../../task_1/task_list.html',
-                        createNew: true,
-                        styles: {
-                            cachemode:"noCache",
-                        }
-                    });
-                },10);
-            }
+            // if (data.flag === 'success') {
+            //     //数据提交成功
+            //     setTimeout(function () {
+            //         mui.openWindow({
+            //             url: '../../../task_1/task_list.html',
+            //             createNew: true,
+            //             styles: {
+            //                 cachemode:"noCache",
+            //             }
+            //         });
+            //     },10);
+            // } else {
+            //     setTimeout(function () {
+            //         mui.openWindow({
+            //             url: '../../../task_1/task_list.html',
+            //             createNew: true,
+            //             styles: {
+            //                 cachemode:"noCache",
+            //             }
+            //         });
+            //     },10);
+            // }
         }
     });
 }
