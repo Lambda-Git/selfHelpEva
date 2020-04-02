@@ -115,6 +115,7 @@
 </head>
 <body>
 <div id="box" class="box">
+    <div id="time" class="hide" style="position: fixed;top: 10px;right: 10px;width: 80px;text-align: center;line-height: 38px;background: #ff0000;border-radius: 100px;font-weight: 900">360秒</div>
 
     <div id="item1" class="item">
         <div class="titleBox div_flex">
@@ -178,7 +179,7 @@
         var NOne=N2_1,NTwo=N2_2,NAns=N2_ans;
         var NOneIndex=0,NTwoIndex=0;
         var NOneIndexLength=2,NTwoIndexLength=20;
-        var time1=1000,time2=500,time3=500;
+        var time1=1000,time2=500,time3=500,maxtime=360;
         var timer1=null,timer2=null,timer3=null;
         var time,beginTime,endTime;
         var QPKey=false;
@@ -203,9 +204,24 @@
             result=true;
         }
         $(".st1").on("click",function () {
+            if(!result){
+                $("#time").removeClass("hide");
+                timer = setInterval(function () {
+                    CountDown();
+                }, 1000);
+            }
             timer1Fun();
         });
-
+        function CountDown() {
+            if (maxtime > 1) {
+                --maxtime;
+                $("#time").text(maxtime)
+            } else{
+                post_result();
+                clearInterval(timer);
+                timer=null;
+            }
+        }
         function hideFun(ID) {
             $(".item").addClass("hide");
             $("#"+ID).removeClass("hide");
