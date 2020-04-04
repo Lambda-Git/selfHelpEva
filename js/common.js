@@ -75,8 +75,8 @@ function getFormData(eId) {
 function postFormInputData() {
     //展示正式任务结束页面
     var formData = getFormData('result');
-    formData.userName = localStorage.getItem(userInfo.userName);
-    formData.password = localStorage.getItem(userInfo.password);
+    formData.userName = userInfo.userName;
+    formData.password = userInfo.password;
     formData.type = 'formal';
     $.ajax({
         type: 'POST',
@@ -90,16 +90,30 @@ function postFormInputData() {
         dataType: 'json',
         success: function (data) {
         //数据提交成功
-        mui.toast('数据保存成功!1秒后自动跳转到任务列表!',{ duration:'long', type:'div' })
-         setTimeout(function () {
-             mui.openWindow({
-                 url: '../../../task_1/task_list.html',
-                 createNew: true,
-                 styles: {
-                     cachemode:"noCache",
-                 }
-             });
-         },1000);
+            if (data.flag === 'success') {
+                mui.toast('数据保存成功!1秒后自动跳转到任务列表!', {duration: 'long', type: 'div'})
+                setTimeout(function () {
+                    mui.openWindow({
+                        url: '../../../task_1/task_list.html',
+                        createNew: true,
+                        styles: {
+                            cachemode: "noCache",
+                        }
+                    });
+                }, 1000);
+            } else {
+                mui.toast('后端服务异常请联系后端管理员!1秒后自动跳转到任务列表!', {duration: 'long', type: 'div'})
+                setTimeout(function () {
+                    mui.openWindow({
+                        url: '../../../task_1/task_list.html',
+                        createNew: true,
+                        styles: {
+                            cachemode: "noCache",
+                        }
+                    });
+                }, 1000);
+            }
+
         }
     });
 }
@@ -110,8 +124,8 @@ function postWebMathData(opes_result_data) {
     /* formData.userName = '18210119894001';
      formData.password = 'password';*/
     //正式环境
-    opes_result_data.userName = localStorage.getItem(userInfo.userName);
-    opes_result_data.password =  localStorage.getItem(userInfo.password);
+    opes_result_data.userName = userInfo.userName;
+    opes_result_data.password = userInfo.password;
     opes_result_data.access_token =  localStorage.getItem('access_token');
     opes_result_data.type = 'formal';
     $.ajax({

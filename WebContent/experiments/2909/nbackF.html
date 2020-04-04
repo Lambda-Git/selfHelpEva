@@ -319,9 +319,9 @@
             opes_result_data.sumitcoids = 0;
             opes_result_data.targetpagename = "<%=targetpagename%>";
             opes_result_data.codematerial = 0;
-            opes_result_data.uid = localStorage.getItem('uid');
+            opes_result_data.uid = parseInt(localStorage.getItem('uid'));
             opes_result_data.lan = "<%=lan%>";
-            opes_result_data.projectid = localStorage.getItem('projectid');
+            opes_result_data.projectid = parseInt(localStorage.getItem('projectid'));
             opes_result_data.duration = 0;
             opes_result_data.timeaverage = Math.round(0);
             opes_result_data.type4set = (data.type4set).join(";");
