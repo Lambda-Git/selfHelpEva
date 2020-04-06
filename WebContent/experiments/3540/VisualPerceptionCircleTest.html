@@ -281,7 +281,7 @@
     var update_interval = midle_relax_interval / bar_length;//
     var current_index = 0;
     var current_start_time = getTimestamp();
-    var ristrict_time = 1000 * 60 * 3;
+    var ristrict_time = 1000 * 60 * 3000;
     //var relax_point=new Array("40","80");
 
     var relax_point = new Array("400", "800");
@@ -333,8 +333,8 @@
         //stroopnum_tips.style.display="block";
         //dotcomparison_tips.style.display="block";
         //stroopnum_tips.innerHTML="<br/><br/>正在装入程序("+ progress + "%)"+"，稍等... ";
-        // document.getElementById("loading").innerHTML = "<img  src='../../images/ajax-loader(2).gif'/><br/><br/>正在装入程序("+ progress + "%)"+"，稍等... ";
-        document.getElementById("loading").innerHTML = "<br/><br/>程序加载中(" + progress + "%)";
+        document.getElementById("loading").innerHTML = "<img  src='../../images/ajax-loader(2).gif'/><br/><br/>正在装入程序("+ progress + "%)"+"，稍等... ";
+        // document.getElementById("loading").innerHTML = "<br/><br/>程序加载中(" + progress + "%)";
     }
 
     /* 按任意键继续 */
