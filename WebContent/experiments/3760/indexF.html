@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图形推理</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        html,body,.box,.item{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .btnBox{
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            height: 40%;
+        }
+        .btn{
+            color: #fff;
+            background-color:#2d8cf0;
+            position: absolute;
+            bottom: 30%;
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: 400;
+            text-align: center;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            height: 60px;
+            padding: 0 50px;
+            font-size: 24px;
+            border-radius: 4px;
+        }
+        .btn:before{
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            bottom: -1px;
+            right: -1px;
+            background: #fff;
+            opacity: .35;
+            content: "";
+            border-radius: inherit;
+            z-index: 1;
+            transition: opacity .2s;
+            pointer-events: none;
+            display: none;
+        }
+
+        .leftBtn{
+            left: 10%;
+        }
+        .rightBtn{
+            right: 10%;
+        }
+        .div_flex{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .stast{
+            height: 40%;
+            width: 100%;
+        }
+        .stast span{
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            background: #2d8cf0;
+            color: #fff;
+            font-size: 28px;
+            line-height: 100px;
+            text-align: center;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+        #box .hide{
+            display: none;
+        }
+        .titleBox{
+            min-height: 40%;
+        }
+        .title{
+            width: 70%;
+            height: auto;
+            text-indent: 2em;
+            font-size: 24px;
+            color: #000;
+        }
+        .btnItemBox{
+            width: 80%;
+            height: 100%;
+            margin: 0px auto;
+        }
+        .btnItem{
+            height: 45%;
+        }
+        .btnItem .btnItem_1{
+            width: 25%;
+            height: 100%;
+        }
+        .btnItem_1 div{
+            width: 90%;
+            height: 90%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            cursor: pointer;
+        }
+        .btnItem_1 div img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .itemImg{
+            height: 60%;
+        }
+        .itemImg img{
+            max-height: 90%;
+            max-width: 80%;
+        }
+
+    </style>
+    <SCRIPT src="../../js/Statistics/Statistics.js" type=text/javascript></SCRIPT>
+    <script src="../../js/oneui/opes_post_result_util.js"></script>
+</head>
+
+<body>
+<div id="box" class="box">
+
+    <div id="time" class="hide" style="position: fixed;top: 10px;right: 10px;width: 80px;text-align: center;line-height: 38px;background: #ff0000;border-radius: 100px;font-weight: 900">240秒</div>
+    <div id="item1" class="item">
+        <div class="titleBox div_flex">
+        </div>
+        <div class="stast div_flex">
+            <span class="st1">开始</span>
+        </div>
+    </div>
+
+    <div id="item2" class="item hide">
+        <div class="itemImg div_flex">
+            <img class="img" id="img1" src="" alt="">
+        </div>
+    </div>
+
+    <div id="item3" class="item hide">
+        <div class="itemImg div_flex">
+            <img class="img" id="img2" src="../../testpics/img/A01-0.png" alt="">
+        </div>
+        <div class="btnBox">
+            <div class="btnItemBox">
+                <div class="btnItem div_flex">
+                    <div class="btnItem_1">
+                        <div class="btnNum" id="A" data-data="A">
+                            <img src="../../testpics/img/A01-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="btnItem_1">
+                        <div class="btnNum" id="B" data-data="B">
+                            <img src="../../testpics/img/A01-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="btnItem_1">
+                        <div class="btnNum" id="C" data-data="C">
+                            <img src="../../testpics/img/A01-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="btnItem_1">
+                        <div class="btnNum" id="D" data-data="D">
+                            <img src="../../testpics/img/A01-1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="btnItem div_flex">
+                    <div class="btnItem_1">
+                        <div class="btnNum" id="E" data-data="E">
+                            <img src="../../testpics/img/A01-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="btnItem_1">
+                        <div class="btnNum" id="F" data-data="F">
+                            <img src="../../testpics/img/A01-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="btnItem_1">
+                        <div class="btnNum" id="G" data-data="G">
+                            <img src="../../testpics/img/A01-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="btnItem_1">
+                        <div class="btnNum" id="H" data-data="H">
+                            <img src="../../testpics/img/A01-1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="item5" class="item hide">
+
+    </div>
+
+    <div id="item6" class="item div_flex hide">
+        <span id="falck" style="font-size: 38px;"></span>
+    </div>
+
+
+
+
+</div>
+</body>
+<script src="../../js/jquery.3.4.1.js"></script>
+<script type="text/javascript" src="../../js/oneui/common_utils.js"></script>
+<script src="../../../js/mui.min.js"></script>
+<script src="../../../js/common.js"></script>
+<script>
+    $(function () {
+        var data=[
+            {"id":"1","ans":"A","topic":"img/A01-0.png","A":"img/A01-1.png","B":"img/A01-2.png","C":"img/A01-3.png","D":"img/A01-4.png","E":"img/A01-5.png","F":"img/A01-6.png","G":"img/A01-7.png","H":"img/A01-8.png"},
+            {"id":"2","ans":"A","topic":"img/A02-0.png","A":"img/A02-1.png","B":"img/A02-2.png","C":"img/A02-3.png","D":"img/A02-4.png","E":"img/A02-5.png","F":"img/A02-6.png","G":"img/A02-7.png","H":"img/A02-8.png"},
+            {"id":"3","ans":"C","topic":"img/A03-0.png","A":"img/A03-1.png","B":"img/A03-2.png","C":"img/A03-3.png","D":"img/A03-4.png","E":"img/A03-5.png","F":"img/A03-6.png","G":"img/A03-7.png","H":"img/A03-8.png"},
+            {"id":"4","ans":"G","topic":"img/A04-0.png","A":"img/A04-1.png","B":"img/A04-2.png","C":"img/A04-3.png","D":"img/A04-4.png","E":"img/A04-5.png","F":"img/A04-6.png","G":"img/A04-7.png","H":"img/A04-8.png"},
+            {"id":"5","ans":"F","topic":"img/A05-0.png","A":"img/A05-1.png","B":"img/A05-2.png","C":"img/A05-3.png","D":"img/A05-4.png","E":"img/A05-5.png","F":"img/A05-6.png","G":"img/A05-7.png","H":"img/A05-8.png"},
+            {"id":"6","ans":"G","topic":"img/A06-0.png","A":"img/A06-1.png","B":"img/A06-2.png","C":"img/A06-3.png","D":"img/A06-4.png","E":"img/A06-5.png","F":"img/A06-6.png","G":"img/A06-7.png","H":"img/A06-8.png"},
+            {"id":"7","ans":"H","topic":"img/A07-0.png","A":"img/A07-1.png","B":"img/A07-2.png","C":"img/A07-3.png","D":"img/A07-4.png","E":"img/A07-5.png","F":"img/A07-6.png","G":"img/A07-7.png","H":"img/A07-8.png"},
+            {"id":"8","ans":"A","topic":"img/A08-0.png","A":"img/A08-1.png","B":"img/A08-2.png","C":"img/A08-3.png","D":"img/A08-4.png","E":"img/A08-5.png","F":"img/A08-6.png","G":"img/A08-7.png","H":"img/A08-8.png"},
+            {"id":"9","ans":"E","topic":"img/A09-0.png","A":"img/A09-1.png","B":"img/A09-2.png","C":"img/A09-3.png","D":"img/A09-4.png","E":"img/A09-5.png","F":"img/A09-6.png","G":"img/A09-7.png","H":"img/A09-8.png"},
+            {"id":"10","ans":"G","topic":"img/A10-0.png","A":"img/A10-1.png","B":"img/A10-2.png","C":"img/A10-3.png","D":"img/A10-4.png","E":"img/A10-5.png","F":"img/A10-6.png","G":"img/A10-7.png","H":"img/A10-8.png"},
+            {"id":"11","ans":"G","topic":"img/A11-0.png","A":"img/A11-1.png","B":"img/A11-2.png","C":"img/A11-3.png","D":"img/A11-4.png","E":"img/A11-5.png","F":"img/A11-6.png","G":"img/A11-7.png","H":"img/A11-8.png"},
+            {"id":"12","ans":"F","topic":"img/A12-0.png","A":"img/A12-1.png","B":"img/A12-2.png","C":"img/A12-3.png","D":"img/A12-4.png","E":"img/A12-5.png","F":"img/A12-6.png","G":"img/A12-7.png","H":"img/A12-8.png"},
+            {"id":"13","ans":"F","topic":"img/A13-0.png","A":"img/A13-1.png","B":"img/A13-2.png","C":"img/A13-3.png","D":"img/A13-4.png","E":"img/A13-5.png","F":"img/A13-6.png","G":"img/A13-7.png","H":"img/A13-8.png"},
+            {"id":"14","ans":"F","topic":"img/A14-0.png","A":"img/A14-1.png","B":"img/A14-2.png","C":"img/A14-3.png","D":"img/A14-4.png","E":"img/A14-5.png","F":"img/A14-6.png","G":"img/A14-7.png","H":"img/A14-8.png"},
+            {"id":"15","ans":"G","topic":"img/A15-0.png","A":"img/A15-1.png","B":"img/A15-2.png","C":"img/A15-3.png","D":"img/A15-4.png","E":"img/A15-5.png","F":"img/A15-6.png","G":"img/A15-7.png","H":"img/A15-8.png"},
+            {"id":"16","ans":"A","topic":"img/B01-0.png","A":"img/B01-1.png","B":"img/B01-2.png","C":"img/B01-3.png","D":"img/B01-4.png","E":"img/B01-5.png","F":"img/B01-6.png","G":"img/B01-7.png","H":"img/B01-8.png"},
+            {"id":"17","ans":"B","topic":"img/B02-0.png","A":"img/B02-1.png","B":"img/B02-2.png","C":"img/B02-3.png","D":"img/B02-4.png","E":"img/B02-5.png","F":"img/B02-6.png","G":"img/B02-7.png","H":"img/B02-8.png"},
+            {"id":"18","ans":"A","topic":"img/B03-0.png","A":"img/B03-1.png","B":"img/B03-2.png","C":"img/B03-3.png","D":"img/B03-4.png","E":"img/B03-5.png","F":"img/B03-6.png","G":"img/B03-7.png","H":"img/B03-8.png"},
+            {"id":"19","ans":"D","topic":"img/B04-0.png","A":"img/B04-1.png","B":"img/B04-2.png","C":"img/B04-3.png","D":"img/B04-4.png","E":"img/B04-5.png","F":"img/B04-6.png","G":"img/B04-7.png","H":"img/B04-8.png"},
+            {"id":"20","ans":"G","topic":"img/B05-0.png","A":"img/B05-1.png","B":"img/B05-2.png","C":"img/B05-3.png","D":"img/B05-4.png","E":"img/B05-5.png","F":"img/B05-6.png","G":"img/B05-7.png","H":"img/B05-8.png"},
+            {"id":"21","ans":"B","topic":"img/B06-0.png","A":"img/B06-1.png","B":"img/B06-2.png","C":"img/B06-3.png","D":"img/B06-4.png","E":"img/B06-5.png","F":"img/B06-6.png","G":"img/B06-7.png","H":"img/B06-8.png"},
+            {"id":"22","ans":"B","topic":"img/B07-0.png","A":"img/B07-1.png","B":"img/B07-2.png","C":"img/B07-3.png","D":"img/B07-4.png","E":"img/B07-5.png","F":"img/B07-6.png","G":"img/B07-7.png","H":"img/B07-8.png"},
+            {"id":"23","ans":"C","topic":"img/B08-0.png","A":"img/B08-1.png","B":"img/B08-2.png","C":"img/B08-3.png","D":"img/B08-4.png","E":"img/B08-5.png","F":"img/B08-6.png","G":"img/B08-7.png","H":"img/B08-8.png"},
+            {"id":"24","ans":"A","topic":"img/B09-0.png","A":"img/B09-1.png","B":"img/B09-2.png","C":"img/B09-3.png","D":"img/B09-4.png","E":"img/B09-5.png","F":"img/B09-6.png","G":"img/B09-7.png","H":"img/B09-8.png"},
+            {"id":"25","ans":"A","topic":"img/B10-0.png","A":"img/B10-1.png","B":"img/B10-2.png","C":"img/B10-3.png","D":"img/B10-4.png","E":"img/B10-5.png","F":"img/B10-6.png","G":"img/B10-7.png","H":"img/B10-8.png"},
+            {"id":"26","ans":"B","topic":"img/B11-0.png","A":"img/B11-1.png","B":"img/B11-2.png","C":"img/B11-3.png","D":"img/B11-4.png","E":"img/B11-5.png","F":"img/B11-6.png","G":"img/B11-7.png","H":"img/B11-8.png"},
+            {"id":"27","ans":"B","topic":"img/B12-0.png","A":"img/B12-1.png","B":"img/B12-2.png","C":"img/B12-3.png","D":"img/B12-4.png","E":"img/B12-5.png","F":"img/B12-6.png","G":"img/B12-7.png","H":"img/B12-8.png"},
+            {"id":"28","ans":"F","topic":"img/B13-0.png","A":"img/B13-1.png","B":"img/B13-2.png","C":"img/B13-3.png","D":"img/B13-4.png","E":"img/B13-5.png","F":"img/B13-6.png","G":"img/B13-7.png","H":"img/B13-8.png"},
+            {"id":"29","ans":"G","topic":"img/B14-0.png","A":"img/B14-1.png","B":"img/B14-2.png","C":"img/B14-3.png","D":"img/B14-4.png","E":"img/B14-5.png","F":"img/B14-6.png","G":"img/B14-7.png","H":"img/B14-8.png"},
+            {"id":"30","ans":"A","topic":"img/B15-0.png","A":"img/B15-1.png","B":"img/B15-2.png","C":"img/B15-3.png","D":"img/B15-4.png","E":"img/B15-5.png","F":"img/B15-6.png","G":"img/B15-7.png","H":"img/B15-8.png"},
+            {"id":"31","ans":"B","topic":"img/C01-0.png","A":"img/C01-1.png","B":"img/C01-2.png","C":"img/C01-3.png","D":"img/C01-4.png","E":"img/C01-5.png","F":"img/C01-6.png","G":"img/C01-7.png","H":"img/C01-8.png"},
+            {"id":"32","ans":"A","topic":"img/C02-0.png","A":"img/C02-1.png","B":"img/C02-2.png","C":"img/C02-3.png","D":"img/C02-4.png","E":"img/C02-5.png","F":"img/C02-6.png","G":"img/C02-7.png","H":"img/C02-8.png"},
+            {"id":"33","ans":"H","topic":"img/C03-0.png","A":"img/C03-1.png","B":"img/C03-2.png","C":"img/C03-3.png","D":"img/C03-4.png","E":"img/C03-5.png","F":"img/C03-6.png","G":"img/C03-7.png","H":"img/C03-8.png"},
+            {"id":"34","ans":"G","topic":"img/C04-0.png","A":"img/C04-1.png","B":"img/C04-2.png","C":"img/C04-3.png","D":"img/C04-4.png","E":"img/C04-5.png","F":"img/C04-6.png","G":"img/C04-7.png","H":"img/C04-8.png"},
+            {"id":"35","ans":"F","topic":"img/C05-0.png","A":"img/C05-1.png","B":"img/C05-2.png","C":"img/C05-3.png","D":"img/C05-4.png","E":"img/C05-5.png","F":"img/C05-6.png","G":"img/C05-7.png","H":"img/C05-8.png"},
+            {"id":"36","ans":"B","topic":"img/C06-0.png","A":"img/C06-1.png","B":"img/C06-2.png","C":"img/C06-3.png","D":"img/C06-4.png","E":"img/C06-5.png","F":"img/C06-6.png","G":"img/C06-7.png","H":"img/C06-8.png"},
+            {"id":"37","ans":"A","topic":"img/C07-0.png","A":"img/C07-1.png","B":"img/C07-2.png","C":"img/C07-3.png","D":"img/C07-4.png","E":"img/C07-5.png","F":"img/C07-6.png","G":"img/C07-7.png","H":"img/C07-8.png"},
+            {"id":"38","ans":"E","topic":"img/C08-0.png","A":"img/C08-1.png","B":"img/C08-2.png","C":"img/C08-3.png","D":"img/C08-4.png","E":"img/C08-5.png","F":"img/C08-6.png","G":"img/C08-7.png","H":"img/C08-8.png"},
+            {"id":"39","ans":"B","topic":"img/C09-0.png","A":"img/C09-1.png","B":"img/C09-2.png","C":"img/C09-3.png","D":"img/C09-4.png","E":"img/C09-5.png","F":"img/C09-6.png","G":"img/C09-7.png","H":"img/C09-8.png"},
+            {"id":"40","ans":"H","topic":"img/C10-0.png","A":"img/C10-1.png","B":"img/C10-2.png","C":"img/C10-3.png","D":"img/C10-4.png","E":"img/C10-5.png","F":"img/C10-6.png","G":"img/C10-7.png","H":"img/C10-8.png"},
+            {"id":"41","ans":"B","topic":"img/C11-0.png","A":"img/C11-1.png","B":"img/C11-2.png","C":"img/C11-3.png","D":"img/C11-4.png","E":"img/C11-5.png","F":"img/C11-6.png","G":"img/C11-7.png","H":"img/C11-8.png"},
+            {"id":"42","ans":"D","topic":"img/C12-0.png","A":"img/C12-1.png","B":"img/C12-2.png","C":"img/C12-3.png","D":"img/C12-4.png","E":"img/C12-5.png","F":"img/C12-6.png","G":"img/C12-7.png","H":"img/C12-8.png"},
+            {"id":"43","ans":"B","topic":"img/C13-0.png","A":"img/C13-1.png","B":"img/C13-2.png","C":"img/C13-3.png","D":"img/C13-4.png","E":"img/C13-5.png","F":"img/C13-6.png","G":"img/C13-7.png","H":"img/C13-8.png"},
+            {"id":"44","ans":"E","topic":"img/C14-0.png","A":"img/C14-1.png","B":"img/C14-2.png","C":"img/C14-3.png","D":"img/C14-4.png","E":"img/C14-5.png","F":"img/C14-6.png","G":"img/C14-7.png","H":"img/C14-8.png"},
+            {"id":"45","ans":"C","topic":"img/C15-0.png","A":"img/C15-1.png","B":"img/C15-2.png","C":"img/C15-3.png","D":"img/C15-4.png","E":"img/C15-5.png","F":"img/C15-6.png","G":"img/C15-7.png","H":"img/C15-8.png"},
+            {"id":"46","ans":"C","topic":"img/D01-0.png","A":"img/D01-1.png","B":"img/D01-2.png","C":"img/D01-3.png","D":"img/D01-4.png","E":"img/D01-5.png","F":"img/D01-6.png","G":"img/D01-7.png","H":"img/D01-8.png"},
+            {"id":"47","ans":"D","topic":"img/D02-0.png","A":"img/D02-1.png","B":"img/D02-2.png","C":"img/D02-3.png","D":"img/D02-4.png","E":"img/D02-5.png","F":"img/D02-6.png","G":"img/D02-7.png","H":"img/D02-8.png"},
+            {"id":"48","ans":"A","topic":"img/D03-0.png","A":"img/D03-1.png","B":"img/D03-2.png","C":"img/D03-3.png","D":"img/D03-4.png","E":"img/D03-5.png","F":"img/D03-6.png","G":"img/D03-7.png","H":"img/D03-8.png"},
+            {"id":"49","ans":"C","topic":"img/D04-0.png","A":"img/D04-1.png","B":"img/D04-2.png","C":"img/D04-3.png","D":"img/D04-4.png","E":"img/D04-5.png","F":"img/D04-6.png","G":"img/D04-7.png","H":"img/D04-8.png"},
+            {"id":"50","ans":"A","topic":"img/D05-0.png","A":"img/D05-1.png","B":"img/D05-2.png","C":"img/D05-3.png","D":"img/D05-4.png","E":"img/D05-5.png","F":"img/D05-6.png","G":"img/D05-7.png","H":"img/D05-8.png"},
+            {"id":"51","ans":"B","topic":"img/D06-0.png","A":"img/D06-1.png","B":"img/D06-2.png","C":"img/D06-3.png","D":"img/D06-4.png","E":"img/D06-5.png","F":"img/D06-6.png","G":"img/D06-7.png","H":"img/D06-8.png"},
+            {"id":"52","ans":"E","topic":"img/D07-0.png","A":"img/D07-1.png","B":"img/D07-2.png","C":"img/D07-3.png","D":"img/D07-4.png","E":"img/D07-5.png","F":"img/D07-6.png","G":"img/D07-7.png","H":"img/D07-8.png"},
+            {"id":"53","ans":"A","topic":"img/D08-0.png","A":"img/D08-1.png","B":"img/D08-2.png","C":"img/D08-3.png","D":"img/D08-4.png","E":"img/D08-5.png","F":"img/D08-6.png","G":"img/D08-7.png","H":"img/D08-8.png"},
+            {"id":"54","ans":"B","topic":"img/D09-0.png","A":"img/D09-1.png","B":"img/D09-2.png","C":"img/D09-3.png","D":"img/D09-4.png","E":"img/D09-5.png","F":"img/D09-6.png","G":"img/D09-7.png","H":"img/D09-8.png"},
+            {"id":"55","ans":"A","topic":"img/D10-0.png","A":"img/D10-1.png","B":"img/D10-2.png","C":"img/D10-3.png","D":"img/D10-4.png","E":"img/D10-5.png","F":"img/D10-6.png","G":"img/D10-7.png","H":"img/D10-8.png"},
+            {"id":"56","ans":"A","topic":"img/D11-0.png","A":"img/D11-1.png","B":"img/D11-2.png","C":"img/D11-3.png","D":"img/D11-4.png","E":"img/D11-5.png","F":"img/D11-6.png","G":"img/D11-7.png","H":"img/D11-8.png"},
+            {"id":"57","ans":"E","topic":"img/D12-0.png","A":"img/D12-1.png","B":"img/D12-2.png","C":"img/D12-3.png","D":"img/D12-4.png","E":"img/D12-5.png","F":"img/D12-6.png","G":"img/D12-7.png","H":"img/D12-8.png"},
+            {"id":"58","ans":"F","topic":"img/D13-0.png","A":"img/D13-1.png","B":"img/D13-2.png","C":"img/D13-3.png","D":"img/D13-4.png","E":"img/D13-5.png","F":"img/D13-6.png","G":"img/D13-7.png","H":"img/D13-8.png"},
+            {"id":"59","ans":"A","topic":"img/D14-0.png","A":"img/D14-1.png","B":"img/D14-2.png","C":"img/D14-3.png","D":"img/D14-4.png","E":"img/D14-5.png","F":"img/D14-6.png","G":"img/D14-7.png","H":"img/D14-8.png"},
+            {"id":"60","ans":"H","topic":"img/D15-0.png","A":"img/D15-1.png","B":"img/D15-2.png","C":"img/D15-3.png","D":"img/D15-4.png","E":"img/D15-5.png","F":"img/D15-6.png","G":"img/D15-7.png","H":"img/D15-8.png"}
+        ];
+        var index=0,indexLength=data.length;
+        var stimulateTime=30,stimulateTimer=null;
+        var time1=1000,maxtime=240,stimid=1;
+        var timer1=null,timer=null;
+        var time,beginTime,endTime;
+        var errorNum=0;
+        var QPKey=false;
+        var dataSet={
+            type4set:[],
+            stimidset:[],
+            correctanswerset:[],
+            buttonset:[],
+            timeset:[],
+            commentset:[]
+        };
+        pushArr(data);
+        tipocFun(data,index);
+        function init(){
+
+        }
+        $(".st1").on("click",function () {
+            hideFun("item3");
+            $("#time").removeClass("hide");
+            QPKey=true;
+            beginTime=new Date().getTime();
+            stimulateFun();
+            timer = setInterval(function () {
+                CountDown();
+            }, 1000);
+
+        });
+
+        function hideFun(ID) {
+            $(".item").addClass("hide");
+            $("#"+ID).removeClass("hide");
+        }
+
+        function stimulateFun() {
+            stimulateTimer = setInterval(function () {
+                stimulateCountDown();
+            }, 1000);
+        }
+        function stimulateCountDown() {
+            if (stimulateTime > 1) {
+                --stimulateTime;
+            } else{
+                QPKeyFun(" ");
+                clearInterval(stimulateTimer);
+                stimulateTimer=null;
+            }
+        }
+        function CountDown() {
+            if (maxtime > 1) {
+                --maxtime;
+                $("#time").text(maxtime)
+            } else{
+                post_result();
+                clearInterval(timer);
+                timer=null;
+            }
+        }
+        function tipocFun(arr,index) {
+            $("#img2").attr("src","../../testpics/" + arr[index].topic);
+            $("#A img").attr("src","../../testpics/" + arr[index].A);
+            $("#B img").attr("src","../../testpics/" + arr[index].B);
+            $("#C img").attr("src","../../testpics/" + arr[index].C);
+            $("#D img").attr("src","../../testpics/" + arr[index].D);
+            $("#E img").attr("src","../../testpics/" + arr[index].E);
+            $("#F img").attr("src","../../testpics/" + arr[index].F);
+            $("#G img").attr("src","../../testpics/" + arr[index].G);
+            $("#H img").attr("src","../../testpics/" + arr[index].H);
+        }
+
+        function timer1Fun() {
+            hideFun("item6");
+            timer1=setInterval(function () {
+
+                if(index >= indexLength){
+                    post_result();
+                }else {
+                    tipocFun(data,index);
+                    hideFun("item3");
+                    stimulateTime=30;
+                    QPKey=true;
+                    beginTime=new Date().getTime();
+                    stimulateFun();
+                }
+                clearInterval(timer1);
+                timer1=null;
+            }, time1);
+        }
+
+
+
+        $(".btnNum").on("click",function () {
+            clearInterval(stimulateTimer);
+            stimulateTimer=null;
+            var key=$(this).attr("data-data");
+            QPKeyFun(key);
+        });
+
+        function QPKeyFun(key) {
+            if(QPKey){
+                endTime=new Date().getTime();
+                time=(endTime-beginTime).toFixed(0);
+                dataSet.timeset.push(time);
+                dataSet.stimidset.push(stimid);
+                dataSet.type4set.push("0");
+                dataSet.correctanswerset.push(data[index].ans);
+                dataSet.buttonset.push(key);
+                QPKey=false;
+                if(data[index].ans === key){
+                    tishi(true)
+                }else {
+                    tishi(false)
+                }
+            }
+        }
+        function pushArr(array) {
+            for (var i = array.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+
+        function tishi(falck) {
+            if(falck){
+                $("#falck").text(" ")
+            }else {
+                errorNum++;
+                if(errorNum>=5){
+                    post_result();
+                    return;
+                }
+                $("#falck").text(" ")
+            }
+            index++;
+            stimid++;
+            timer1Fun();
+        }
+
+        function post_result() {
+            // sumscore,meanscore,meanart;
+            var opes_result_data = {};
+            opes_result_data.taskid = 3760;
+            opes_result_data.sumitcoids = 0;
+            opes_result_data.targetpagename = "<%=targetpagename%>";
+            opes_result_data.codematerial = 0;
+            opes_result_data.uid = parseInt(localStorage.getItem('uid'));
+            opes_result_data.lan = "<%=lan%>";
+            opes_result_data.projectid = parseInt(localStorage.getItem('projectid'));
+            opes_result_data.duration = 0;
+            opes_result_data.timeaverage = Math.round(0);
+            opes_result_data.type4set = (dataSet.type4set).join(";");
+            opes_result_data.stimidset = (dataSet.stimidset).join(";");
+            opes_result_data.correctanswerset = (dataSet.correctanswerset).join(";");
+            opes_result_data.time = "0";
+            opes_result_data.level = "0";
+            opes_result_data.timeset = (dataSet.timeset).join(";");
+            opes_result_data.radioset = "";
+            opes_result_data.buttonset = (dataSet.buttonset).join(";");
+            opes_result_data.commentset = "";
+            opes_result_data.numset = "";
+            opes_post_result_util_js_opes_post_result(opes_result_data);
+            return;
+        }
+
+    })
+</script>
+</html>

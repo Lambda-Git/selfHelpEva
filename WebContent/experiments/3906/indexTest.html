@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../../../css/mui.min.css" rel="stylesheet"/>
+    <title>图形推理</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        html,body,.box,.item{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .btnBox{
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            height: 40%;
+        }
+        .btn{
+            color: #fff;
+            background-color:#2d8cf0;
+            position: absolute;
+            bottom: 30%;
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: 400;
+            text-align: center;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            height: 60px;
+            padding: 0 50px;
+            font-size: 24px;
+            border-radius: 4px;
+        }
+        .btn:before{
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            bottom: -1px;
+            right: -1px;
+            background: #fff;
+            opacity: .35;
+            content: "";
+            border-radius: inherit;
+            z-index: 1;
+            transition: opacity .2s;
+            pointer-events: none;
+            display: none;
+        }
+
+        .leftBtn{
+            left: 10%;
+        }
+        .rightBtn{
+            right: 10%;
+        }
+        .div_flex{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .stast{
+            height: 40%;
+            width: 100%;
+        }
+        .stast span{
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            background: #2d8cf0;
+            color: #fff;
+            font-size: 28px;
+            line-height: 100px;
+            text-align: center;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+        #box .hide{
+            display: none;
+        }
+        .titleBox{
+            min-height: 40%;
+        }
+        .title{
+            width: 70%;
+            height: auto;
+            text-indent: 2em;
+            font-size: 24px;
+            color: #000;
+        }
+        .btnItemBox{
+            width: 80%;
+            height: 100%;
+            margin: 0px auto;
+        }
+        .btnItem{
+            height: 45%;
+        }
+        .btnItem .btnItem_1{
+            width: 25%;
+            height: 100%;
+        }
+        .btnItem_1 div{
+            width: 90%;
+            height: 90%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            cursor: pointer;
+        }
+        .btnItem_1 div img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .itemImg{
+            height: 60%;
+        }
+        .itemImg img{
+            max-height: 90%;
+            max-width: 80%;
+        }
+
+    </style>
+    <SCRIPT src="../../js/Statistics/Statistics.js" type=text/javascript></SCRIPT>
+    <script src="../../js/oneui/opes_post_result_util.js"></script>
+</head>
+
+<body>
+<div id="box" class="box">
+
+    <div id="time" class="hide" style="position: fixed;top: 10px;right: 10px;width: 80px;text-align: center;line-height: 38px;background: #ff0000;border-radius: 100px;font-weight: 900">60秒</div>
+    <div id="item1" class="item">
+        <div class="titleBox div_flex">
+            <!--<div class="title">判断当前出现的位置与先于当前位置2个出现的位置是否相同，如果相同，请按Q键，如果不同，请按P键。按任意键开始测验。</div>-->
+        </div>
+        <div class="stast div_flex">
+            <span class="st1">开始</span>
+        </div>
+    </div>
+
+    <div id="item2" class="item hide">
+        <div class="itemImg div_flex">
+            <img class="img" id="img1" src="" alt="">
+        </div>
+    </div>
+
+    <div id="item3" class="item hide">
+        <div class="itemImg div_flex">
+            <img class="img" id="img2" src="../../testpics/img/A01-0.png" alt="">
+        </div>
+        <div class="btnBox">
+            <div class="btnItemBox">
+                <div class="btnItem div_flex">
+                    <div class="btnItem_1">
+                        <div class="btnNum" id="A" data-data="A">
+                            <img src="../../testpics/img/A01-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="btnItem_1">
+                        <div class="btnNum" id="B" data-data="B">
+                            <img src="../../testpics/img/A01-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="btnItem_1">
+                        <div class="btnNum" id="C" data-data="C">
+                            <img src="../../testpics/img/A01-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="btnItem_1">
+                        <div class="btnNum" id="D" data-data="D">
+                            <img src="../../testpics/img/A01-1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="btnItem div_flex">
+                    <div class="btnItem_1">
+                        <div class="btnNum" id="E" data-data="E">
+                            <img src="../../testpics/img/A01-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="btnItem_1">
+                        <div class="btnNum" id="F" data-data="F">
+                            <img src="../../testpics/img/A01-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="btnItem_1">
+                        <div class="btnNum" id="G" data-data="G">
+                            <img src="../../testpics/img/A01-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="btnItem_1">
+                        <div class="btnNum" id="H" data-data="H">
+                            <img src="../../testpics/img/A01-1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="item5" class="item hide">
+
+    </div>
+
+    <div id="item6" class="item div_flex hide">
+        <span id="falck" style="font-size: 38px;"></span>
+    </div>
+
+
+
+
+</div>
+</body>
+<script src="../../js/jquery.3.4.1.js"></script>
+<script type="text/javascript" src="../../js/oneui/common_utils.js"></script>
+<script src="../../../js/mui.min.js"></script>
+<script src="../../../js/common.js"></script>
+<script>
+    $(function () {
+        var data=[
+            {"id":"1","ans":"C","topic":"img/01-0.png","A":"img/01-1.png","B":"img/01-2.png","C":"img/01-3.png","D":"img/01-4.png","E":"img/01-5.png","F":"img/01-6.png","G":"img/01-7.png","H":"img/01-8.png"},
+            {"id":"2","ans":"G","topic":"img/02-0.png","A":"img/02-1.png","B":"img/02-2.png","C":"img/02-3.png","D":"img/02-4.png","E":"img/02-5.png","F":"img/02-6.png","G":"img/02-7.png","H":"img/02-8.png"},
+            {"id":"3","ans":"B","topic":"img/03-0.png","A":"img/03-1.png","B":"img/03-2.png","C":"img/03-3.png","D":"img/03-4.png","E":"img/03-5.png","F":"img/03-6.png","G":"img/03-7.png","H":"img/03-8.png"},
+            {"id":"4","ans":"F","topic":"img/04-0.png","A":"img/04-1.png","B":"img/04-2.png","C":"img/04-3.png","D":"img/04-4.png","E":"img/04-5.png","F":"img/04-6.png","G":"img/04-7.png","H":"img/04-8.png"},
+            {"id":"5","ans":"A","topic":"img/05-0.png","A":"img/05-1.png","B":"img/05-2.png","C":"img/05-3.png","D":"img/05-4.png","E":"img/05-5.png","F":"img/05-6.png","G":"img/05-7.png","H":"img/05-8.png"},
+            {"id":"6","ans":"H","topic":"img/06-0.png","A":"img/06-1.png","B":"img/06-2.png","C":"img/06-3.png","D":"img/06-4.png","E":"img/06-5.png","F":"img/06-6.png","G":"img/06-7.png","H":"img/06-8.png"}
+        ];
+        var index=0,indexLength=data.length;
+        var stimulateTime=30,stimulateTimer=null;
+        var time1=3000,maxtime=60;
+        var timer1=null,timer=null;
+        var time,beginTime,endTime;
+        var QPKey=false;
+        pushArr(data);
+        tipocFun(data,index);
+        function init(){
+
+        }
+        $(".st1").on("click",function () {
+            hideFun("item3");
+            $("#time").removeClass("hide");
+            QPKey=true;
+            stimulateFun();
+            timer = setInterval(function () {
+                CountDown();
+            }, 1000);
+
+        });
+
+        function hideFun(ID) {
+            $(".item").addClass("hide");
+            $("#"+ID).removeClass("hide");
+        }
+
+        function stimulateFun() {
+            stimulateTimer = setInterval(function () {
+                stimulateCountDown();
+            }, 1000);
+        }
+        function stimulateCountDown() {
+            if (stimulateTime > 1) {
+                --stimulateTime;
+            } else{
+                QPKeyFun(" ");
+                clearInterval(stimulateTimer);
+                stimulateTimer=null;
+            }
+        }
+        function CountDown() {
+            if (maxtime > 1) {
+                --maxtime;
+                $("#time").text(maxtime)
+            } else{
+                post_result();
+                clearInterval(timer);
+                timer=null;
+            }
+        }
+        function tipocFun(arr,index) {
+            $("#img2").attr("src","../../testpics/" + arr[index].topic);
+            $("#A img").attr("src","../../testpics/" + arr[index].A);
+            $("#B img").attr("src","../../testpics/" + arr[index].B);
+            $("#C img").attr("src","../../testpics/" + arr[index].C);
+            $("#D img").attr("src","../../testpics/" + arr[index].D);
+            $("#E img").attr("src","../../testpics/" + arr[index].E);
+            $("#F img").attr("src","../../testpics/" + arr[index].F);
+            $("#G img").attr("src","../../testpics/" + arr[index].G);
+            $("#H img").attr("src","../../testpics/" + arr[index].H);
+        }
+
+        function timer1Fun() {
+            hideFun("item6");
+            timer1=setInterval(function () {
+
+                if(index >= indexLength){
+                    post_result();
+                }else {
+                    tipocFun(data,index);
+                    hideFun("item3");
+                    stimulateTime=30;
+                    QPKey=true;
+                    stimulateFun();
+                }
+                clearInterval(timer1);
+                timer1=null;
+            }, time1);
+        }
+
+
+
+        $(".btnNum").on("click",function () {
+            clearInterval(stimulateTimer);
+            stimulateTimer=null;
+            var key=$(this).attr("data-data");
+            QPKeyFun(key);
+        });
+
+        function QPKeyFun(key) {
+            if(QPKey){
+                endTime=new Date().getTime();
+                time=(endTime-beginTime).toFixed(0);
+                QPKey=false;
+                if(data[index].ans === key){
+                    tishi(true)
+                }else {
+                    tishi(false)
+                }
+            }
+        }
+        function pushArr(array) {
+            for (var i = array.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+
+        function tishi(falck) {
+            if(falck){
+                $("#falck").text("答对了")
+            }else {
+                $("#falck").text("答错了")
+            }
+            index++;
+            timer1Fun();
+        }
+
+        function post_result() {
+            mui.toast('练习结束!2秒后自动跳转正式任务页面!', {duration: 'long', type: 'div'})
+            setTimeout(function () {
+                mui.openWindow({
+                    url: '../../../task_1/task_type.html?type=1&practice=true',
+                    createNew: true,
+                    styles: {
+                        cachemode: "noCache",
+                    }
+                });
+            }, 0);
+        }
+
+    })
+</script>
+</html>
