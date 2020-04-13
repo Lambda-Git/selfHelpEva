@@ -12,7 +12,6 @@
             height: 100%;
             margin: 0;
         }
-
         body {
             height: 100%;
             margin: 0;
@@ -28,7 +27,7 @@
 <div id="left" style="float:left;background-color:floralwhite;height:95%;width:10%"></div>
 <div id="mid" style="float:left;color:#0000FF;background-color:floralwhite;height:95%;width:80%;">
     <div id="textArea" style="font-size:30px; float:left; height:75%;width:100%;background-color: floralwhite;">
-        <p id="contentText" style="color:black;line-height: 35px;margin-top:10px;height: auto;padding-top: 40px;text-indent: 2em"></p>
+        <p id="contentText" style="color:black;line-height: 35px;margin-top:10px;height: auto;padding-top: 40px;text-indent: 2em;"></p>
     </div>
     <div id="clickArea" style="margin-top:10px;text-align:center;font-size: 12px">
         <div class="mui-row">
@@ -40,7 +39,6 @@
                 <input type="radio" id="ansB" value="" onclick="userClick(2)"/>
                 <label id='radioB' for="ansB"></label>
             </div>
-
         </div>
     </div>
 </div>
@@ -48,9 +46,9 @@
 </body>
 <script type="text/javascript">
     var index = 0;
-    var words = new Array ("您所在的环境是否是安静的？需要在安静的环境中完成测验。","您是否一个人或者只有一位监护人陪同您进行测验？","您是否可以做到一个人独立完成测验？需要独立完成，保证数据真实性。","监护人要做到不干扰不提示不暗示测试者答题，只能在答题前讲解指导语。","这是一个1分钟的练习；请认真完成练习。","屏幕上将呈现一组不规则图形，如果有2个相同的图形，请用左手食指按一下“有”键；如果没有相同图形，请用右手食指按一下“无”键。");
-    var answerA = new Array("环境是安静的。","我独自一人或者我只有一位监护人陪同我。","我能一个人独立完成测验（监护人可以在答题前讲解指导语）","监护人可以做到不干扰不提示不暗示，只是在答题前讲解指导语！","我知道是练习，也会认真完成。","我理解了指导语，开始答题。");
-    var answerB = new Array("环境是嘈杂的，退出。","有很多人，退出。","不能独立完成，退出。","不能做到，退出。","不明白，退出。","不理解，退出。");
+    var words = new Array ("您是否已经完成了练习？只有完成了练习，才能参加正式测验。","您所在的环境是否是安静的？需要在安静的环境中完成测验。","您是否一个人或者只有一位监护人陪同您进行测验？","您是否可以做到一个人独立完成测验？需要独立完成，保证数据真实性。","监护人要做到不干扰不提示不暗示测试者答题，只能在答题前讲解指导语。","这是一个限时10分钟的测验；要求既快速又准确！","屏幕上将呈现一组不规则图形，如果有2个相同的图形，请用左手食指按一下“有”键；如果没有相同图形，请用右手食指按一下“无”键。");
+    var answerA = new Array("完成了！","环境是安静的。","我独自一人或者我只有一位监护人陪同我。","我能一个人独立完成测验（监护人可以在答题前讲解指导语）","监护人可以做到不干扰不提示不暗示，只是在答题前讲解指导语！","我知道要求既快速又准确。","我理解了指导语，开始答题。");
+    var answerB = new Array("没有完成，退出。","环境是嘈杂的，退出。","有很多人，退出。","不能独立完成，退出。","不能做到，退出。","不明白，退出。","不理解，退出。");
     window.onload=function(){
         fontsetting();
         $("#contentText").text(words[index]);
@@ -68,10 +66,10 @@
                     cachemode:"noCache",
                 }
             });
-        } else if (index >= 6) {
+        } else if (index >= 7) {
             if (para == 1) {
                 mui.openWindow({
-                    url: 'VisualPerceptionCircleTest.html',
+                    url: 'VisualPerceptionCircleF.html',
                     createNew: true,
                     styles: {
                         cachemode:"noCache",
