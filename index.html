@@ -132,6 +132,7 @@
                 dataType: 'json',
                 success: function (data) {
                     localStorage.setItem('coid',JSON.stringify(data.results.coid))
+					$('.curUser').html('欢迎' +data.results.realName+ '同学');
 
 					//获取个体报告信息接口
                     var argsdata = {
