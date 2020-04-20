@@ -397,7 +397,7 @@
                 endTime=new Date().getTime();
                 time=(endTime-beginTime).toFixed(0);
                 dataSet.timeset.push(time);
-                dataSet.stimidset.push(stimid);
+                dataSet.stimidset.push(data[index].id);
                 dataSet.type4set.push("0");
                 dataSet.correctanswerset.push(data[index].ans);
                 dataSet.buttonset.push(key);
