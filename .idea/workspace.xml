@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9255633a-0bbd-42bf-98ae-93cf44dd1df7" name="Default Changelist" comment="">
+    <list default="true" id="9255633a-0bbd-42bf-98ae-93cf44dd1df7" name="Default Changelist" comment="n-bank">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,6 +75,9 @@
       <workItem from="1585792131636" duration="2006000" />
       <workItem from="1587347277333" duration="3738000" />
       <workItem from="1587471426791" duration="633000" />
+      <workItem from="1587614427338" duration="1410000" />
+      <workItem from="1588061583783" duration="1508000" />
+      <workItem from="1588070919798" duration="672000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1584780092258</created>
@@ -272,7 +275,35 @@
       <option name="project" value="LOCAL" />
       <updated>1587352530246</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="n-bank">
+      <created>1587614641043</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1587614641043</updated>
+    </task>
+    <task id="LOCAL-00030" summary="7054指导语修改">
+      <created>1588062001160</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1588062001160</updated>
+    </task>
+    <task id="LOCAL-00031" summary="n-bank">
+      <created>1588062484540</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1588062484540</updated>
+    </task>
+    <task id="LOCAL-00032" summary="n-bank">
+      <created>1588070969751</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1588070969751</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,25 +336,26 @@
     <MESSAGE value="修改" />
     <MESSAGE value="压缩文件" />
     <MESSAGE value="css" />
+    <MESSAGE value="7054指导语修改" />
     <MESSAGE value="n-bank" />
     <option name="LAST_COMMIT_MESSAGE" value="n-bank" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="244" y="0" key="CommitChangelistDialog2" timestamp="1587352524533">
+    <state x="244" y="0" key="CommitChangelistDialog2" timestamp="1588070966238">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="244" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1587352524533" />
+    <state x="244" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1588070966238" />
     <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1587352082057">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1587352082057" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1587352533364">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1588070990391">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1587352533364" />
-    <state x="439" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587347300168">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1588070990391" />
+    <state x="439" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588072155019">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="439" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1587347300168" />
+    <state x="439" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1588072155019" />
   </component>
 </project>
