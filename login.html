@@ -286,8 +286,7 @@
                     });
                 }, function (e) {
                     plus.nativeUI.closeWaiting();
-                    // plus.nativeUI.alert("安装wgt文件失败[" + e.code + "]：" + e.message);
-                    plus.nativeUI.alert("当前版本已经是最新版本!");
+                    plus.nativeUI.alert("安装更新文件失败["+e.code+"]："+e.message);
                 });
             }
 
