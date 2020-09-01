@@ -131,8 +131,8 @@
                 data: loginData,
                 dataType: 'json',
                 success: function (data) {
-                    localStorage.setItem('coid',JSON.stringify(data.results.coid))
-					$('.curUser').html('欢迎' +data.results.realName+ '同学');
+                    localStorage.setItem('coid',JSON.stringify(data.RESPONSE_RESULTS.coid))
+					$('.curUser').html('欢迎' +data.RESPONSE_RESULTS.realName+ '同学');
 
 					//获取个体报告信息接口
                     var argsdata = {
@@ -148,7 +148,7 @@
                     };
                     $.ajax({
                         type: 'POST',
-                        url: 'http://www.dweipsy.com/lattice/CommonActionProxy',
+						url: 'http://www.dweipsy.com/lattice/CommonActionThirdPartyProxy',
                         data: reportData,
                         dataType: 'json',
                         success: function (data) {
